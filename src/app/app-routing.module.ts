@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PlanoAlimentarComponent } from './core/modules/mobile/pages/plano-alimentar/plano-alimentar.component';
-import { AvaliacaoFisicaComponent } from './core/modules/mobile/pages/avaliacao-fisica/avaliacao-fisica.component';
-import { MetasComponent } from './core/modules/mobile/pages/metas/metas.component';
-import { PerfilComponent } from './core/modules/mobile/pages/perfil/perfil.component';
-import { RefeicaoComponent } from './core/modules/mobile/pages/refeicao/refeicao.component';
-import { LoginComponent } from './core/modules/mobile/pages/login/login.component';
-import { EsqueciSenhaComponent } from './core/modules/mobile/pages/esqueci-senha/esqueci-senha.component';
-import { PrimeiroAcessoComponent } from './core/modules/mobile/pages/primeiro-acesso/primeiro-acesso.component';
+import { PlanoAlimentarComponent } from './core/modules/desktop/pages/plano-alimentar/plano-alimentar.component';
+import { AvaliacaoFisicaComponent } from './core/modules/desktop/pages/avaliacao-fisica/avaliacao-fisica.component';
+import { MetasComponent } from './core/modules/desktop/pages/metas/metas.component';
+import { PerfilComponent } from './core/modules/desktop/pages/perfil/perfil.component';
+import { RefeicaoComponent } from './core/modules/desktop/pages/refeicao/refeicao.component';
+import { LoginComponent } from './core/modules/desktop/pages/login/login.component';
+import { EsqueciSenhaComponent } from './core/modules/desktop/pages/esqueci-senha/esqueci-senha.component';
+import { PrimeiroAcessoComponent } from './core/modules/desktop/pages/primeiro-acesso/primeiro-acesso.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },

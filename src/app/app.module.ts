@@ -7,24 +7,24 @@ import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BotaoComponent } from './core/components/botao/botao.component';
-import { MenuRodapeComponent } from './core/components/mobile/menu-rodape/menu-rodape.component';
-import { CardInformacaoComponent } from './core/components/mobile/card-informacao/card-informacao.component';
-import { TabelaAlimentosComponent } from './core/components/mobile/tabela/tabela-alimentos.component';
-import { CardCheckboxComponent } from './core/components/mobile/card-checkbox/card-checkbox.component';
+import { MenuRodapeComponent } from './core/components/desktop/menu-rodape/menu-rodape.component';
+import { CardInformacaoComponent } from './core/components/desktop/card-informacao/card-informacao.component';
+import { TabelaAlimentosComponent } from './core/components/desktop/tabela/tabela-alimentos.component';
+import { CardCheckboxComponent } from './core/components/desktop/card-checkbox/card-checkbox.component';
 import { FormsModule } from '@angular/forms';
-import { PlanoAlimentarComponent } from './core/modules/mobile/pages/plano-alimentar/plano-alimentar.component';
-import { MetasComponent } from './core/modules/mobile/pages/metas/metas.component';
-import { AvaliacaoFisicaComponent } from './core/modules/mobile/pages/avaliacao-fisica/avaliacao-fisica.component';
-import { PerfilComponent } from './core/modules/mobile/pages/perfil/perfil.component';
-import { RefeicaoComponent } from './core/modules/mobile/pages/refeicao/refeicao.component';
-import { LoadingComponent } from './core/components/mobile/loading/loading.component';
+import { PlanoAlimentarComponent } from './core/modules/desktop/pages/plano-alimentar/plano-alimentar.component';
+import { MetasComponent } from './core/modules/desktop/pages/metas/metas.component';
+import { AvaliacaoFisicaComponent } from './core/modules/desktop/pages/avaliacao-fisica/avaliacao-fisica.component';
+import { PerfilComponent } from './core/modules/desktop/pages/perfil/perfil.component';
+import { RefeicaoComponent } from './core/modules/desktop/pages/refeicao/refeicao.component';
+import { LoadingComponent } from './core/components/desktop/loading/loading.component';
 import { ErroComponent } from './core/components/erro/erro.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { LoginComponent } from './core/modules/mobile/pages/login/login.component';
-import { EsqueciSenhaComponent } from './core/modules/mobile/pages/esqueci-senha/esqueci-senha.component';
-import { PrimeiroAcessoComponent } from './core/modules/mobile/pages/primeiro-acesso/primeiro-acesso.component';
-import { InputTextoComponent } from './core/components/mobile/input-texto/input-texto.component';
+import { LoginComponent } from './core/modules/desktop/pages/login/login.component';
+import { EsqueciSenhaComponent } from './core/modules/desktop/pages/esqueci-senha/esqueci-senha.component';
+import { PrimeiroAcessoComponent } from './core/modules/desktop/pages/primeiro-acesso/primeiro-acesso.component';
+import { InputTextoComponent } from './core/components/desktop/input-texto/input-texto.component';
 
 registerLocaleData(ptBr);
 
