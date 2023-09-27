@@ -1,0 +1,11 @@
+<div class="card-checkbox">
+    <label class="card-checkbox__label">
+        <input class="card-checkbox__checkbox"
+            (click)="selecionarCheckbox($event, meta)"
+            type="checkbox"
+            [value]="meta"
+            [(ngModel)]="meta.atingida"
+            aria-hidden="true">
+        <span class="card-checkbox__texto-checkbox">{{ meta.descricao }}</span>
+    </label>
+</div>

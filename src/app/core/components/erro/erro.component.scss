@@ -1,0 +1,30 @@
+@import '../../../styles/base-import';
+
+.erro-card {
+    background-color: $cor-branco-padrao;
+    border: 0.556vw solid $cor-verde-padrao;
+    border-radius: 6.667vw;
+    padding: 4.444vw 4.444vw 8.889vw 4.444vw;
+    font-family: 'Manrope-Medium';
+    font-size: 4.444vw;
+    text-align: center;
+    box-shadow: 0vw 1.111vw 1.111vw 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__botao {
+        flex-shrink: 0;
+        margin-top: 6.667vw;
+        width: 100%;
+    }
+    &__imagem {
+        width: 27.778vw;
+        height: 27.778vw;
+        background: url('../../../../assets/images/Erro.svg') no-repeat;
+        background-size: 27.778vw 27.778vw;
+        background-position: center;
+        margin-bottom: 6.667vw;
+    }
+}

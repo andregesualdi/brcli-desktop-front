@@ -1,0 +1,40 @@
+@import '../../../../../styles.scss';
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th, tr {
+    height: 13.333vw;
+    text-align: justify;
+}
+
+.tabela-alimentos {
+    &__titulos {
+        background-color: $cor-verde-selecionado;
+        font-family: 'Manrope-Bold';
+        font-size: 4.444vw;
+        color: $cor-branco-padrao;
+    }
+
+    &__corpo {
+        font-family: 'Manrope-Medium';
+        font-size: 3.889vw;
+        color: $cor-preto;
+    }
+
+    &__coluna-1 {
+        width: 15.556vw;
+        padding-left: 2.222vw;
+    }
+
+    &__coluna-2 {
+        padding-left: 2.222vw;
+    }
+
+    &__itens { 
+        border-bottom: 0.556vw solid $cor-verde-padrao;
+    }
+}

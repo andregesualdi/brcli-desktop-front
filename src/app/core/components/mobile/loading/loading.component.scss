@@ -1,0 +1,20 @@
+.loading {
+    &__fullpage { 
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+}
+
+img {
+    width: 17.778vw;
+    height: 17.778vw;
+}

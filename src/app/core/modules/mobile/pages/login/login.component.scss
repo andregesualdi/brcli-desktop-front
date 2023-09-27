@@ -1,0 +1,79 @@
+@import '../../../../../styles/base-import';
+
+.login {
+
+    a {
+        text-decoration: none;
+    }
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 6.667vw 8.889vw 6.667vw 8.889vw;
+
+    &__logo {
+        padding-bottom: 5.556vw;
+    }
+
+    &__card {
+        padding: 4.444vw 4.444vw 6.667vw;
+        background-color: $cor-card-login;
+        border-radius: 6.667vw;
+        box-shadow: 0vw 1.111vw 6.944vw 0 rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        min-height: 103.333vw;
+        max-height: 103.333vw;
+
+        &--loading {
+            justify-content: center;
+        }
+
+        &--alerta {
+            text-indent: -9999vw;
+            color: $cor-card-login;
+        }
+
+        &--alerta-ativo {
+            background-color: $cor-vermelho;
+            width: 100%;
+            color: $cor-branco-padrao;
+            text-align: center;
+            font-family: 'Manrope-Bold';
+            text-indent: 0vw;
+        }
+
+        &--descricao {
+            text-align: center;
+            font-family: 'Manrope-Medium';
+        }
+
+        &--nome {
+            padding-bottom: 8.889vw;
+        }
+
+        &--login, &--senha, &--botao {
+            width: 100%;
+            padding-bottom: 4.444vw;
+        }
+
+        &--esqueceu-senha {
+            align-self: flex-start;
+            padding-bottom: 4.444vw;
+            font-size: 3.333vw;
+        }
+
+        &--esqueceu-senha, &--primeiro-acesso {
+            font-family: 'Manrope-SemiBold';
+            color: $cor-link;
+        }
+    }
+}

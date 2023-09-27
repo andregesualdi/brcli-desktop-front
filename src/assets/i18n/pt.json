@@ -1,0 +1,67 @@
+{
+    "AVALIACAO_FISICA": {
+        "TITULO": "Minha avaliação física",
+        "DESCRICAO": "Nós do Broccoli estamos trabalhando para trazer a avaliação física detalhada aqui no app para você, Camila. Por enquanto, você pode baixar a versão em PDF disponibilizada pelo seu nutricionista.",
+        "BOTAO_BAIXAR": "Baixar avaliação"
+    },
+    "ERRO": {
+        "TEXTO": "Não é possível exibir essas informações no momento. Por favor, tente mais tarde.",
+        "ERRO_NUTRICIONISTA": "Que bom te ver por aqui, nutricionista. No momento, este acesso é apenas para pacientes. Por favor, acesse o Broccoli através do site.",
+        "BOTAO_OK": "Ok"
+    },
+    "PLANO_ALIMENTAR": {
+        "TITULO": "Meu plano alimentar",
+        "TEXTO_AGENDAMENTO": "Seu próximo agendamento é dia 12 de agosto, às 14h30.",
+        "CAFE": "Café da manhã",
+        "LANCHEMANHA": "Lanche da manhã",
+        "ALMOCO": "Almoço",
+        "LANCHETARDE": "Lanche da tarde",
+        "JANTAR": "Jantar",
+        "CEIA": "Ceia",
+        "HORARIO_PREVISTO": "Horário previsto: ",
+        "BOTAO_BAIXAR": "Baixar plano",
+        "MEU": "Meu",
+        "MINHA": "Minha",
+        "VOLTAR": "Voltar"
+    },
+    "TABELA_ALIMENTOS": {
+        "QUANTIDADE": "Qtd.",
+        "ALIMENTO": "Alimento"
+    },
+    "METAS": {
+        "TITULO": "Minhas metas mensais",
+        "BOTAO_SALVAR": "Salvar metas",
+        "METAS_SALVAS": "Metas salvas",
+        "ERRO_AO_SALVAR": "Erro ao salvar metas, tente novamente."
+    },
+    "PERFIL": {
+        "TITULO": "Meu perfil",
+        "TITULO_NUTRICIONISTA": "Nutricionista",
+        "BOTAO_SAIR": "Sair do aplicativo",
+        "ALTURA": "Altura: "
+    },
+    "LOGIN": {
+        "LOGIN": "Login",
+        "SENHA": "Senha",
+        "ESQUECEU_SENHA": "Esqueceu sua senha?",
+        "ACESSAR": "Acessar",
+        "PRIMEIRO_ACESSO": "Primeiro acesso",
+        "INVALIDO": "Usuário ou senha inválidos"
+    },
+    "PRIMEIRO_ACESSO": {
+        "DESCRICAO": "Informe o código de acesso fornecido pelo seu nutricionista",
+        "CODIGO_ACESSO": "Código de acesso",
+        "VALIDAR": "Validar",
+        "FINALIZE": "Finalize seu cadastro",
+        "NOME_USUARIO": "Nome de usuário",
+        "SENHA": "Senha",
+        "CADASTRAR": "Cadastrar"
+    },
+    "RECUPERAR_SENHA": {
+        "DESCRICAO": "Informe seu usuário",
+        "NOME_USUARIO": "Nome de usuário",
+        "RECUPERAR": "Recuperar senha",
+        "INFOS_ENVIADAS": "As informações para recuperar sua senha foram encaminhadas para o seu e-mail caso este seja um usuário válido. Verifique sua caixa de entrada ou spam.",
+        "BOTAO_OK": "Ok"
+    }
+}

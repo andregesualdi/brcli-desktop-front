@@ -1,0 +1,5 @@
+<div class="erro-card">
+    <div class="erro-card__imagem"></div>
+        {{ 'ERRO.TEXTO' | translate }}
+    <app-botao (botaoClicado)="retornar()" class="erro-card__botao" [texto]="'ERRO.BOTAO_OK' | translate "></app-botao>
+</div>

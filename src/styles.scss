@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'app/styles/colors';
+@import 'app/styles/fonts';
+
+body {
+    background-color: $cor-de-fundo;
+    margin: 0px;
+    font-family: 'Manrope-Regular';
+}

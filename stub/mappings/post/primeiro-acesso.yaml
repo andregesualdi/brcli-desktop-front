@@ -1,0 +1,9 @@
+- request:
+    method: POST
+    url: /brcli-gateway/brcli-bff-desktop/primeiro-acesso
+  response:
+    latency: 2500
+    status: 200
+    headers:
+      content-type: application/json
+    file: '../../mocks/primeiro-acesso.json'

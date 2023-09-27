@@ -1,0 +1,33 @@
+@import '../../../../styles/base-import';
+
+.texto-input > input {
+    height: 11.111vw;
+    border: 0;
+    border-bottom: 0.556vw solid $cor-letra-nao-selecionada;
+    background: none;
+    font-family: 'Manrope-Regular';
+    font-size: 4.444vw;
+    width: 100%;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: $cor-letra-nao-selecionada;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: $cor-letra-nao-selecionada;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: $cor-letra-nao-selecionada;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: $cor-letra-nao-selecionada;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: $cor-letra-nao-selecionada;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color: $cor-letra-nao-selecionada;
+}

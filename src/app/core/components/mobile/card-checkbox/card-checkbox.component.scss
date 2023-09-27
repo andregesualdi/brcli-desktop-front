@@ -1,0 +1,62 @@
+@import '../../../../../styles.scss';
+
+.card-checkbox {
+    width: 100%;
+    height: 17.778vw;
+    background-color: $cor-branco-padrao;
+    border: 0.556vw solid $cor-verde-padrao;
+    border-radius: 6.667vw;
+    box-shadow: 0vw 1.111vw 4.167vw 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+
+    &__checkbox {
+        margin: 0 3.333vw 0 4.444vw;
+    }
+
+    &__texto-checkbox {    
+        font-family: 'Manrope-Medium';
+        font-size: 3.889vw;
+        color: $cor-preto;
+        height: 6.667vw;
+        vertical-align: middle;
+    }
+}
+
+label > input[type="checkbox"] {
+    display: none;
+}
+
+label > input[type="checkbox"] + *::before {
+    content: "";
+    display: flex;
+    width: 4.444vw;
+    height: 4.444vw;
+    margin-right: 3.333vw;
+    margin-left: 3.333vw;
+    border-radius: 1.111vw;
+    border: 0.278vw solid $cor-verde-selecionado;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+label > input[type="checkbox"]:checked + *::before {
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAyMCAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzg3XzcyNykiPgo8cGF0aCBkPSJNMjAgMi40Njk1NUwxNy41MzA1IDBMNS43OTkyNCAxMS43MzIxTDIuNzA4ODIgNy45Mzc4MkwwIDEwLjE0MzZMNS41MzQ2NSAxNi45MzY2TDIwIDIuNDY5NTVaIiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzg3XzcyNyI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIxNi45MzY2IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=');
+    background-size: 4.444vw 4.444vw;
+    background-color: $cor-verde-selecionado;
+    border-radius: 1.111vw;
+}
+
+label > span {
+    display: flex;
+    margin-right: 3.333vw;
+    width: 78vw;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}

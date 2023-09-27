@@ -1,0 +1,22 @@
+<div class="menu-rodape">
+    <button id="botao-plano" class="menu-rodape__botao" [ngClass]="{'menu-rodape__botao--selecionado': planoSelecionado}" (click)="navegar('plano')">
+        <img *ngIf="!planoSelecionado" src="../../../../../assets/images/Alimentacao_NaoSelecionado.svg">
+        <img *ngIf="planoSelecionado" src="../../../../../assets/images/Alimentacao_Selecionado.svg">
+        Plano
+    </button>
+    <button id="botao-metas" class="menu-rodape__botao menu-rodape__metas" [ngClass]="{'menu-rodape__botao--selecionado': metasSelecionado}" (click)="navegar('metas')">
+        <img *ngIf="!metasSelecionado" src="../../../../../assets/images/Check_NaoSelecionado.svg">
+        <img *ngIf="metasSelecionado" src="../../../../../assets/images/Check_Selecionado.svg">
+        Metas
+    </button>
+    <button id="botao-avaliacao" class="menu-rodape__botao menu-rodape__avaliacao" [ngClass]="{'menu-rodape__botao--selecionado': avaliacaoSelecionado}" (click)="navegar('avaliacao')">
+        <img *ngIf="!avaliacaoSelecionado" src="../../../../../assets/images/Avaliacao_NaoSelecionado.svg">
+        <img *ngIf="avaliacaoSelecionado" src="../../../../../assets/images/Avaliacao_Selecionado.svg">
+        Avaliação
+    </button>
+    <button id="botao-perfil" class="menu-rodape__botao menu-rodape__perfil" [ngClass]="{'menu-rodape__botao--selecionado': perfilSelecionado}" (click)="navegar('perfil')">
+        <img *ngIf="!perfilSelecionado" src="../../../../../assets/images/Perfil_NaoSelecionado.svg">
+        <img *ngIf="perfilSelecionado" src="../../../../../assets/images/Perfil_Selecionado.svg">
+        Perfil
+    </button>
+</div>

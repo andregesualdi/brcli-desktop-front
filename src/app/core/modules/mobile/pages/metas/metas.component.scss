@@ -1,0 +1,38 @@
+@import '../../../../../styles/base-import';
+
+.metas {
+    padding: 6.667vw 8.889vw 28.889vw 8.889vw;
+
+    &__titulo {
+        margin-top: 13.333vw;
+        margin-bottom: 8.889vw;
+        font-family: 'Manrope-Bold';
+        font-size: 6.667vw;
+    }
+
+    &__listagem {
+        padding-bottom: 4.444vw;
+    }
+
+    &__botao {
+        padding-top: 4.444vw;
+    }
+
+    &__aviso-sucesso {
+        background-color: $cor-verde-padrao;
+        width: 100%;
+        color: $cor-branco-padrao;
+        margin-top: 4.444vw;
+        text-align: center;
+        font-family: 'Manrope-Bold';
+    }
+
+    &__aviso-erro {
+        background-color: $cor-vermelho;
+        width: 100%;
+        color: $cor-branco-padrao;
+        margin-top: 4.444vw;
+        text-align: center;
+        font-family: 'Manrope-Bold';
+    }
+}

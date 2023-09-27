@@ -1,0 +1,112 @@
+@import '../../../../../styles/base-import';
+
+.perfil {
+    padding: 6.667vw 8.889vw 28.889vw 8.889vw;
+
+    &__sem-imagem {
+        background: url('../../../../../../assets/images/Avatar_SemImagem.svg') no-repeat, $cor-imagem-basica-perfil;
+        background-size: 17.778vw 17.778vw;
+    }
+
+    &__titulo {
+        margin-top: 13.333vw;
+        margin-bottom: 8.889vw;
+        font-family: 'Manrope-Bold';
+        font-size: 6.667vw;
+    }
+
+    &__card-usuario {
+        background-color: $cor-branco-padrao;
+        border: 0.556vw solid $cor-verde-padrao;
+        border-radius: 6.667vw;
+        padding: 4.444vw;
+        font-family: 'Manrope-Medium';
+        font-size: 4.444vw;
+        box-shadow: 0vw 1.111vw 1.111vw 0 rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        &--nome {
+            font-family: 'Manrope-Bold';
+            font-size: 4.444vw;
+        }
+
+        &--usuario {
+            font-family: 'Manrope-Medium';
+            font-size: 3.333vw;
+            color: $cor-cinza-subtitulo;
+        }
+
+        &--altura {
+            font-family: 'Manrope-Bold';
+            font-size: 3.889vw;
+        }
+
+        &--valor {
+            font-family: 'Manrope-Medium';
+        }
+
+        &--email {
+            font-family: 'Manrope-Bold';
+            font-size: 3.889vw;
+        }
+
+        &--informacoes-usuario {
+            position: relative;
+            width: fit-content;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 2.222vw;
+
+            label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        
+            input[type='file'] {
+                display: none;
+            }
+        }
+
+        &--dados-usuario {
+            padding-left: 2.222vw;
+        }
+    }
+
+    &__card-nutricionista {
+        background-color: $cor-branco-padrao;
+        border: 0.556vw solid $cor-verde-padrao;
+        border-radius: 6.667vw;
+        padding: 4.444vw;
+        font-family: 'Manrope-Medium';
+        font-size: 4.444vw;
+        box-shadow: 0vw 1.111vw 1.111vw 0 rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        &--nome {
+            font-family: 'Manrope-Bold';
+        }
+    }
+
+    &__botao {
+        padding-top: 8.889vw;
+    }
+
+    &__imagem {
+        height: 17.778vw;
+        width: 17.778vw;
+        z-index: 1;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+    }
+}

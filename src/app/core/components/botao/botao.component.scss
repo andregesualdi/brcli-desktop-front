@@ -1,0 +1,31 @@
+@import '../../../../styles.scss';
+
+button {
+    width: 100%;
+    border: 0px;
+}
+
+button:disabled {
+    background-color: $cor-cinza-desabilitado;
+}
+
+.brcli__botao {
+    &--primario-mobile {
+        background-color: $cor-verde-padrao;
+        font-family: 'Manrope-SemiBold';
+        font-size: 4.444vw;
+        height: 11.111vw;
+        color: $cor-branco-padrao;
+        border-radius: 4.444vw;
+    }
+
+    &--flutuante-mobile {
+        background-color: $cor-verde-padrao;
+        font-family: 'Manrope-SemiBold';
+        font-size: 4.444vw;
+        height: 11.111vw;
+        color: $cor-branco-padrao;
+        border-radius: 4.444vw;
+        box-shadow: 0vw 1.111vw 1.111vw 0 rgba(0, 0, 0, 0.25);
+    }
+}

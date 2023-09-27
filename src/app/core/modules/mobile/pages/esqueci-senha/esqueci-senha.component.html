@@ -1,0 +1,22 @@
+<div class="esqueci-senha">
+    <img class="esqueci-senha__logo" src="../../../../../../assets/images/logo_broccoli.svg" />
+    <div class="esqueci-senha__card" [hidden]="emailEnviado || loading || erro">
+        <img class="esqueci-senha__card--nome" src="../../../../../../assets/images/nome_broccoli.svg" />
+        <div class="esqueci-senha__card--descricao">{{ 'RECUPERAR_SENHA.DESCRICAO' | translate }}</div>
+        <app-input-texto class="esqueci-senha__card--login" [placeholder]="'RECUPERAR_SENHA.NOME_USUARIO' | translate " (valorDigitado)="recuperarLogin($event)"></app-input-texto>
+        <app-botao class="esqueci-senha__card--botao" [desabilitado]="desabilitado" (botaoClicado)="recuperarSenha()" tipoBotao="flutuante-mobile" [texto]="'RECUPERAR_SENHA.RECUPERAR' | translate "></app-botao>
+    </div>
+    <div class="esqueci-senha__card" [hidden]="!emailEnviado || loading || erro">
+        <img class="esqueci-senha__card--nome-enviado" src="../../../../../../assets/images/nome_broccoli.svg" />
+        <div class="esqueci-senha__card--descricao-enviado">{{ 'RECUPERAR_SENHA.INFOS_ENVIADAS' | translate }}</div>
+        <app-botao class="esqueci-senha__card--botao-ok" (botaoClicado)="redirecionarLogin()" tipoBotao="flutuante-mobile" [texto]="'RECUPERAR_SENHA.BOTAO_OK' | translate "></app-botao>
+    </div>
+    <div class="esqueci-senha__card esqueci-senha__card--loading" [hidden]="!loading">
+        <app-loading [fullpage]="false"></app-loading>
+    </div>
+    <div class="esqueci-senha__card" [hidden]="!erro">
+        <img class="esqueci-senha__card--nome" src="../../../../../../assets/images/nome_broccoli.svg" />
+        <div class="esqueci-senha__card--descricao">{{ 'ERRO.TEXTO' | translate }}</div>
+        <app-botao class="esqueci-senha__card--botao" (botaoClicado)="redirecionarLogin()" tipoBotao="flutuante-mobile" [texto]="'ERRO.BOTAO_OK' | translate "></app-botao>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+- request:
+    method: PUT
+    url: /brcli-gateway/brcli-bff-desktop/cadastro-paciente
+  response:
+    latency: 2000
+    status: 200
+    headers:
+      content-type: application/json
+    file: '../../mocks/cadastro-paciente.json'
