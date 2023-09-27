@@ -4,14 +4,14 @@
         <img class="primeiro-acesso__card--nome" src="../../../../../../assets/images/nome_broccoli.svg" />
         <div class="primeiro-acesso__card--descricao">{{ 'PRIMEIRO_ACESSO.DESCRICAO' | translate }}</div>
         <app-input-texto class="primeiro-acesso__card--codigo" [placeholder]="'PRIMEIRO_ACESSO.CODIGO_ACESSO' | translate " (valorDigitado)="recuperarCodigo($event)"></app-input-texto>
-        <app-botao class="primeiro-acesso__card--botao" [desabilitado]="validarDesabilitado" (botaoClicado)="validarCodigo()" tipoBotao="flutuante-mobile" [texto]="'PRIMEIRO_ACESSO.VALIDAR' | translate "></app-botao>
+        <app-botao class="primeiro-acesso__card--botao" [desabilitado]="validarDesabilitado" (botaoClicado)="validarCodigo()" tipoBotao="flutuante-desktop" [texto]="'PRIMEIRO_ACESSO.VALIDAR' | translate "></app-botao>
     </div>
     <div class="primeiro-acesso__card" [hidden]="!codigoValido || loading || erro">
         <img class="primeiro-acesso__card--nome" src="../../../../../../assets/images/nome_broccoli.svg" />
         <div class="primeiro-acesso__card--finalize">{{ 'PRIMEIRO_ACESSO.FINALIZE' | translate }}</div>
         <app-input-texto class="primeiro-acesso__card--login" [placeholder]="'PRIMEIRO_ACESSO.NOME_USUARIO' | translate " (valorDigitado)="recuperarLogin($event)"></app-input-texto>
         <app-input-texto class="primeiro-acesso__card--senha" tipo="password" [placeholder]="'PRIMEIRO_ACESSO.SENHA' | translate " (valorDigitado)="recuperarSenha($event)"></app-input-texto>
-        <app-botao class="primeiro-acesso__card--botao" [desabilitado]="cadastrarDesabilitado" (botaoClicado)="cadastrar()" tipoBotao="flutuante-mobile" [texto]="'PRIMEIRO_ACESSO.CADASTRAR' | translate "></app-botao>
+        <app-botao class="primeiro-acesso__card--botao" [desabilitado]="cadastrarDesabilitado" (botaoClicado)="cadastrar()" tipoBotao="flutuante-desktop" [texto]="'PRIMEIRO_ACESSO.CADASTRAR' | translate "></app-botao>
     </div>
     <div class="primeiro-acesso__card primeiro-acesso__card--loading" [hidden]="!loading">
         <app-loading [fullpage]="false"></app-loading>
@@ -19,6 +19,6 @@
     <div class="primeiro-acesso__card" [hidden]="!erro">
         <img class="primeiro-acesso__card--nome" src="../../../../../../assets/images/nome_broccoli.svg" />
         <div class="primeiro-acesso__card--finalize">{{ 'ERRO.TEXTO' | translate }}</div>
-        <app-botao class="primeiro-acesso__card--botao" (botaoClicado)="voltar()" tipoBotao="flutuante-mobile" [texto]="'ERRO.BOTAO_OK' | translate "></app-botao>
+        <app-botao class="primeiro-acesso__card--botao" (botaoClicado)="voltar()" tipoBotao="flutuante-desktop" [texto]="'ERRO.BOTAO_OK' | translate "></app-botao>
     </div>
 </div>

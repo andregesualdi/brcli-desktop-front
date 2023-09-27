@@ -10,7 +10,7 @@ button:disabled {
 }
 
 .brcli__botao {
-    &--primario-mobile {
+    &--primario-desktop {
         background-color: $cor-verde-padrao;
         font-family: 'Manrope-SemiBold';
         font-size: 4.444vw;
@@ -19,7 +19,7 @@ button:disabled {
         border-radius: 4.444vw;
     }
 
-    &--flutuante-mobile {
+    &--flutuante-desktop {
         background-color: $cor-verde-padrao;
         font-family: 'Manrope-SemiBold';
         font-size: 4.444vw;

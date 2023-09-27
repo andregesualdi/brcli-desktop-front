@@ -10,7 +10,7 @@ export class BotaoComponent {
   public texto: string = '';
 
   @Input()
-  public tipoBotao: string = 'primario-mobile';
+  public tipoBotao: string = 'primario-desktop';
 
   @Input()
   public desabilitado: boolean = false;

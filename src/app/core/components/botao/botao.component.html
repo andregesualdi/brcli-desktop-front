@@ -1,7 +1,7 @@
 <button
     [ngClass]="{
-        'brcli__botao--primario-mobile': tipoBotao === 'primario-mobile',
-        'brcli__botao--flutuante-mobile': tipoBotao === 'flutuante-mobile'
+        'brcli__botao--primario-desktop': tipoBotao === 'primario-desktop',
+        'brcli__botao--flutuante-desktop': tipoBotao === 'flutuante-desktop'
     }"
     (click)="clique($event)"
     [disabled]="desabilitado">

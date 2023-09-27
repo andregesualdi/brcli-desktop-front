@@ -8,7 +8,7 @@
         <div class="login__card--alerta" [ngClass]="{
             'login__card--alerta-ativo': usuarioInvalido
         }">{{ 'LOGIN.INVALIDO' | translate }}</div>
-        <app-botao class="login__card--botao" [desabilitado]="desabilitado" (botaoClicado)="acessarApp()" tipoBotao="flutuante-mobile" [texto]="'LOGIN.ACESSAR' | translate "></app-botao>
+        <app-botao class="login__card--botao" [desabilitado]="desabilitado" (botaoClicado)="acessarApp()" tipoBotao="flutuante-desktop" [texto]="'LOGIN.ACESSAR' | translate "></app-botao>
         <a  (click)="primeiroAcesso()" class="login__card--primeiro-acesso">{{ 'LOGIN.PRIMEIRO_ACESSO' | translate  }}</a>
     </div>
     <div class="login__card login__card--loading" [hidden]="!loading">
@@ -17,11 +17,11 @@
     <div class="login__card" [hidden]="!erro">
         <img class="login__card--nome" src="../../../../../../assets/images/nome_broccoli.svg" />
         <div class="login__card--descricao">{{ 'ERRO.TEXTO' | translate }}</div>
-        <app-botao class="login__card--botao" (botaoClicado)="redirecionarLogin()" tipoBotao="flutuante-mobile" [texto]="'ERRO.BOTAO_OK' | translate "></app-botao>
+        <app-botao class="login__card--botao" (botaoClicado)="redirecionarLogin()" tipoBotao="flutuante-desktop" [texto]="'ERRO.BOTAO_OK' | translate "></app-botao>
     </div>
     <div class="login__card" [hidden]="!nutricionista">
         <img class="login__card--nome" src="../../../../../../assets/images/nome_broccoli.svg" />
         <div class="login__card--descricao">{{ 'ERRO.ERRO_NUTRICIONISTA' | translate }}</div>
-        <app-botao class="login__card--botao" (botaoClicado)="redirecionarLogin()" tipoBotao="flutuante-mobile" [texto]="'ERRO.BOTAO_OK' | translate "></app-botao>
+        <app-botao class="login__card--botao" (botaoClicado)="redirecionarLogin()" tipoBotao="flutuante-desktop" [texto]="'ERRO.BOTAO_OK' | translate "></app-botao>
     </div>
 </div>
