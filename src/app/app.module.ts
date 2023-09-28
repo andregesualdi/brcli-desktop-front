@@ -7,7 +7,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BotaoComponent } from './core/components/botao/botao.component';
-import { MenuRodapeComponent } from './core/components/desktop/menu-rodape/menu-rodape.component';
+import { MenuLateralComponent } from './core/components/desktop/menu-lateral/menu-lateral.component';
 import { CardInformacaoComponent } from './core/components/desktop/card-informacao/card-informacao.component';
 import { TabelaAlimentosComponent } from './core/components/desktop/tabela/tabela-alimentos.component';
 import { CardCheckboxComponent } from './core/components/desktop/card-checkbox/card-checkbox.component';
@@ -19,6 +19,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LoginComponent } from './core/modules/desktop/pages/login/login.component';
 import { EsqueciSenhaComponent } from './core/modules/desktop/pages/esqueci-senha/esqueci-senha.component';
 import { InputTextoComponent } from './core/components/desktop/input-texto/input-texto.component';
+import { MeusAgendamentosComponent } from './core/modules/desktop/pages/meus-agendamentos/meus-agendamentos.component';
 
 registerLocaleData(ptBr);
 
@@ -26,7 +27,7 @@ registerLocaleData(ptBr);
   declarations: [
     AppComponent,
     BotaoComponent,
-    MenuRodapeComponent,
+    MenuLateralComponent,
     CardInformacaoComponent,
     TabelaAlimentosComponent,
     CardCheckboxComponent,
@@ -34,7 +35,8 @@ registerLocaleData(ptBr);
     ErroComponent,
     LoginComponent,
     EsqueciSenhaComponent,
-    InputTextoComponent
+    InputTextoComponent,
+    MeusAgendamentosComponent
   ],
   imports: [
     BrowserModule,

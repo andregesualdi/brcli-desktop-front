@@ -1,8 +1,8 @@
 {
-    "AVALIACAO_FISICA": {
-        "TITULO": "Minha avaliação física",
-        "DESCRICAO": "Nós do Broccoli estamos trabalhando para trazer a avaliação física detalhada aqui no app para você, Camila. Por enquanto, você pode baixar a versão em PDF disponibilizada pelo seu nutricionista.",
-        "BOTAO_BAIXAR": "Baixar avaliação"
+    "MENU_LATERAL": {
+        "AGENDAMENTOS": "Agenda",
+        "PACIENTES": "Pacientes",
+        "SAIR": "Sair"
     },
     "ERRO": {
         "TEXTO": "Não é possível exibir essas informações no momento. Por favor, tente mais tarde.",
