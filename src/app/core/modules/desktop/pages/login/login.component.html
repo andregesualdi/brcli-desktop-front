@@ -1,15 +1,14 @@
 <div class="login">
     <img class="login__logo" src="../../../../../../assets/images/logo_broccoli.svg" />
-    <div class="login__card" [hidden]="loading || erro || nutricionista">
+    <div class="login__card" [hidden]="loading || erro || paciente">
         <img class="login__card--nome" src="../../../../../../assets/images/nome_broccoli.svg" />
         <app-input-texto class="login__card--login" [placeholder]="'LOGIN.LOGIN' | translate " (valorDigitado)="recuperarLogin($event)"></app-input-texto>
         <app-input-texto class="login__card--senha" tipo="password" [placeholder]="'LOGIN.SENHA' | translate " (valorDigitado)="recuperarSenha($event)"></app-input-texto>
-        <a (click)="esqueceuSenha()" class="login__card--esqueceu-senha">{{ 'LOGIN.ESQUECEU_SENHA' | translate  }}</a>
+        <a role="link" type="link" (click)="esqueceuSenha()" class="login__card--esqueceu-senha">{{ 'LOGIN.ESQUECEU_SENHA' | translate  }}</a>
         <div class="login__card--alerta" [ngClass]="{
             'login__card--alerta-ativo': usuarioInvalido
         }">{{ 'LOGIN.INVALIDO' | translate }}</div>
         <app-botao class="login__card--botao" [desabilitado]="desabilitado" (botaoClicado)="acessarApp()" tipoBotao="flutuante-desktop" [texto]="'LOGIN.ACESSAR' | translate "></app-botao>
-        <a  (click)="primeiroAcesso()" class="login__card--primeiro-acesso">{{ 'LOGIN.PRIMEIRO_ACESSO' | translate  }}</a>
     </div>
     <div class="login__card login__card--loading" [hidden]="!loading">
         <app-loading [fullpage]="false"></app-loading>
@@ -19,9 +18,9 @@
         <div class="login__card--descricao">{{ 'ERRO.TEXTO' | translate }}</div>
         <app-botao class="login__card--botao" (botaoClicado)="redirecionarLogin()" tipoBotao="flutuante-desktop" [texto]="'ERRO.BOTAO_OK' | translate "></app-botao>
     </div>
-    <div class="login__card" [hidden]="!nutricionista">
+    <div class="login__card" [hidden]="!paciente">
         <img class="login__card--nome" src="../../../../../../assets/images/nome_broccoli.svg" />
-        <div class="login__card--descricao">{{ 'ERRO.ERRO_NUTRICIONISTA' | translate }}</div>
+        <div class="login__card--descricao">{{ 'ERRO.ERRO_PACIENTE' | translate }}</div>
         <app-botao class="login__card--botao" (botaoClicado)="redirecionarLogin()" tipoBotao="flutuante-desktop" [texto]="'ERRO.BOTAO_OK' | translate "></app-botao>
     </div>
 </div>

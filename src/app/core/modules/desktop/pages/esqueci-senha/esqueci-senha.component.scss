@@ -8,48 +8,49 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    padding: 6.667vw 8.889vw 6.667vw 8.889vw;
+    padding: 1.389vw 1.852vw 1.389vw 1.852vw;
 
     &__logo {
-        padding-bottom: 5.556vw;
+        padding-bottom: 3.704vw;
     }
 
     &__card {
-        padding: 4.444vw 4.444vw 6.667vw;
+        padding: 3.704vw 3.704vw 5.556vw;
         background-color: $cor-card-login;
-        border-radius: 6.667vw;
-        box-shadow: 0vw 1.111vw 6.944vw 0 rgba(0, 0, 0, 0.25);
+        border-radius: 1.389vw;
+        box-shadow: 0vw 0.116vw 0.231vw 0 rgba(0, 0, 0, 0.25);
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         align-content: center;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
-        min-height: 103.333vw;
-        max-height: 103.333vw;
+        width: 27.141vw;
+        min-height: 33.738vw;
+        max-height: 33.738vw;
+        font-size: 1.389vw;
 
         &--loading {
             justify-content: center;
         }
 
         &--nome {
-            padding-bottom: 6.667vw;
+            padding-bottom: 5.556vw;
         }
 
         &--nome-enviado {
-            padding-bottom: 20vw;
+            padding-bottom: 5.556vw;
         }
 
         &--descricao {
-            padding-bottom: 17.778vw;
+            padding-bottom: 3.704vw;
             font-family: 'Manrope-Medium';
             text-align: center;
         }
 
         &--descricao-enviado {
             text-align: center;
-            padding-bottom: 20vw;
+            padding-bottom: 3.704vw;
             font-family: 'Manrope-Medium';
         }
 
@@ -58,7 +59,7 @@
         }
 
         &--login {
-            padding-bottom: 22.222vw;
+            padding-bottom: 7.407vw;
         }
 
         &--login, &--botao {
