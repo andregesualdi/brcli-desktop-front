@@ -1,9 +1,0 @@
-<div class="refeicao">
-    <h1 *ngIf="refeicao.tipo !== 'ceia'" class="refeicao__titulo">{{ 'PLANO_ALIMENTAR.MEU' | translate }} {{ getTipoRefeicao | translate }}</h1>
-    <h1 *ngIf="refeicao.tipo === 'ceia'" class="refeicao__titulo">{{ 'PLANO_ALIMENTAR.MINHA' | translate }} {{ getTipoRefeicao | translate }}</h1>
-    <app-tabela-alimentos [alimentos]="refeicao.alimentos"></app-tabela-alimentos>
-    <div class="refeicao__botao">
-        <app-botao (botaoClicado)="voltar()" [texto]="'PLANO_ALIMENTAR.VOLTAR' | translate"></app-botao>
-    </div>
-</div>
-<app-menu-rodape [selecao]="'refeicao'"></app-menu-rodape>

@@ -6,7 +6,7 @@
     },
     "ERRO": {
         "TEXTO": "Não é possível exibir essas informações no momento. Por favor, tente mais tarde.",
-        "ERRO_NUTRICIONISTA": "Que bom te ver por aqui, nutricionista. No momento, este acesso é apenas para pacientes. Por favor, acesse o Broccoli através do site.",
+        "ERRO_PACIENTE": "Que bom te ver por aqui, paciente! No momento, o acesso de pacientes é somente através do aplicativo para celular. Em breve traremos uma versão web para você.",
         "BOTAO_OK": "Ok"
     },
     "PLANO_ALIMENTAR": {

@@ -14,7 +14,7 @@ export class LoginComponent {
   public desabilitado: boolean = true;
   public login: string = '';
   public senha: string = '';
-  public nutricionista: boolean = false;
+  public paciente: boolean = false;
   public usuarioInvalido: boolean = false;
   public erro: boolean = false;
   public loading: boolean = false;
@@ -51,12 +51,12 @@ export class LoginComponent {
       {
         next: (data: Login) => {
         if (data.authorized) {
-          if (data.userType === "paciente") {
+          if (data.userType === "nutricionista") {
             window.sessionStorage.setItem('usuario', this.login); // Melhorar este ponto, acesso perigoso, analisar outras formas
             this.loading = false;
             this.router.navigate(['plano-alimentar']);
-          } else if (data.userType === "nutricionista") {
-            this.nutricionista = true;
+          } else if (data.userType === "paciente") {
+            this.paciente = true;
           } else {
             this.usuarioInvalido = true;
             this.avisoUsuarioInvalido();
@@ -82,10 +82,6 @@ export class LoginComponent {
 
   public esqueceuSenha(): void {
     this.router.navigate(['esqueci-senha']);
-  }
-
-  public primeiroAcesso(): void {
-    this.router.navigate(['primeiro-acesso']);
   }
 
   private validarCampos(): void {
