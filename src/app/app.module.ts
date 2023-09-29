@@ -20,6 +20,7 @@ import { LoginComponent } from './core/modules/desktop/pages/login/login.compone
 import { EsqueciSenhaComponent } from './core/modules/desktop/pages/esqueci-senha/esqueci-senha.component';
 import { InputTextoComponent } from './core/components/desktop/input-texto/input-texto.component';
 import { MeusAgendamentosComponent } from './core/modules/desktop/pages/meus-agendamentos/meus-agendamentos.component';
+import { CardPacienteComponent } from './core/components/desktop/card-paciente/card-paciente.component';
 
 registerLocaleData(ptBr);
 
@@ -36,7 +37,8 @@ registerLocaleData(ptBr);
     LoginComponent,
     EsqueciSenhaComponent,
     InputTextoComponent,
-    MeusAgendamentosComponent
+    MeusAgendamentosComponent,
+    CardPacienteComponent
   ],
   imports: [
     BrowserModule,

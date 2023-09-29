@@ -1,0 +1,34 @@
+@import '../../../../styles/base-import';
+
+.card-paciente {
+    border-bottom: 0.463vw solid $cor-verde-selecionado;
+    background-color: $cor-branco-padrao;
+    display: flex;
+    align-items: center;
+    padding: 0.926vw;
+    font-size: 1.389vw;
+    font-family: 'Manrope-Medium';
+
+    &__sem-imagem {
+        background: url('../../../../../assets/images/Avatar_SemImagem.svg') no-repeat, $cor-imagem-basica-perfil;
+        background-size: 5.556vw 5.556vw;
+    }
+
+    &__imagem {
+        height: 5.556vw;
+        width: 5.556vw;
+        z-index: 1;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+        margin-right: 0.926vw;
+    }
+
+    &__nome {
+        font-family: 'Manrope-Bold';
+    }
+
+    &__horario {
+        color: $cor-cinza-subtitulo;
+    }
+}

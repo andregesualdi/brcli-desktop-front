@@ -1,0 +1,11 @@
+<div class="card-paciente">
+    <div
+        class="card-paciente__imagem"
+        [ngClass]="{'card-paciente__sem-imagem': !agendamento.imagem }"
+        [ngStyle]="{'background-image': (agendamento.imagem && agendamento.imagem !== '') ? 'url(' + agendamento.imagem + ')' : ''}"
+    ></div>
+    <div class="card-paciente__informacoes">
+        <div class="card-paciente__nome">{{ agendamento.nome }}</div>
+        <div class="card-paciente__horario">{{ agendamento.horario }}</div>
+    </div>
+</div>
