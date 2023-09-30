@@ -4,6 +4,11 @@
         "PACIENTES": "Pacientes",
         "SAIR": "Sair"
     },
+    "MEUS_AGENDAMENTOS": {
+        "TITULO": "Meus agendamentos",
+        "SEM_AGENDAMENTOS": "Você não possui agendamentos para este dia.",
+        "ERRO": "Erro ao carregar agendamentos. Tente novamente mais tarde."
+    },
     "ERRO": {
         "TEXTO": "Não é possível exibir essas informações no momento. Por favor, tente mais tarde.",
         "ERRO_PACIENTE": "Que bom te ver por aqui, paciente! No momento, o acesso de pacientes é somente através do aplicativo para celular. Em breve traremos uma versão web para você.",
@@ -34,12 +39,6 @@
         "METAS_SALVAS": "Metas salvas",
         "ERRO_AO_SALVAR": "Erro ao salvar metas, tente novamente."
     },
-    "PERFIL": {
-        "TITULO": "Meu perfil",
-        "TITULO_NUTRICIONISTA": "Nutricionista",
-        "BOTAO_SAIR": "Sair do aplicativo",
-        "ALTURA": "Altura: "
-    },
     "LOGIN": {
         "LOGIN": "Login",
         "SENHA": "Senha",
@@ -47,15 +46,6 @@
         "ACESSAR": "Acessar",
         "PRIMEIRO_ACESSO": "Primeiro acesso",
         "INVALIDO": "Usuário ou senha inválidos"
-    },
-    "PRIMEIRO_ACESSO": {
-        "DESCRICAO": "Informe o código de acesso fornecido pelo seu nutricionista",
-        "CODIGO_ACESSO": "Código de acesso",
-        "VALIDAR": "Validar",
-        "FINALIZE": "Finalize seu cadastro",
-        "NOME_USUARIO": "Nome de usuário",
-        "SENHA": "Senha",
-        "CADASTRAR": "Cadastrar"
     },
     "RECUPERAR_SENHA": {
         "DESCRICAO": "Informe seu usuário",

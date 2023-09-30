@@ -1,0 +1,9 @@
+- request:
+    method: GET
+    url: /brcli-gateway/brcli-bff-desktop/agenda
+  response:
+    latency: 1250
+    status: 200
+    headers:
+      content-type: application/json
+    file: '../../mocks/agenda.json'

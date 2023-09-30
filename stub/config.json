@@ -10,6 +10,7 @@
             "status": 200
         },
         "requests": [
+            "mappings/get/agenda.yaml",
             "mappings/get/plano-alimentar.yaml",
             "mappings/get/dados-paciente.yaml",
             "mappings/get/metas.yaml",

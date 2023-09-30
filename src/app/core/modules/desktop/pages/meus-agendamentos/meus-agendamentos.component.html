@@ -1,1 +1,101 @@
-Funcionando!
+<app-menu-lateral [selecao]="'agenda'"></app-menu-lateral>
+<div class="meus-agendamentos__borda-superior">
+    <div class="meus-agendamentos__texto">
+        {{ 'MEUS_AGENDAMENTOS.TITULO' | translate }}
+    </div>
+</div>
+<div class="meus-agendamentos__container">
+    <div class="meus-agendamentos__card">
+        <div class="meus-agendamentos__card--data">
+            {{ horaUtils.gerarDia(0) | date:'d \'de\' MMMM':'GMT-3' }}
+        </div>
+        <div class="meus-agendamentos__card--agendamentos" *ngIf="!loadingHoje && !erroHoje && !semAgendamentoHoje">
+            <div *ngFor="let agendamento of agendaHoje!.agendamentos">
+                <app-card-paciente [agendamento]="agendamento"></app-card-paciente>
+            </div>
+        </div>
+        <div class="meus-agendamentos__card--agendamentos" *ngIf="loadingHoje">
+            <div class="meus-agendamentos__card--loading">
+                <app-loading [fullpage]="false"></app-loading>
+            </div>
+        </div>
+        <div class="meus-agendamentos__card--agendamentos" *ngIf="semAgendamentoHoje">
+            <div class="meus-agendamentos__card--erro">
+                <img src="../../../../../../assets/images/Erro.svg" />
+                <div class="meus-agendamentos__descricao-erro">
+                    {{ 'MEUS_AGENDAMENTOS.SEM_AGENDAMENTOS' | translate }}
+                </div>
+            </div>
+        </div>
+        <div class="meus-agendamentos__card--agendamentos" *ngIf="erroHoje">
+            <div class="meus-agendamentos__card--erro">
+                <img src="../../../../../../assets/images/Erro.svg" />
+                <div class="meus-agendamentos__descricao-erro">
+                    {{ 'MEUS_AGENDAMENTOS.ERRO' | translate }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="meus-agendamentos__card">
+        <div class="meus-agendamentos__card--data">
+            {{ horaUtils.gerarDia(24) | date:'d \'de\' MMMM':'GMT-3' }}
+        </div>
+        <div class="meus-agendamentos__card--agendamentos" *ngIf="!loadingAmanha && !erroAmanha && !semAgendamentoAmanha">
+            <div *ngFor="let agendamento of agendaAmanha!.agendamentos">
+                <app-card-paciente [agendamento]="agendamento"></app-card-paciente>
+            </div>
+        </div>
+        <div class="meus-agendamentos__card--agendamentos" *ngIf="loadingAmanha">
+            <div class="meus-agendamentos__card--loading">
+                <app-loading [fullpage]="false"></app-loading>
+            </div>
+        </div>
+        <div class="meus-agendamentos__card--agendamentos" *ngIf="semAgendamentoAmanha">
+            <div class="meus-agendamentos__card--erro">
+                <img src="../../../../../../assets/images/Erro.svg" />
+                <div class="meus-agendamentos__descricao-erro">
+                    {{ 'MEUS_AGENDAMENTOS.SEM_AGENDAMENTOS' | translate }}
+                </div>
+            </div>
+        </div>
+        <div class="meus-agendamentos__card--agendamentos" *ngIf="erroAmanha">
+            <div class="meus-agendamentos__card--erro">
+                <img src="../../../../../../assets/images/Erro.svg" />
+                <div class="meus-agendamentos__descricao-erro">
+                    {{ 'MEUS_AGENDAMENTOS.ERRO' | translate }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="meus-agendamentos__card">
+        <div class="meus-agendamentos__card--data">
+            {{ horaUtils.gerarDia(48) | date:'d \'de\' MMMM':'GMT-3' }}
+        </div>
+        <div class="meus-agendamentos__card--agendamentos" *ngIf="!loadingDepoisAmanha && !erroAposAmanha && !semAgendamentoDepoisAmanha">
+            <div *ngFor="let agendamento of agendaDepoisAmanha!.agendamentos">
+                <app-card-paciente [agendamento]="agendamento"></app-card-paciente>
+            </div>
+        </div>
+        <div class="meus-agendamentos__card--agendamentos" *ngIf="loadingDepoisAmanha">
+            <div class="meus-agendamentos__card--loading">
+                <app-loading [fullpage]="false"></app-loading>
+            </div>
+        </div>
+        <div class="meus-agendamentos__card--agendamentos" *ngIf="semAgendamentoDepoisAmanha">
+            <div class="meus-agendamentos__card--erro">
+                <img src="../../../../../../assets/images/Erro.svg" />
+                <div class="meus-agendamentos__descricao-erro">
+                    {{ 'MEUS_AGENDAMENTOS.SEM_AGENDAMENTOS' | translate }}
+                </div>
+            </div>
+        </div>
+        <div class="meus-agendamentos__card--agendamentos" *ngIf="erroAposAmanha">
+            <div class="meus-agendamentos__card--erro">
+                <img src="../../../../../../assets/images/Erro.svg" />
+                <div class="meus-agendamentos__descricao-erro">
+                    {{ 'MEUS_AGENDAMENTOS.ERRO' | translate }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
