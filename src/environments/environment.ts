@@ -6,12 +6,12 @@ export const environment = {
         context: '/brcli-gateway/brcli-bff-desktop',
         endpoints: {
             agenda: '/agenda',
-            alterarImagem: '/alterar-imagem',
             avaliacaoFisica: '/avaliacao-fisica',
             cadastroPaciente: '/cadastro-paciente',
             dadosPaciente: '/dados-paciente',
             login: '/login',
             metas: '/metas',
+            pacientes: '/pacientes',
             planoAlimentar: '/plano-alimentar',
             primeiroAcesso: '/primeiro-acesso',
             recuperarSenha: '/recuperar-senha',

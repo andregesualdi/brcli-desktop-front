@@ -11,6 +11,7 @@
         },
         "requests": [
             "mappings/get/agenda.yaml",
+            "mappings/get/pacientes.yaml",
             "mappings/get/plano-alimentar.yaml",
             "mappings/get/dados-paciente.yaml",
             "mappings/get/metas.yaml",
@@ -19,7 +20,6 @@
             "mappings/post/login.yaml",
             "mappings/post/primeiro-acesso.yaml",
             "mappings/post/recuperar-senha.yaml",
-            "mappings/put/alterar-imagem.yaml",
             "mappings/put/salvar-metas.yaml"
         ]
     },

@@ -1,9 +1,0 @@
-- request:
-    method: PUT
-    url: /brcli-gateway/brcli-bff-desktop/alterar-imagem
-  response:
-    latency: 2500
-    status: 200
-    headers:
-      content-type: application/json
-    file: '../../mocks/alterar-imagem.json'

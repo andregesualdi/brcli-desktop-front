@@ -9,6 +9,13 @@
         "SEM_AGENDAMENTOS": "Você não possui agendamentos para este dia.",
         "ERRO": "Erro ao carregar agendamentos. Tente novamente mais tarde."
     },
+    "PACIENTES": {
+        "TITULO": "Pacientes",
+        "NOME": "Nome",
+        "NOVO_PACIENTE": "Novo paciente",
+        "ERRO": "Erro ao carregar pacientes. Tente novamente mais tarde.",
+        "SEM_PACIENTES": "Você não possui pacientes no momento. Cadastre um paciente para acessar mais detalhes."
+    },
     "ERRO": {
         "TEXTO": "Não é possível exibir essas informações no momento. Por favor, tente mais tarde.",
         "ERRO_PACIENTE": "Que bom te ver por aqui, paciente! No momento, o acesso de pacientes é somente através do aplicativo para celular. Em breve traremos uma versão web para você.",

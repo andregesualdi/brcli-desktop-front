@@ -21,6 +21,9 @@ import { EsqueciSenhaComponent } from './core/modules/desktop/pages/esqueci-senh
 import { InputTextoComponent } from './core/components/desktop/input-texto/input-texto.component';
 import { MeusAgendamentosComponent } from './core/modules/desktop/pages/meus-agendamentos/meus-agendamentos.component';
 import { CardPacienteComponent } from './core/components/desktop/card-paciente/card-paciente.component';
+import { PacientesComponent } from './core/modules/desktop/pages/pacientes/pacientes.component';
+import { CardPessoaComponent } from './core/components/desktop/card-pessoa/card-pessoa.component';
+import { FilterPipe } from './core/modules/desktop/pipes/filter.pipe';
 
 registerLocaleData(ptBr);
 
@@ -38,7 +41,10 @@ registerLocaleData(ptBr);
     EsqueciSenhaComponent,
     InputTextoComponent,
     MeusAgendamentosComponent,
-    CardPacienteComponent
+    CardPacienteComponent,
+    PacientesComponent,
+    CardPessoaComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

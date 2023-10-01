@@ -1,0 +1,10 @@
+<div class="card-pessoa">
+    <div
+        class="card-pessoa__imagem"
+        [ngClass]="{'card-pessoa__sem-imagem': !paciente.imagem }"
+        [ngStyle]="{'background-image': (paciente.imagem && paciente.imagem !== '') ? 'url(' + paciente.imagem + ')' : ''}"
+    ></div>
+    <div class="card-pessoa__informacoes">
+        <div class="card-pessoa__nome">{{ paciente.nome }}</div>
+    </div>
+</div>

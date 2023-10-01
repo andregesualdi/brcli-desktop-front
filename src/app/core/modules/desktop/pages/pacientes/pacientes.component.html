@@ -1,0 +1,44 @@
+<app-menu-lateral [selecao]="'pacientes'"></app-menu-lateral>
+<div class="pacientes__borda-superior">
+    <div class="pacientes__texto">
+        {{ 'PACIENTES.TITULO' | translate }}
+    </div>
+</div>
+<div class="pacientes__container">
+    <div class="pacientes__card" *ngIf="!loading && !erro && !semPacientes">
+        <div class="pacientes__topo">
+            <div class="pacientes__busca">
+                <app-input-texto (valorDigitado)="buscar($event)" [placeholder]="'PACIENTES.NOME' | translate"></app-input-texto>
+            </div>
+            <div class="pacientes__novo-cadastro">
+                <app-botao  (botaoClicado)="cadastrarPacientes()" [texto]="'PACIENTES.NOVO_PACIENTE' | translate"></app-botao>
+            </div>
+            <div class="pacientes__cadastro"></div>
+        </div>
+        <div class="pacientes__listagem">
+            <app-card-pessoa *ngFor="let paciente of pacientes | filter: search" [paciente]="paciente"></app-card-pessoa>
+        </div>
+    </div>
+    <div class="pacientes__card pacientes__card--center" *ngIf="loading">
+        <app-loading [fullpage]="false"></app-loading>
+    </div>
+    <div class="pacientes__card pacientes__card--center" *ngIf="erro">
+        <div class="pacientes__card--erro">
+            <img src="../../../../../../assets/images/Erro.svg" />
+            <div class="pacientes__descricao-erro">
+                {{ 'PACIENTES.ERRO' | translate }}
+            </div>
+        </div>
+    </div>
+    <div class="pacientes__card pacientes__card--center" *ngIf="semPacientes">
+        <div class="pacientes__card--erro">
+            <img src="../../../../../../assets/images/Erro.svg" />
+            <div class="pacientes__descricao-erro">
+                {{ 'PACIENTES.SEM_PACIENTES' | translate }}
+            </div>
+            <div class="pacientes__botao">
+                <app-botao  (botaoClicado)="cadastrarPacientes()" [texto]="'PACIENTES.NOVO_PACIENTE' | translate"></app-botao>
+            </div>
+        </div>
+    </div>
+</div>
