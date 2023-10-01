@@ -33,6 +33,10 @@ export class MenuLateralComponent implements OnInit {
         this.pacientesSelecionado = true;
         this.router.navigate(['pacientes']);
         break;
+      case 'cadastro':
+        this.agendaSelecionada = false;
+        this.pacientesSelecionado = true;
+        break;
     }
   }
 

@@ -11,7 +11,7 @@ import { MenuLateralComponent } from './core/components/desktop/menu-lateral/men
 import { CardInformacaoComponent } from './core/components/desktop/card-informacao/card-informacao.component';
 import { TabelaAlimentosComponent } from './core/components/desktop/tabela/tabela-alimentos.component';
 import { CardCheckboxComponent } from './core/components/desktop/card-checkbox/card-checkbox.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoadingComponent } from './core/components/desktop/loading/loading.component';
 import { ErroComponent } from './core/components/erro/erro.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -24,6 +24,7 @@ import { CardPacienteComponent } from './core/components/desktop/card-paciente/c
 import { PacientesComponent } from './core/modules/desktop/pages/pacientes/pacientes.component';
 import { CardPessoaComponent } from './core/components/desktop/card-pessoa/card-pessoa.component';
 import { FilterPipe } from './core/modules/desktop/pipes/filter.pipe';
+import { CadastroPacientesComponent } from './core/modules/desktop/pages/cadastro-pacientes/cadastro-pacientes.component';
 
 registerLocaleData(ptBr);
 
@@ -44,12 +45,14 @@ registerLocaleData(ptBr);
     CardPacienteComponent,
     PacientesComponent,
     CardPessoaComponent,
-    FilterPipe
+    FilterPipe,
+    CadastroPacientesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader:  {

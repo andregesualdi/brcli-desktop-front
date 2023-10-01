@@ -1,5 +1,8 @@
 export class CadastrarPaciente {
-    public codigo: string | undefined;
-    public usuario: string | undefined;
-    public senha: string | undefined;
+    public nome: string | undefined;
+    public telefone: string | undefined;
+    public email: string | undefined;
+    public dataNasc: string | undefined;
+    public altura: number | undefined;
+    public peso: number | undefined;
 }

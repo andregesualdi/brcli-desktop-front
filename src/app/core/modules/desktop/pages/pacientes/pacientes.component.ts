@@ -30,7 +30,7 @@ export class PacientesComponent implements OnInit {
   }
 
   public cadastrarPacientes(): void {
-    // colocar router quando ter página pronta
+    this.router.navigate(['cadastrar-paciente']);
   }
 
   private recuperarPacientes(): void {

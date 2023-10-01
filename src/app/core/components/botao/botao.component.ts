@@ -10,6 +10,9 @@ export class BotaoComponent {
   public texto: string = '';
 
   @Input()
+  public tipo?: string = 'button';
+
+  @Input()
   public tipoBotao: string = 'primario-desktop';
 
   @Input()

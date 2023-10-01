@@ -5,6 +5,8 @@ import { environment } from '../../../environments/environment';
 import { HttpHeaders } from '@angular/common/http';
 import { Agenda } from '../shared/models/agenda.model';
 import { Paciente } from '../shared/models/paciente.model';
+import { CadastrarPaciente } from '../shared/models/cadastrar-paciente.model';
+import { ResponseSucesso } from '../shared/models/response-sucesso.model';
 
 @Injectable({
   providedIn: 'root'
@@ -32,5 +34,13 @@ export class DadosService {
     headers.append('x-usuario', usuario);
     return this.rest.get(environment.api.endpoints.pacientes,
       headers);
+  }
+
+  public cadastrarPaciente(usuario: string, paciente: CadastrarPaciente): Observable<ResponseSucesso> {
+    const headers = new HttpHeaders().set(
+      'Content-type', 'application/json'
+    );
+    headers.append('x-usuario', usuario);
+    return this.rest.post(environment.api.endpoints.cadastroPaciente, paciente, headers);
   }
 }
