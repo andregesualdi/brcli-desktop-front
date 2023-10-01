@@ -5,8 +5,6 @@ import { Observable } from 'rxjs';
 import { Login } from '../shared/models/login.model';
 import { environment } from '../../../environments/environment';
 import { HttpHeaders } from '@angular/common/http';
-import { RequisicaoCodigo } from '../shared/models/requisicao-codigo.model';
-import { CodigoValidado } from '../shared/models/codigo-validado.model';
 import { RecuperarSenha } from '../shared/models/recuperar-senha.model';
 import { EmailEnviado } from '../shared/models/email-enviado.model';
 
@@ -21,12 +19,6 @@ export class AcessoService {
 
   public logar(req: RequisicaoLogin): Observable<Login> {
     return this.rest.post(environment.api.endpoints.login,
-      req,
-      new HttpHeaders().set('Content-type', 'application/json'));
-  }
-
-  public validarCodigo(req: RequisicaoCodigo): Observable<CodigoValidado> {
-    return this.rest.post(environment.api.endpoints.primeiroAcesso,
       req,
       new HttpHeaders().set('Content-type', 'application/json'));
   }

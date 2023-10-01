@@ -17,6 +17,7 @@
             "mappings/get/metas.yaml",
             "mappings/get/avaliacao-fisica.yaml",
             "mappings/post/cadastro-paciente.yaml",
+            "mappings/post/editar-paciente.yaml",
             "mappings/post/login.yaml",
             "mappings/post/primeiro-acesso.yaml",
             "mappings/post/recuperar-senha.yaml",

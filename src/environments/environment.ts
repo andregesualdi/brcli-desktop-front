@@ -8,6 +8,7 @@ export const environment = {
             agenda: '/agenda',
             avaliacaoFisica: '/avaliacao-fisica',
             cadastroPaciente: '/cadastro-paciente',
+            editarPaciente: '/editar-paciente',
             dadosPaciente: '/dados-paciente',
             login: '/login',
             metas: '/metas',

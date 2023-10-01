@@ -1,6 +1,6 @@
 @import '../../../../../styles/base-import';
 
-.cadastro-pacientes {
+.editar-pacientes {
     aspect-ratio: 16 / 9;
 
     &__borda-superior {
@@ -78,7 +78,7 @@
     }
 }
 
-.cadastro-pacientes__input > input {
+.editar-pacientes__input > input {
     height: 2.315vw;
     border: 0;
     border-bottom: 0.231vw solid $cor-letra-nao-selecionada;

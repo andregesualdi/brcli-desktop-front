@@ -27,6 +27,10 @@
         "PESO": "Peso",
         "BOTAO_CADASTRAR": "Cadastrar"
     },
+    "EDITAR_PACIENTES": {
+        "TITULO": "Editar informações do paciente",
+        "BOTAO_SALVAR": "Salvar"
+    },
     "ERRO": {
         "TEXTO": "Não é possível exibir essas informações no momento. Por favor, tente mais tarde.",
         "ERRO_PACIENTE": "Que bom te ver por aqui, paciente! No momento, o acesso de pacientes é somente através do aplicativo para celular. Em breve traremos uma versão web para você.",

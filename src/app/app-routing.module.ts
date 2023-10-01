@@ -5,13 +5,15 @@ import { EsqueciSenhaComponent } from './core/modules/desktop/pages/esqueci-senh
 import { MeusAgendamentosComponent } from './core/modules/desktop/pages/meus-agendamentos/meus-agendamentos.component';
 import { PacientesComponent } from './core/modules/desktop/pages/pacientes/pacientes.component';
 import { CadastroPacientesComponent } from './core/modules/desktop/pages/cadastro-pacientes/cadastro-pacientes.component';
+import { EditarPacienteComponent } from './core/modules/desktop/pages/editar-paciente/editar-paciente.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'esqueci-senha', component: EsqueciSenhaComponent },
   { path: 'meus-agendamentos', component: MeusAgendamentosComponent },
   { path: 'pacientes', component: PacientesComponent },
-  { path: 'cadastrar-paciente', component: CadastroPacientesComponent }
+  { path: 'cadastrar-paciente', component: CadastroPacientesComponent },
+  { path: 'editar-paciente/:id', component: EditarPacienteComponent, data: { public: true } }
 ];
 
 @NgModule({

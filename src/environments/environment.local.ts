@@ -9,6 +9,7 @@ export const environment = {
             avaliacaoFisica: '/avaliacao-fisica',
             cadastroPaciente: '/cadastro-paciente',
             dadosPaciente: '/dados-paciente',
+            editarPaciente: '/editar-paciente',
             login: '/login',
             metas: '/metas',
             pacientes: '/pacientes',

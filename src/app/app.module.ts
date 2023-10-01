@@ -25,6 +25,7 @@ import { PacientesComponent } from './core/modules/desktop/pages/pacientes/pacie
 import { CardPessoaComponent } from './core/components/desktop/card-pessoa/card-pessoa.component';
 import { FilterPipe } from './core/modules/desktop/pipes/filter.pipe';
 import { CadastroPacientesComponent } from './core/modules/desktop/pages/cadastro-pacientes/cadastro-pacientes.component';
+import { EditarPacienteComponent } from './core/modules/desktop/pages/editar-paciente/editar-paciente.component';
 
 registerLocaleData(ptBr);
 
@@ -46,7 +47,8 @@ registerLocaleData(ptBr);
     PacientesComponent,
     CardPessoaComponent,
     FilterPipe,
-    CadastroPacientesComponent
+    CadastroPacientesComponent,
+    EditarPacienteComponent
   ],
   imports: [
     BrowserModule,
