@@ -52,7 +52,10 @@ export class CadastroPacientesComponent {
         this.loading = false;
         this.router.navigate(['pacientes']);
       }
-    })
+    });
+  }
 
+  public voltar(): void {
+    this.router.navigate(['pacientes']);
   }
 }

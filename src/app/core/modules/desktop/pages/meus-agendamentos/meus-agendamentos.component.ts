@@ -3,7 +3,6 @@ import { Agenda } from '../../../../shared/models/agenda.model';
 import { HoraUtils } from '../../../../shared/utils/hora.utils';
 import { DadosService } from 'src/app/core/services/dados.service';
 import { Router } from '@angular/router';
-import { Agendamento } from 'src/app/core/shared/models/agendamento.model';
 
 @Component({
   selector: 'app-meus-agendamentos',
@@ -84,8 +83,7 @@ export class MeusAgendamentosComponent implements OnInit {
     });
   }
 
-  public redirecionarPaciente(agendamento: Agendamento): void {
-    console.log(agendamento.codigoPaciente);
-    // após ter página de paciente, implantar router.navigate
+  public redirecionarPaciente(event: any): void {
+    this.router.navigate(['paciente', event]);
   }
 }

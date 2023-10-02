@@ -1,6 +1,7 @@
 @import '../../../../styles/base-import';
 
 .card-paciente {
+    cursor: pointer;
     border-bottom: 0.463vw solid $cor-verde-selecionado;
     background-color: $cor-branco-padrao;
     display: flex;

@@ -20,15 +20,7 @@ export class EditarPacienteComponent implements OnInit {
     'peso': new FormControl(null, [ Validators.required, Validators.minLength(2), Validators.maxLength(3) ]),
   });
   public loading: boolean = false;
-  public paciente: DadosPaciente = {
-    nome: 'Karla Cruz',
-    telefone: '12926322222',
-    email: 'karla@cruz.com.br',
-    dataNascimento: '1992-04-01',
-    altura: 163,
-    peso: 60,
-    codigoPaciente: '120A775522'
-  };
+  public paciente: DadosPaciente = new DadosPaciente();
 
   constructor(
     private dados: DadosService,
@@ -36,12 +28,17 @@ export class EditarPacienteComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.paciente = history.state.data;
     this.cadastro.controls['nome'].setValue(this.paciente.nome);
     this.cadastro.controls['telefone'].setValue(this.paciente.telefone);
     this.cadastro.controls['email'].setValue(this.paciente.email);
     this.cadastro.controls['dataNasc'].setValue(this.paciente.dataNascimento);
     this.cadastro.controls['altura'].setValue(this.paciente.altura);
     this.cadastro.controls['peso'].setValue(this.paciente.peso);
+  }
+
+  public voltar(): void {
+    this.router.navigate(['paciente', this.paciente.codigoPaciente]);
   }
 
   public salvarDados(): void {
@@ -59,17 +56,17 @@ export class EditarPacienteComponent implements OnInit {
       next: (data: ResponseSucesso) => {
         if (data.sucesso) {
           alert('Paciente editado com sucesso');
-          this.router.navigate(['pacientes']);
+          this.router.navigate(['paciente', this.paciente.codigoPaciente]);
         } else {
           alert('Erro ao editar paciente');
-          this.router.navigate(['pacientes']);
+          this.router.navigate(['paciente', this.paciente.codigoPaciente]);
         }
         this.loading = false;
       },
       error: () => {
         alert('Erro ao editar paciente');
         this.loading = false;
-        this.router.navigate(['pacientes']);
+        this.router.navigate(['paciente', this.paciente.codigoPaciente]);
       }
     })
   }

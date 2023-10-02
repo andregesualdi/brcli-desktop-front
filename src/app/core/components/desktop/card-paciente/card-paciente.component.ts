@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Agendamento } from '../../../shared/models/agendamento.model';
 
 @Component({
@@ -9,4 +9,11 @@ import { Agendamento } from '../../../shared/models/agendamento.model';
 export class CardPacienteComponent {
   @Input()
   public agendamento: Agendamento = new Agendamento;
+
+  @Output()
+  public botaoClicado: EventEmitter<any> = new EventEmitter<any>();
+
+  public clique(event: any): void {
+    this.botaoClicado.emit(this.agendamento.codigoPaciente);
+  }
 }

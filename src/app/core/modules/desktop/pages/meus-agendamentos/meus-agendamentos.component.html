@@ -11,7 +11,7 @@
         </div>
         <div class="meus-agendamentos__card--agendamentos" *ngIf="!loadingHoje && !erroHoje && !semAgendamentoHoje">
             <div *ngFor="let agendamento of agendaHoje!.agendamentos">
-                <app-card-paciente [agendamento]="agendamento"></app-card-paciente>
+                <app-card-paciente (botaoClicado)="redirecionarPaciente($event)" [agendamento]="agendamento"></app-card-paciente>
             </div>
         </div>
         <div class="meus-agendamentos__card--agendamentos" *ngIf="loadingHoje">
@@ -42,7 +42,7 @@
         </div>
         <div class="meus-agendamentos__card--agendamentos" *ngIf="!loadingAmanha && !erroAmanha && !semAgendamentoAmanha">
             <div *ngFor="let agendamento of agendaAmanha!.agendamentos">
-                <app-card-paciente [agendamento]="agendamento"></app-card-paciente>
+                <app-card-paciente (botaoClicado)="redirecionarPaciente($event)" [agendamento]="agendamento"></app-card-paciente>
             </div>
         </div>
         <div class="meus-agendamentos__card--agendamentos" *ngIf="loadingAmanha">
@@ -73,7 +73,7 @@
         </div>
         <div class="meus-agendamentos__card--agendamentos" *ngIf="!loadingDepoisAmanha && !erroAposAmanha && !semAgendamentoDepoisAmanha">
             <div *ngFor="let agendamento of agendaDepoisAmanha!.agendamentos">
-                <app-card-paciente [agendamento]="agendamento"></app-card-paciente>
+                <app-card-paciente (botaoClicado)="redirecionarPaciente($event)" [agendamento]="agendamento"></app-card-paciente>
             </div>
         </div>
         <div class="meus-agendamentos__card--agendamentos" *ngIf="loadingDepoisAmanha">

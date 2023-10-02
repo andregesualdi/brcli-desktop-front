@@ -33,6 +33,10 @@ export class PacientesComponent implements OnInit {
     this.router.navigate(['cadastrar-paciente']);
   }
 
+  public redirecionarPaciente(event: any): void {
+    this.router.navigate(['paciente', event]);
+  }
+
   private recuperarPacientes(): void {
     this.dados.recuperarPacientes('1200A').subscribe({
       next: (data: Paciente[]) => {

@@ -8,6 +8,8 @@ import { Paciente } from '../shared/models/paciente.model';
 import { CadastrarPaciente } from '../shared/models/cadastrar-paciente.model';
 import { ResponseSucesso } from '../shared/models/response-sucesso.model';
 import { DadosPaciente } from '../shared/models/dados-paciente.model';
+import { PerfilPaciente } from '../shared/models/perfil-paciente.model';
+import { CodigoAcessoGerado } from '../shared/models/codigo.model';
 
 @Injectable({
   providedIn: 'root'
@@ -51,5 +53,23 @@ export class DadosService {
     );
     headers.append('x-usuario', usuario);
     return this.rest.post(environment.api.endpoints.editarPaciente, pacienteEditado, headers);
+  }
+
+  public recuperarPerfil(usuario: string, codigoPaciente: string): Observable<PerfilPaciente> {
+    const headers = new HttpHeaders().set(
+      'Content-type', 'application/json'
+    );
+    headers.append('x-usuario', usuario);
+    headers.append('codigo-paciente', codigoPaciente);
+    return this.rest.get(environment.api.endpoints.perfilPaciente, headers);
+  }
+
+  public gerarCodigo(usuario: string, codigoPaciente: string): Observable<CodigoAcessoGerado> {
+    const headers = new HttpHeaders().set(
+      'Content-type', 'application/json'
+    );
+    headers.append('x-usuario', usuario);
+    headers.append('codigo-paciente', codigoPaciente);
+    return this.rest.get(environment.api.endpoints.gerarCodigo, headers);
   }
 }

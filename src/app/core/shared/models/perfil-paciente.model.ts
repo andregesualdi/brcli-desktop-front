@@ -12,4 +12,5 @@ export class PerfilPaciente {
     public imc: number | undefined;
     public usuario: string | undefined;
     public codigoAcesso: string | undefined;
+    public idade: number | undefined;
 }

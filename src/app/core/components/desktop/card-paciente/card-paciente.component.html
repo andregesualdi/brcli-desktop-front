@@ -1,4 +1,4 @@
-<div class="card-paciente">
+<div class="card-paciente" (click)="clique($event)">
     <div
         class="card-paciente__imagem"
         [ngClass]="{'card-paciente__sem-imagem': !agendamento.imagem }"

@@ -6,6 +6,7 @@ import { MeusAgendamentosComponent } from './core/modules/desktop/pages/meus-age
 import { PacientesComponent } from './core/modules/desktop/pages/pacientes/pacientes.component';
 import { CadastroPacientesComponent } from './core/modules/desktop/pages/cadastro-pacientes/cadastro-pacientes.component';
 import { EditarPacienteComponent } from './core/modules/desktop/pages/editar-paciente/editar-paciente.component';
+import { PerfilPacienteComponent } from './core/modules/desktop/pages/perfil-paciente/perfil-paciente.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'meus-agendamentos', component: MeusAgendamentosComponent },
   { path: 'pacientes', component: PacientesComponent },
   { path: 'cadastrar-paciente', component: CadastroPacientesComponent },
+  { path: 'paciente/:id', component: PerfilPacienteComponent, data: { public: true } },
   { path: 'editar-paciente/:id', component: EditarPacienteComponent, data: { public: true } }
 ];
 

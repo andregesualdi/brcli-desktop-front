@@ -6,7 +6,7 @@
 </div>
 <div class="cadastro-pacientes__container">
     <div class="cadastro-pacientes__card" *ngIf="!loading">
-        <button type="button" class="cadastro-pacientes__voltar">
+        <button (click)="voltar()" type="button" class="cadastro-pacientes__voltar">
             <img class="cadastro-pacientes__seta" src="../../../../../../assets/images/Seta_Esquerda.svg" />
             <div class="cadastro-pacientes__voltar--texto">{{ 'CADASTRO_PACIENTE.BOTAO_VOLTAR' | translate }}</div>
         </button>

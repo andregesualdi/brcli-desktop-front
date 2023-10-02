@@ -31,6 +31,24 @@
         "TITULO": "Editar informações do paciente",
         "BOTAO_SALVAR": "Salvar"
     },
+    "PERFIL_PACIENTE": {
+        "PACIENTE_DESDE": "Paciente desde ",
+        "PROXIMO_AGENDAMENTO": "Próximo agendamento em ",
+        "PESO": "Peso",
+        "ALTURA": "Altura",
+        "IMC": "IMC",
+        "IDADE": "Idade",
+        "EMAIL": "E-mail",
+        "TELEFONE_CELULAR": "Telefone ou celular",
+        "NOME_USUARIO": "Nome de usuário do Broccoli",
+        "CODIGO_ACESSO": "Código de acesso Broccoli",
+        "EDITAR": "Editar informações",
+        "GERAR_CODIGO": "Gerar novo código de acesso",
+        "PLANO": "Plano alimentar",
+        "METAS": "Metas",
+        "AVALIACAO": "Avaliação física",
+        "CONSULTA": "Consulta"
+    },
     "ERRO": {
         "TEXTO": "Não é possível exibir essas informações no momento. Por favor, tente mais tarde.",
         "ERRO_PACIENTE": "Que bom te ver por aqui, paciente! No momento, o acesso de pacientes é somente através do aplicativo para celular. Em breve traremos uma versão web para você.",

@@ -8,4 +8,7 @@ import { Component, Input } from '@angular/core';
 export class LoadingComponent {
   @Input()
   public fullpage: boolean = true;
+
+  @Input()
+  public small?: boolean = false;
 }

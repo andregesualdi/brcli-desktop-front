@@ -10,6 +10,8 @@ export const environment = {
             cadastroPaciente: '/cadastro-paciente',
             dadosPaciente: '/dados-paciente',
             editarPaciente: '/editar-paciente',
+            perfilPaciente: '/perfil-paciente',
+            gerarCodigo: '/gerar-codigo',
             login: '/login',
             metas: '/metas',
             pacientes: '/pacientes',

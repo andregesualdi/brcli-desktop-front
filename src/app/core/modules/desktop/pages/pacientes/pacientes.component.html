@@ -16,7 +16,7 @@
             <div class="pacientes__cadastro"></div>
         </div>
         <div class="pacientes__listagem">
-            <app-card-pessoa *ngFor="let paciente of pacientes | filter: search" [paciente]="paciente"></app-card-pessoa>
+            <app-card-pessoa (botaoClicado)="redirecionarPaciente($event)" *ngFor="let paciente of pacientes | filter: search" [paciente]="paciente"></app-card-pessoa>
         </div>
     </div>
     <div class="pacientes__card pacientes__card--center" *ngIf="loading">
