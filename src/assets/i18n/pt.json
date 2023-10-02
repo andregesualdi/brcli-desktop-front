@@ -49,6 +49,15 @@
         "AVALIACAO": "Avaliação física",
         "CONSULTA": "Consulta"
     },
+    "CONSULTA": {
+        "TITULO": "Consulta",
+        "TEXTO": "Estamos trabalhando para uma melhor experiência na parte de agendamento de consultas. No momento, você pode informar, alterar ou remover a data da próxima consulta do seu paciente.",
+        "DESCRICAO": "Este paciente ainda não possui consulta agendada.",
+        "DATA": "Data da consulta",
+        "HORA": "Hora da consulta",
+        "BOTAO_AGENDAR": "Agendar",
+        "SEM_AGENDAMENTO": "Este paciente ainda não possui consulta agendada."
+    },
     "ERRO": {
         "TEXTO": "Não é possível exibir essas informações no momento. Por favor, tente mais tarde.",
         "ERRO_PACIENTE": "Que bom te ver por aqui, paciente! No momento, o acesso de pacientes é somente através do aplicativo para celular. Em breve traremos uma versão web para você.",

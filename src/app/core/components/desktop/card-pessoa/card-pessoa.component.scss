@@ -29,3 +29,15 @@
         font-family: 'Manrope-Bold';
     }
 }
+
+.card-pessoa-mini {
+    cursor: pointer;
+    border: 0.1vw solid $cor-verde-selecionado;
+    border-radius: 0.926vw;
+    background-color: $cor-branco-padrao;
+    display: flex;
+    align-items: center;
+    padding: 0.926vw;
+    font-size: 1.389vw;
+    font-family: 'Manrope-Medium';
+}

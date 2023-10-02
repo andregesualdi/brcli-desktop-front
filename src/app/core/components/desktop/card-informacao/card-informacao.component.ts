@@ -7,8 +7,6 @@ import { RefeicaoUtils } from '../../../shared/utils/refeicao.utils';
   styleUrls: ['./card-informacao.component.scss']
 })
 export class CardInformacaoComponent {
-  @Input()
-  public descricao: string = '';
 
   @Input()
   public texto: string = '';
@@ -16,17 +14,10 @@ export class CardInformacaoComponent {
   @Input()
   public imagem: string | undefined;
 
-  @Input()
-  public direcionador: boolean = false;
-
   @Output()
   public cliqueBotao: EventEmitter<any> = new EventEmitter();
 
   public navegar(event: Event): void {
     this.cliqueBotao.emit('clicou');
-  }
-
-  get getTipoRefeicao(): string {
-    return RefeicaoUtils.getChaveRefeicao(this.imagem);
   }
 }

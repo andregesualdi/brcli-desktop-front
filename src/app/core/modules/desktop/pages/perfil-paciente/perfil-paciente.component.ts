@@ -59,7 +59,15 @@ export class PerfilPacienteComponent implements OnInit {
   }
 
   public redirecionar(caminho: string): void {
-    this.router.navigate([caminho, this.idPaciente]);
+    this.router.navigate([caminho, this.idPaciente], {
+      state: {
+        perfil: {
+          codigoPaciente: this.idPaciente,
+          imagem: this.perfilPaciente.imagem,
+          nome: this.perfilPaciente.nome
+        }
+      }
+    });
   }
 
   public voltar(): void {

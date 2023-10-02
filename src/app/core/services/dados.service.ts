@@ -10,6 +10,8 @@ import { ResponseSucesso } from '../shared/models/response-sucesso.model';
 import { DadosPaciente } from '../shared/models/dados-paciente.model';
 import { PerfilPaciente } from '../shared/models/perfil-paciente.model';
 import { CodigoAcessoGerado } from '../shared/models/codigo.model';
+import { NovoAgendamento } from '../shared/models/novo-agendamento.model';
+import { AgendamentoPaciente } from '../shared/models/agendamento-paciente.model';
 
 @Injectable({
   providedIn: 'root'
@@ -71,5 +73,23 @@ export class DadosService {
     headers.append('x-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.gerarCodigo, headers);
+  }
+
+  public agendarConsulta(usuario: string, codigoPaciente: string, agendamento: NovoAgendamento): Observable<ResponseSucesso> {
+    const headers = new HttpHeaders().set(
+      'Content-type', 'application/json'
+    );
+    headers.append('x-usuario', usuario);
+    headers.append('codigo-paciente', codigoPaciente);
+    return this.rest.post(environment.api.endpoints.agendar, agendamento, headers);
+  }
+
+  public proximaConsultaPaciente(usuario: string, codigoPaciente: string): Observable<AgendamentoPaciente> {
+    const headers = new HttpHeaders().set(
+      'Content-type', 'application/json'
+    );
+    headers.append('x-usuario', usuario);
+    headers.append('codigo-paciente', codigoPaciente);
+    return this.rest.get(environment.api.endpoints.consulta, headers);
   }
 }

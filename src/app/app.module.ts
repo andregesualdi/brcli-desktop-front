@@ -1,7 +1,7 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import ptBr from '@angular/common/locales/pt';
-import { registerLocaleData } from '@angular/common';
+import { DatePipe, registerLocaleData } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +27,7 @@ import { FilterPipe } from './core/modules/desktop/pipes/filter.pipe';
 import { CadastroPacientesComponent } from './core/modules/desktop/pages/cadastro-pacientes/cadastro-pacientes.component';
 import { EditarPacienteComponent } from './core/modules/desktop/pages/editar-paciente/editar-paciente.component';
 import { PerfilPacienteComponent } from './core/modules/desktop/pages/perfil-paciente/perfil-paciente.component';
+import { ConsultaComponent } from './core/modules/desktop/pages/consulta/consulta.component';
 
 registerLocaleData(ptBr);
 
@@ -50,7 +51,8 @@ registerLocaleData(ptBr);
     FilterPipe,
     CadastroPacientesComponent,
     EditarPacienteComponent,
-    PerfilPacienteComponent
+    PerfilPacienteComponent,
+    ConsultaComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,8 @@ registerLocaleData(ptBr);
     })
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'pt' }
+    { provide: LOCALE_ID, useValue: 'pt' },
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

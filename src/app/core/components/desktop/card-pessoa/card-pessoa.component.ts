@@ -10,6 +10,9 @@ export class CardPessoaComponent {
   @Input()
   public paciente: Paciente = new Paciente;
 
+  @Input()
+  public mini: boolean = false;
+
   @Output()
   public botaoClicado: EventEmitter<any> = new EventEmitter<any>();
 

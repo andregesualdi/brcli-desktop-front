@@ -7,6 +7,7 @@ import { PacientesComponent } from './core/modules/desktop/pages/pacientes/pacie
 import { CadastroPacientesComponent } from './core/modules/desktop/pages/cadastro-pacientes/cadastro-pacientes.component';
 import { EditarPacienteComponent } from './core/modules/desktop/pages/editar-paciente/editar-paciente.component';
 import { PerfilPacienteComponent } from './core/modules/desktop/pages/perfil-paciente/perfil-paciente.component';
+import { ConsultaComponent } from './core/modules/desktop/pages/consulta/consulta.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'pacientes', component: PacientesComponent },
   { path: 'cadastrar-paciente', component: CadastroPacientesComponent },
   { path: 'paciente/:id', component: PerfilPacienteComponent, data: { public: true } },
-  { path: 'editar-paciente/:id', component: EditarPacienteComponent, data: { public: true } }
+  { path: 'editar-paciente/:id', component: EditarPacienteComponent, data: { public: true } },
+  { path: 'consulta/:id', component: ConsultaComponent, data: { public: true } }
 ];
 
 @NgModule({

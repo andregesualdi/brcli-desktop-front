@@ -1,0 +1,61 @@
+<app-menu-lateral [selecao]="'cadastro'"></app-menu-lateral>
+<div class="consulta__borda-superior">
+    <div class="consulta__texto">
+        {{ 'PACIENTES.TITULO' | translate }}
+    </div>
+</div>
+<div class="consulta__container">
+    <div class="consulta__card" *ngIf="!loading">
+        <div class="consulta__topo">
+            <button (click)="voltar()" type="button" class="consulta__voltar">
+                <img class="consulta__seta" src="../../../../../../assets/images/Seta_Esquerda.svg" />
+                <div class="consulta__voltar--texto">{{ 'CADASTRO_PACIENTE.BOTAO_VOLTAR' | translate }}</div>
+            </button>
+            <div class="consulta__cartao-perfil">
+                <app-card-pessoa (botaoClicado)="voltar()" [mini]="true" [paciente]="paciente"></app-card-pessoa>
+            </div>
+        </div>
+        <div class="consulta__conteudo">
+            <div class="consulta__titulo">{{ 'CONSULTA.TITULO' | translate }}</div>
+            <div class="consulta__inner-container">
+                <div class="consulta__infos">
+                    <div class="consulta__cartao-feature">
+                        <img src="'../../../../../../../../assets/images/New_Feature.svg" />
+                        <div class="consulta__cartao-feature--texto">{{ 'CONSULTA.TEXTO' | translate }}</div>
+                    </div>
+                    <div class="consulta__cartao-agenda" *ngIf="semAgendamento">
+                        <app-card-informacao [imagem]="'agenda'" [texto]="'CONSULTA.SEM_AGENDAMENTO' | translate"></app-card-informacao>
+                    </div>
+                    <div class="consulta__cartao-agenda" *ngIf="!semAgendamento">
+                        <app-card-informacao [imagem]="'agenda'" [texto]="dataAgendamento"></app-card-informacao>
+                    </div>
+                </div>
+                <div class="consulta__agendar">
+                    <form [formGroup]="agendamento" (ngSubmit)="agendar()">
+                        <div class="consulta__input">
+                            <input
+                                class="consulta__espacamento-input"
+                                type="date" 
+                                [placeholder]="'CONSULTA.DATA' | translate"
+                                formControlName="data"
+                                [min]="dataMinimaAgendamento"
+                            >
+                            <input
+                                class="consulta__espacamento-input"
+                                type="time" 
+                                [placeholder]="'CONSULTA.HORA' | translate"
+                                formControlName="hora"
+                            >
+                            <div class="consulta__salvar">
+                                <app-botao tipo="submit" [desabilitado]="!agendamento.valid" [texto]="'CONSULTA.BOTAO_AGENDAR' | translate"></app-botao>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="consulta__card consulta__card--center" *ngIf="loading">
+        <app-loading [fullpage]="false"></app-loading>
+    </div>
+</div>
