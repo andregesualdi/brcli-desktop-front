@@ -52,11 +52,17 @@
     "CONSULTA": {
         "TITULO": "Consulta",
         "TEXTO": "Estamos trabalhando para uma melhor experiência na parte de agendamento de consultas. No momento, você pode informar, alterar ou remover a data da próxima consulta do seu paciente.",
-        "DESCRICAO": "Este paciente ainda não possui consulta agendada.",
         "DATA": "Data da consulta",
         "HORA": "Hora da consulta",
         "BOTAO_AGENDAR": "Agendar",
         "SEM_AGENDAMENTO": "Este paciente ainda não possui consulta agendada."
+    },
+    "AVALIACAO": {
+        "TITULO": "Avaliação física",
+        "TEXTO": "Estamos trabalhando para uma melhor experiência na parte de avaliação física. No momento, você pode enviar em PDF a avaliação física do paciente.",
+        "DESCRICAO": "Este paciente ainda não possui avaliação física.",
+        "ESCOLHER": "Escolher arquivo",
+        "BOTAO_ENVIAR": "Enviar avaliação"
     },
     "ERRO": {
         "TEXTO": "Não é possível exibir essas informações no momento. Por favor, tente mais tarde.",

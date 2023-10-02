@@ -28,6 +28,9 @@ import { CadastroPacientesComponent } from './core/modules/desktop/pages/cadastr
 import { EditarPacienteComponent } from './core/modules/desktop/pages/editar-paciente/editar-paciente.component';
 import { PerfilPacienteComponent } from './core/modules/desktop/pages/perfil-paciente/perfil-paciente.component';
 import { ConsultaComponent } from './core/modules/desktop/pages/consulta/consulta.component';
+import { AvaliacaoComponent } from './core/modules/desktop/pages/avaliacao/avaliacao.component';
+import { MetasComponent } from './core/modules/desktop/pages/metas/metas.component';
+import { PlanoAlimentarComponent } from './core/modules/desktop/pages/plano-alimentar/plano-alimentar.component';
 
 registerLocaleData(ptBr);
 
@@ -52,7 +55,10 @@ registerLocaleData(ptBr);
     CadastroPacientesComponent,
     EditarPacienteComponent,
     PerfilPacienteComponent,
-    ConsultaComponent
+    ConsultaComponent,
+    AvaliacaoComponent,
+    MetasComponent,
+    PlanoAlimentarComponent
   ],
   imports: [
     BrowserModule,

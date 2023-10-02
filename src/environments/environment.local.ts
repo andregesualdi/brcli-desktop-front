@@ -9,6 +9,7 @@ export const environment = {
             agendar: '/agendar',
             consulta: '/consulta-paciente',
             avaliacaoFisica: '/avaliacao-fisica',
+            registrarAvaliacaoFisica: '/registrar-avaliacao-fisica',
             cadastroPaciente: '/cadastro-paciente',
             dadosPaciente: '/dados-paciente',
             editarPaciente: '/editar-paciente',

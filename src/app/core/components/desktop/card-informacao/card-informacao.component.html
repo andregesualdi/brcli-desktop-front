@@ -1,8 +1,8 @@
-<div class="card-informativo">
+<div class="card-informativo" (click)="navegar($event)">
     <div class="card-informativo__imagem"
         [ngClass]="{
             'card-informativo__imagem--agenda': imagem === 'agenda',
-        }"></div>
+            'card-informativo__imagem--arquivo': imagem === 'arquivo'}"></div>
     <div class="card-informativo__texto">
         <div>
             <div class="card-informativo__texto--titulo">

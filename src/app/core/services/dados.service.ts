@@ -12,6 +12,7 @@ import { PerfilPaciente } from '../shared/models/perfil-paciente.model';
 import { CodigoAcessoGerado } from '../shared/models/codigo.model';
 import { NovoAgendamento } from '../shared/models/novo-agendamento.model';
 import { AgendamentoPaciente } from '../shared/models/agendamento-paciente.model';
+import { AvaliacaoFisica } from '../shared/models/avaliacao-fisica.model';
 
 @Injectable({
   providedIn: 'root'
@@ -91,5 +92,23 @@ export class DadosService {
     headers.append('x-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.consulta, headers);
+  }
+
+  public salvarAvaliacao(usuario: string, avaliacao: AvaliacaoFisica, codigoPaciente: string): Observable<ResponseSucesso> {
+    const headers = new HttpHeaders().set(
+      'Content-type', 'application/json'
+    );
+    headers.append('x-usuario', usuario);
+    headers.append('codigo-paciente', codigoPaciente);
+    return this.rest.post(environment.api.endpoints.registrarAvaliacaoFisica, avaliacao, headers);
+  }
+
+  public recuperarAvaliacao(usuario: string, codigoPaciente: string): Observable<AvaliacaoFisica> {
+    const headers = new HttpHeaders().set(
+      'Content-type', 'application/json'
+    );
+    headers.append('x-usuario', usuario);
+    headers.append('codigo-paciente', codigoPaciente);
+    return this.rest.get(environment.api.endpoints.avaliacaoFisica, headers);
   }
 }

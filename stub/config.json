@@ -20,6 +20,7 @@
             "mappings/get/gerar-codigo.yaml",
             "mappings/post/cadastro-paciente.yaml",
             "mappings/post/agendar.yaml",
+            "mappings/post/registrar-avaliacao-fisica.yaml",
             "mappings/post/editar-paciente.yaml",
             "mappings/post/login.yaml",
             "mappings/post/primeiro-acesso.yaml",

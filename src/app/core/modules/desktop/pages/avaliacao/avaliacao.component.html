@@ -1,0 +1,54 @@
+<app-menu-lateral [selecao]="'cadastro'"></app-menu-lateral>
+<div class="avaliacao__borda-superior">
+    <div class="avaliacao__texto">
+        {{ 'PACIENTES.TITULO' | translate }}
+    </div>
+</div>
+<div class="avaliacao__container">
+    <div class="avaliacao__card" *ngIf="!loading">
+        <div class="avaliacao__topo">
+            <button (click)="voltar()" type="button" class="avaliacao__voltar">
+                <img class="avaliacao__seta" src="../../../../../../assets/images/Seta_Esquerda.svg" />
+                <div class="avaliacao__voltar--texto">{{ 'CADASTRO_PACIENTE.BOTAO_VOLTAR' | translate }}</div>
+            </button>
+            <div class="avaliacao__cartao-perfil">
+                <app-card-pessoa (botaoClicado)="voltar()" [mini]="true" [paciente]="paciente"></app-card-pessoa>
+            </div>
+        </div>
+        <div class="avaliacao__conteudo">
+            <div class="avaliacao__titulo">{{ 'AVALIACAO.TITULO' | translate }}</div>
+            <div class="avaliacao__inner-container">
+                <div class="avaliacao__infos">
+                    <div class="avaliacao__cartao-feature">
+                        <img src="'../../../../../../../../assets/images/New_Feature.svg" />
+                        <div class="avaliacao__cartao-feature--texto">{{ 'AVALIACAO.TEXTO' | translate }}</div>
+                    </div>
+                    <div class="avaliacao__cartao-avaliacao" *ngIf="semAvaliacao">
+                        <app-card-informacao [imagem]="'arquivo'" [texto]="'AVALIACAO.DESCRICAO' | translate"></app-card-informacao>
+                    </div>
+                    <div class="avaliacao__cartao-avaliacao avaliacao__cartao-avaliacao-disponivel" *ngIf="!semAvaliacao">
+                        <app-card-informacao (cliqueBotao)="baixar()" [imagem]="'arquivo'" [texto]="avaliacao.nomeArquivo!"></app-card-informacao>
+                    </div>
+                </div>
+                <div class="avaliacao__enviar">
+                        <div class="avaliacao__input">
+                            <input
+                                class="avaliacao__espacamento-input"
+                                id="avaliacao-arquivo"
+                                type="file" 
+                                [placeholder]="'AVALIACAO.ESCOLHER' | translate"
+                                accept="application/pdf"
+                                (change)="onFileChange($event)"
+                            >
+                            <div class="avaliacao__salvar">
+                                <app-botao (botaoClicado)="salvarAvaliacao()" tipo="button" [desabilitado]="!arquivo || arquivo === ''" [texto]="'AVALIACAO.BOTAO_ENVIAR' | translate"></app-botao>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="avaliacao__card avaliacao__card--center" *ngIf="loading">
+        <app-loading [fullpage]="false"></app-loading>
+    </div>
+</div>
