@@ -13,6 +13,7 @@ import { CodigoAcessoGerado } from '../shared/models/codigo.model';
 import { NovoAgendamento } from '../shared/models/novo-agendamento.model';
 import { AgendamentoPaciente } from '../shared/models/agendamento-paciente.model';
 import { AvaliacaoFisica } from '../shared/models/avaliacao-fisica.model';
+import { Meta } from '../shared/models/meta.model';
 
 @Injectable({
   providedIn: 'root'
@@ -110,5 +111,23 @@ export class DadosService {
     headers.append('x-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.avaliacaoFisica, headers);
+  }
+
+  public recuperarMetas(usuario: string, codigoPaciente: string): Observable<Meta[]> {
+    const headers = new HttpHeaders().set(
+      'Content-type', 'application/json'
+    );
+    headers.append('x-usuario', usuario);
+    headers.append('codigo-paciente', codigoPaciente);
+    return this.rest.get(environment.api.endpoints.metas, headers);
+  }
+
+  public salvarMetas(usuario: string, codigoPaciente: string, metas: Meta[]): Observable<ResponseSucesso> {
+    const headers = new HttpHeaders().set(
+      'Content-type', 'application/json'
+    );
+    headers.append('x-usuario', usuario);
+    headers.append('codigo-paciente', codigoPaciente);
+    return this.rest.post(environment.api.endpoints.salvarMetas, metas, headers);
   }
 }

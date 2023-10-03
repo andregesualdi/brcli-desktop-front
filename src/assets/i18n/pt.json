@@ -57,6 +57,15 @@
         "BOTAO_AGENDAR": "Agendar",
         "SEM_AGENDAMENTO": "Este paciente ainda não possui consulta agendada."
     },
+    "METAS": {
+      "TITULO": "Metas",
+      "DESCRICAO": "Descrição",
+      "ATINGIDA": "Atingida?",
+      "BOTAO_EXCLUIR": "excluir",
+      "BOTAO_ADICIONAR": "+ adicionar meta",
+      "NUMERO_MAXIMO": "Número máximo de metas atingido.",
+      "BOTAO_SALVAR": "Salvar metas"
+    },
     "AVALIACAO": {
         "TITULO": "Avaliação física",
         "TEXTO": "Estamos trabalhando para uma melhor experiência na parte de avaliação física. No momento, você pode enviar em PDF a avaliação física do paciente.",
@@ -87,12 +96,6 @@
     "TABELA_ALIMENTOS": {
         "QUANTIDADE": "Qtd.",
         "ALIMENTO": "Alimento"
-    },
-    "METAS": {
-        "TITULO": "Minhas metas mensais",
-        "BOTAO_SALVAR": "Salvar metas",
-        "METAS_SALVAS": "Metas salvas",
-        "ERRO_AO_SALVAR": "Erro ao salvar metas, tente novamente."
     },
     "LOGIN": {
         "LOGIN": "Login",

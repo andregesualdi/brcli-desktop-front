@@ -1,5 +1,5 @@
 import { DatePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as FileSaver from 'file-saver';
 import { DadosService } from '../../../../services/dados.service';
@@ -12,7 +12,7 @@ import { ArquivoUtils } from '../../../../shared/utils/arquivo.utils';
   templateUrl: './avaliacao.component.html',
   styleUrls: ['./avaliacao.component.scss']
 })
-export class AvaliacaoComponent {
+export class AvaliacaoComponent implements OnInit {
   public loading: boolean = false;
   public idPaciente: string = '';
   public paciente: Paciente = new Paciente;

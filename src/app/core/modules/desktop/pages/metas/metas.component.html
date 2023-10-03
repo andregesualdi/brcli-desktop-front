@@ -1,1 +1,57 @@
-<p>metas works!</p>
+<app-menu-lateral [selecao]="'cadastro'"></app-menu-lateral>
+<div class="metas__borda-superior">
+    <div class="metas__texto">
+        {{ 'PACIENTES.TITULO' | translate }}
+    </div>
+</div>
+<div class="metas__container">
+    <div class="metas__card" *ngIf="!loading">
+        <div class="metas__topo">
+            <button (click)="voltar()" type="button" class="metas__voltar">
+                <img class="metas__seta" src="../../../../../../assets/images/Seta_Esquerda.svg" />
+                <div class="metas__voltar--texto">{{ 'CADASTRO_PACIENTE.BOTAO_VOLTAR' | translate }}</div>
+            </button>
+            <div class="metas__cartao-perfil">
+                <app-card-pessoa (botaoClicado)="voltar()" [mini]="true" [paciente]="paciente"></app-card-pessoa>
+            </div>
+        </div>
+        <div class="metas__conteudo">
+            <div class="metas__titulo">{{ 'METAS.TITULO' | translate }}</div>
+            <div class="metas__inner-container">
+                <div class="metas__tabela">
+                    <div class="metas__tabela--topo">
+                        <div class="metas__tabela--coluna-1">{{ 'METAS.DESCRICAO' | translate }}</div>
+                        <div class="metas__tabela--coluna-2">{{ 'METAS.ATINGIDA' | translate }}</div>
+                    </div>
+                    <div class="metas__tabela--corpo" *ngFor="let meta of metas; index as i">
+                        <div class="metas__tabela--linha-0">
+                            <input [(ngModel)]="meta.descricao" id="meta-{{i}}" placeholder="{{ 'METAS.DESCRICAO' | translate }}" type="text">
+                        </div>
+                        <div class="metas__tabela--linha-1">
+                            {{ meta.atingida ? 'Sim' : 'Não' }}
+                        </div>
+                        <div class="metas__tabela--linha-2">
+                            <button (click)="remover(i)">{{ 'METAS.BOTAO_EXCLUIR' | translate }}</button>
+                        </div>
+                    </div>
+                    <div class="metas__tabela--corpo metas__tabela--botao" *ngIf="!maximoMetas()">
+                        <div class="metas__tabela--linha-unica">
+                            <button (click)="adicionarMeta()">{{ 'METAS.BOTAO_ADICIONAR' | translate }}</button>
+                        </div>
+                    </div>
+                    <div class="metas__tabela--corpo metas__tabela--botao" *ngIf="maximoMetas()">
+                        <div class="metas__tabela--linha-unica">
+                            <div class="metas__tabela--maximo">{{ 'METAS.NUMERO_MAXIMO' | translate }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="metas__salvar-metas">
+                    <app-botao (botaoClicado)="salvar()" [texto]="'METAS.BOTAO_SALVAR' | translate"></app-botao>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="metas__card metas__card--center" *ngIf="loading">
+        <app-loading [fullpage]="false"></app-loading>
+    </div>
+</div>

@@ -9,6 +9,7 @@ import { EditarPacienteComponent } from './core/modules/desktop/pages/editar-pac
 import { PerfilPacienteComponent } from './core/modules/desktop/pages/perfil-paciente/perfil-paciente.component';
 import { ConsultaComponent } from './core/modules/desktop/pages/consulta/consulta.component';
 import { AvaliacaoComponent } from './core/modules/desktop/pages/avaliacao/avaliacao.component';
+import { MetasComponent } from './core/modules/desktop/pages/metas/metas.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'paciente/:id', component: PerfilPacienteComponent, data: { public: true } },
   { path: 'editar-paciente/:id', component: EditarPacienteComponent, data: { public: true } },
   { path: 'consulta/:id', component: ConsultaComponent, data: { public: true } },
-  { path: 'avaliacao/:id', component: AvaliacaoComponent, data: { public: true } }
+  { path: 'avaliacao/:id', component: AvaliacaoComponent, data: { public: true } },
+  { path: 'metas/:id', component: MetasComponent, data: { public: true } },
 ];
 
 @NgModule({

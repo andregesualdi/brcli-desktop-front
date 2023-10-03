@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { BotaoComponent } from './core/components/botao/botao.component';
 import { MenuLateralComponent } from './core/components/desktop/menu-lateral/menu-lateral.component';
 import { CardInformacaoComponent } from './core/components/desktop/card-informacao/card-informacao.component';
-import { TabelaAlimentosComponent } from './core/components/desktop/tabela/tabela-alimentos.component';
 import { CardCheckboxComponent } from './core/components/desktop/card-checkbox/card-checkbox.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoadingComponent } from './core/components/desktop/loading/loading.component';
@@ -40,7 +39,6 @@ registerLocaleData(ptBr);
     BotaoComponent,
     MenuLateralComponent,
     CardInformacaoComponent,
-    TabelaAlimentosComponent,
     CardCheckboxComponent,
     LoadingComponent,
     ErroComponent,

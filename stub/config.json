@@ -25,7 +25,7 @@
             "mappings/post/login.yaml",
             "mappings/post/primeiro-acesso.yaml",
             "mappings/post/recuperar-senha.yaml",
-            "mappings/put/salvar-metas.yaml"
+            "mappings/post/salvar-metas.yaml"
         ]
     },
     "server": {
