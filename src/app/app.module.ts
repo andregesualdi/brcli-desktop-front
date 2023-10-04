@@ -30,6 +30,7 @@ import { ConsultaComponent } from './core/modules/desktop/pages/consulta/consult
 import { AvaliacaoComponent } from './core/modules/desktop/pages/avaliacao/avaliacao.component';
 import { MetasComponent } from './core/modules/desktop/pages/metas/metas.component';
 import { PlanoAlimentarComponent } from './core/modules/desktop/pages/plano-alimentar/plano-alimentar.component';
+import { RefeicaoComponent } from './core/modules/desktop/pages/refeicao/refeicao.component';
 
 registerLocaleData(ptBr);
 
@@ -56,7 +57,8 @@ registerLocaleData(ptBr);
     ConsultaComponent,
     AvaliacaoComponent,
     MetasComponent,
-    PlanoAlimentarComponent
+    PlanoAlimentarComponent,
+    RefeicaoComponent
   ],
   imports: [
     BrowserModule,

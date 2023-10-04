@@ -10,6 +10,8 @@ import { PerfilPacienteComponent } from './core/modules/desktop/pages/perfil-pac
 import { ConsultaComponent } from './core/modules/desktop/pages/consulta/consulta.component';
 import { AvaliacaoComponent } from './core/modules/desktop/pages/avaliacao/avaliacao.component';
 import { MetasComponent } from './core/modules/desktop/pages/metas/metas.component';
+import { PlanoAlimentarComponent } from './core/modules/desktop/pages/plano-alimentar/plano-alimentar.component';
+import { RefeicaoComponent } from './core/modules/desktop/pages/refeicao/refeicao.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -22,6 +24,8 @@ const routes: Routes = [
   { path: 'consulta/:id', component: ConsultaComponent, data: { public: true } },
   { path: 'avaliacao/:id', component: AvaliacaoComponent, data: { public: true } },
   { path: 'metas/:id', component: MetasComponent, data: { public: true } },
+  { path: 'plano-alimentar/:id', component: PlanoAlimentarComponent, data: { public: true } },
+  { path: 'plano-alimentar/:id/:refeicao', component: RefeicaoComponent, data: { public: true } }
 ];
 
 @NgModule({

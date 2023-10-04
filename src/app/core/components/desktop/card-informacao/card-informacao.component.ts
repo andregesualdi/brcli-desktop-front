@@ -14,6 +14,12 @@ export class CardInformacaoComponent {
   @Input()
   public imagem: string | undefined;
 
+  @Input()
+  public refeicao: boolean = false;
+
+  @Input()
+  public refeicaoAlterada: boolean = false;
+
   @Output()
   public cliqueBotao: EventEmitter<any> = new EventEmitter();
 

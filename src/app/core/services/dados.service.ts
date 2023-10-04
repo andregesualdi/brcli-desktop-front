@@ -14,6 +14,7 @@ import { NovoAgendamento } from '../shared/models/novo-agendamento.model';
 import { AgendamentoPaciente } from '../shared/models/agendamento-paciente.model';
 import { AvaliacaoFisica } from '../shared/models/avaliacao-fisica.model';
 import { Meta } from '../shared/models/meta.model';
+import { PlanoAlimentar } from '../shared/models/plano-alimentar.model';
 
 @Injectable({
   providedIn: 'root'
@@ -129,5 +130,14 @@ export class DadosService {
     headers.append('x-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.post(environment.api.endpoints.salvarMetas, metas, headers);
+  }
+
+  public recuperarPlano(usuario: string, codigoPaciente: string): Observable<PlanoAlimentar> {
+    const headers = new HttpHeaders().set(
+      'Content-type', 'application/json'
+    );
+    headers.append('x-usuario', usuario);
+    headers.append('codigo-paciente', codigoPaciente);
+    return this.rest.get(environment.api.endpoints.planoAlimentar, headers);
   }
 }

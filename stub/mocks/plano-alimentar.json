@@ -23,6 +23,11 @@
         ]
       },
       {
+        "tipo": "lanchemanha",
+        "horario": "",
+        "alimentos": []
+      },
+      {
         "tipo": "almoco",
         "horario": "12h",
         "alimentos": [
