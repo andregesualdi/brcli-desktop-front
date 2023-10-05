@@ -1,6 +1,6 @@
 export class RefeicaoUtils {
     public static getChaveRefeicao(tipo: number | undefined): string {
-        switch (tipo) {
+        switch (Number(tipo)) {
           case 0:
             return 'PLANO_ALIMENTAR.CAFE';
             break;

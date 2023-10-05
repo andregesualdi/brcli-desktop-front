@@ -42,7 +42,7 @@
                 </div>
                 <div class="plano-alimentar__botao-salvar" *ngIf="planoAlterado()">
                     <div class="plano-alimentar__texto-salvar">{{ 'PLANO_ALIMENTAR.PLANO_ALTERADO' | translate }}</div>
-                    <app-botao [tipoBotao]="'menor-desktop'" [texto]="'PLANO_ALIMENTAR.SALVAR' | translate"></app-botao>
+                    <app-botao (botaoClicado)="salvarPlano()" [tipoBotao]="'menor-desktop'" [texto]="'PLANO_ALIMENTAR.SALVAR' | translate"></app-botao>
                 </div>
             </div>                
         </div>

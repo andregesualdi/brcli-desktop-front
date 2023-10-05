@@ -1,1 +1,63 @@
-<p>refeicao works!</p>
+<app-menu-lateral [selecao]="'cadastro'"></app-menu-lateral>
+<div class="refeicao__borda-superior">
+    <div class="refeicao__texto">
+        {{ 'PACIENTES.TITULO' | translate }}
+    </div>
+</div>
+<div class="refeicao__container">
+    <div class="refeicao__card" *ngIf="!loading">
+        <div class="refeicao__topo">
+            <button (click)="voltar()" type="button" class="refeicao__voltar">
+                <img class="refeicao__seta" src="../../../../../../assets/images/Seta_Esquerda.svg" />
+                <div class="refeicao__voltar--texto">{{ 'CADASTRO_PACIENTE.BOTAO_VOLTAR' | translate }}</div>
+            </button>
+            <div class="refeicao__cartao-perfil">
+                <app-card-pessoa (botaoClicado)="voltar()" [mini]="true" [paciente]="paciente"></app-card-pessoa>
+            </div>
+        </div>
+        <div class="refeicao__conteudo">
+            <div class="refeicao__titulo">{{ getTipoRefeicao | translate }}</div>
+            <div class="refeicao__inner-container">
+                <div class="refeicao__container-tabela">
+                    <div class="refeicao__tabela">
+                        <div class="refeicao__tabela--topo">
+                            <div class="refeicao__tabela--coluna-0">{{ 'REFEICAO.QUANTIDADE' | translate }}</div>
+                            <div class="refeicao__tabela--coluna-1">{{ 'REFEICAO.MEDIDA' | translate }}</div>
+                            <div class="refeicao__tabela--coluna-2">{{ 'REFEICAO.DESCRICAO' | translate }}</div>
+                        </div>
+                        <div class="refeicao__tabela--corpo" *ngFor="let alimento of planoAlimentar.refeicoes![idRefeicao].alimentos; index as i">
+                            <div class="refeicao__tabela--linha-0">
+                                <input [(ngModel)]="alimento.quantidade" id="alimento-{{i}}" placeholder="{{ 'REFEICAO.QUANTIDADE_QTDE' | translate }}" type="text">
+                            </div>
+                            <div class="refeicao__tabela--linha-1">
+                                <select [(ngModel)]="alimento.medida">
+                                    <option>ml</option>
+                                    <option>g</option>
+                                    <option>L</option>
+                                    <option>kg</option>
+                                </select>
+                            </div>
+                            <div class="refeicao__tabela--linha-2">
+                                <input [(ngModel)]="alimento.descricao" id="alimento-{{i}}" placeholder="{{ 'REFEICAO.DESCRICAO' | translate }}" type="text">
+                            </div>
+                            <div class="refeicao__tabela--linha-3">
+                                <button (click)="remover(i)">{{ 'REFEICAO.BOTAO_EXCLUIR' | translate }}</button>
+                            </div>
+                        </div>
+                        <div class="refeicao__tabela--corpo refeicao__tabela--botao">
+                            <div class="refeicao__tabela--linha-unica">
+                                <button (click)="adicionar()">{{ 'REFEICAO.ADICIONAR_ALIMENTO' | translate }}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="refeicao__salvar-refeicao">
+                    <app-botao (botaoClicado)="salvar()" [texto]="'REFEICAO.SALVAR_REFEICAO' | translate"></app-botao>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="refeicao__card refeicao__card--center" *ngIf="loading">
+        <app-loading [fullpage]="false"></app-loading>
+    </div>
+</div>

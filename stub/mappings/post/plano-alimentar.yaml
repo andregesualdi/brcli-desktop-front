@@ -1,0 +1,9 @@
+- request:
+    method: POST
+    url: /brcli-gateway/brcli-bff-desktop/plano-alimentar
+  response:
+    latency: 1500,
+    status: 200
+    headers:
+      content-type: application/json
+    file: '../../mocks/response-sucesso.json'

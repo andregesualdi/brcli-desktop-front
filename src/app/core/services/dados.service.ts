@@ -140,4 +140,13 @@ export class DadosService {
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.planoAlimentar, headers);
   }
+
+  public salvarPlano(usuario: string, codigoPaciente: string, planoAlimentar: PlanoAlimentar): Observable<ResponseSucesso> {
+    const headers = new HttpHeaders().set(
+      'Content-type', 'application/json'
+    );
+    headers.append('x-usuario', usuario);
+    headers.append('codigo-paciente', codigoPaciente);
+    return this.rest.post(environment.api.endpoints.planoAlimentar, planoAlimentar, headers);
+  }
 }

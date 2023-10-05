@@ -32,11 +32,17 @@ export class PlanoAlimentarComponent {
   ngOnInit(): void {
     this.idPaciente = this.route.snapshot.params['id'];
     this.paciente = history.state.perfil;
-    this.recuperarPlano();
+    this.validarOrigem();
   }
 
   public voltar(): void {
-    this.router.navigate(['paciente', this.idPaciente]);
+    if (this.planoAlterado()) {
+      if (confirm('Você deseja sair do plano? As alterações não foram salvas e serão perdidas.')) {
+        this.router.navigate(['paciente', this.idPaciente]);
+      }
+    } else {
+      this.router.navigate(['paciente', this.idPaciente]);
+    }
   }
 
   public planoAlterado(): boolean {
@@ -49,13 +55,13 @@ export class PlanoAlimentarComponent {
     ], {
       state: {
         plano: this.planoAlimentar,
-        refeicoesAlteradas: this.refeicaoAlterada
+        refeicoesAlteradas: this.refeicaoAlterada,
+        perfil: this.paciente
       }
     })
   }
 
   public recuperarPlano(): void {
-    this.loading = true;
     this.dados.recuperarPlano('1200A', this.idPaciente).subscribe({
       next: (data) => {
         this.planoAlimentar = data;
@@ -67,5 +73,36 @@ export class PlanoAlimentarComponent {
         this.voltar();
       }
     })
+  }
+
+  public salvarPlano(): void {
+    this.loading = true;
+    this.dados.salvarPlano('1200A', this.idPaciente, this.planoAlimentar).subscribe({
+      next: (data) => {
+        if (data.sucesso) {
+          alert('Plano novo salvo com sucesso');
+          this.refeicaoAlterada = [false,false,false,false,false,false];
+          this.recuperarPlano();
+        } else {
+          alert('Erro ao salvar plano');
+          this.loading = false;
+        }
+      },
+      error: () => {
+        alert('Erro ao salvar plano');
+        this.loading = false;
+      }
+    });
+  }
+
+  private validarOrigem(): void {
+    this.loading = true;
+    if (history.state.origem && history.state.origem === 'refeicao') {
+      this.planoAlimentar = history.state.plano;
+      this.refeicaoAlterada = history.state.alteracoes;
+      this.loading = false;
+    } else {
+      this.recuperarPlano();
+    }
   }
 }
