@@ -1,0 +1,124 @@
+<app-menu-lateral [selecao]="'cadastro'"></app-menu-lateral>
+<div class="perfil-paciente__borda-superior">
+    <div class="perfil-paciente__texto">
+        {{ 'PACIENTES.TITULO' | translate }}
+    </div>
+</div>
+<div class="perfil-paciente__container">
+    <div class="perfil-paciente__card" *ngIf="!loading">
+        <button (click)="voltar()" type="button" class="perfil-paciente__voltar">
+            <img class="perfil-paciente__seta" src="../../../../../../assets/images/Seta_Esquerda.svg" />
+            <div class="perfil-paciente__voltar--texto">{{ 'CADASTRO_PACIENTE.BOTAO_VOLTAR' | translate }}</div>
+        </button>
+        <div class="perfil-paciente__inner-container">
+            <div class="perfil-paciente__topo">
+                <div class="perfil-paciente__imagem"
+                [ngClass]="{'perfil-paciente__sem-imagem': !perfilPaciente.imagem }"
+                [ngStyle]="{'background-image': (perfilPaciente.imagem && perfilPaciente.imagem !== '') ? 'url(' + perfilPaciente.imagem + ')' : ''}">
+
+                </div>
+                <div class="perfil-paciente__dados">
+                    <div class="perfil-paciente__nome">{{ perfilPaciente.nome }}</div>
+                    <div class="perfil-paciente__informacoes">{{ 'PERFIL_PACIENTE.PACIENTE_DESDE' | translate }}{{ perfilPaciente.dataCadastro }}</div>
+                    <div class="perfil-paciente__informacoes">{{ 'PERFIL_PACIENTE.PROXIMO_AGENDAMENTO' | translate }}{{ perfilPaciente.dataAgendamento }}</div>
+                </div>
+            </div>
+            <div class="perfil-paciente__bottom">
+                <div class="perfil-paciente__campos">
+                    <div class="perfil-paciente__campo">
+                        <div class="perfil-paciente__informacao">
+                            {{ perfilPaciente.peso }}kg
+                        </div>
+                        <div class="perfil-paciente__legenda">
+                            {{ 'PERFIL_PACIENTE.PESO' | translate }}
+                        </div>
+                    </div>
+                    <div class="perfil-paciente__campo">
+                        <div class="perfil-paciente__informacao">
+                            {{ perfilPaciente.altura }}cm
+                        </div>
+                        <div class="perfil-paciente__legenda">
+                            {{ 'PERFIL_PACIENTE.ALTURA' | translate }}
+                        </div>
+                    </div>
+                    <div class="perfil-paciente__campo">
+                        <div class="perfil-paciente__informacao">
+                            {{ perfilPaciente.imc }}
+                        </div>
+                        <div class="perfil-paciente__legenda">
+                            {{ 'PERFIL_PACIENTE.IMC' | translate }}
+                        </div>
+                    </div>
+                    <div class="perfil-paciente__campo">
+                        <div class="perfil-paciente__informacao">
+                            {{ perfilPaciente.idade }}
+                        </div>
+                        <div class="perfil-paciente__legenda">
+                            {{ 'PERFIL_PACIENTE.IDADE' | translate }}
+                        </div>
+                    </div>
+                    <div class="perfil-paciente__botao-rodape">
+                        <app-botao  (botaoClicado)="editar()" [tipoBotao]="'menor-desktop'" [texto]="'PERFIL_PACIENTE.EDITAR' | translate"></app-botao>
+                    </div>
+                </div>
+                <div class="perfil-paciente__campos">
+                    <div class="perfil-paciente__campo">
+                        <div class="perfil-paciente__informacao">
+                            {{ perfilPaciente.email }}
+                        </div>
+                        <div class="perfil-paciente__legenda">
+                            {{ 'PERFIL_PACIENTE.EMAIL' | translate }}
+                        </div>
+                    </div>
+                    <div class="perfil-paciente__campo">
+                        <div class="perfil-paciente__informacao">
+                            {{ perfilPaciente.telefone }}
+                        </div>
+                        <div class="perfil-paciente__legenda">
+                            {{ 'PERFIL_PACIENTE.TELEFONE_CELULAR' | translate }}
+                        </div>
+                    </div>
+                    <div class="perfil-paciente__campo">
+                        <div class="perfil-paciente__informacao">
+                            {{ perfilPaciente.usuario || '-' }}
+                        </div>
+                        <div class="perfil-paciente__legenda">
+                            {{ 'PERFIL_PACIENTE.NOME_USUARIO' | translate }}
+                        </div>
+                    </div>
+                    <div class="perfil-paciente__campo">
+                        <div class="perfil-paciente__informacao">
+                            {{ perfilPaciente.codigoAcesso || '-' }}
+                        </div>
+                        <div class="perfil-paciente__legenda">
+                            {{ 'PERFIL_PACIENTE.CODIGO_ACESSO' | translate }}
+                        </div>
+                    </div>
+                    <div class="perfil-paciente__botao-rodape">
+                        <app-botao  (botaoClicado)="gerarCodigo()" [desabilitado]="gerandoCodigo" [tipoBotao]="'menor-desktop'" [texto]="'PERFIL_PACIENTE.GERAR_CODIGO' | translate"></app-botao>
+                    </div>
+                    <div class="perfil-paciente__botao-rodape" *ngIf="gerandoCodigo">
+                        <app-loading [small]="true" [fullpage]="false"></app-loading>
+                    </div>
+                </div>
+                <div class="perfil-paciente__campos">
+                    <div class="perfil-paciente__botao-lista">
+                        <app-botao (botaoClicado)="redirecionar('plano-alimentar')" [tipoBotao]="'menor-desktop'" [texto]="'PERFIL_PACIENTE.PLANO' | translate"></app-botao>
+                    </div>
+                    <div class="perfil-paciente__botao-lista">
+                        <app-botao (botaoClicado)="redirecionar('metas')" [tipoBotao]="'menor-desktop'" [texto]="'PERFIL_PACIENTE.METAS' | translate"></app-botao>
+                    </div>
+                    <div class="perfil-paciente__botao-lista">
+                        <app-botao (botaoClicado)="redirecionar('avaliacao')" [tipoBotao]="'menor-desktop'" [texto]="'PERFIL_PACIENTE.AVALIACAO' | translate"></app-botao>
+                    </div>
+                    <div class="perfil-paciente__botao-lista">
+                        <app-botao (botaoClicado)="redirecionar('consulta')" [tipoBotao]="'menor-desktop'" [texto]="'PERFIL_PACIENTE.CONSULTA' | translate"></app-botao>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="perfil-paciente__card perfil-paciente__card--center" *ngIf="loading">
+        <app-loading [fullpage]="false"></app-loading>
+    </div>
+</div>

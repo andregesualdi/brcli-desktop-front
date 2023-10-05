@@ -1,0 +1,142 @@
+@import '../../../../../styles/base-import';
+
+.perfil-paciente {
+    aspect-ratio: 16 / 9;
+
+    &__borda-superior {
+        height: 8.25vw;
+        width: 100%;
+        background-color: $cor-verde-selecionado;
+        display: flex;
+        margin-bottom: 1.852vw;
+        align-items: center;
+    }
+
+    &__sem-imagem {
+        background: url('../../../../../../assets/images/Avatar_SemImagem.svg') no-repeat, $cor-imagem-basica-perfil;
+        background-size: 9.259vw 9.259vw;
+    }
+
+    &__imagem {
+        height: 9.259vw;
+        width: 9.259vw;
+        z-index: 1;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+        margin-right: 0.926vw;
+    }
+
+    &__campos {
+        width: 33%;
+        padding: 0 0.463vw 0;
+    }
+
+    &__campo {
+        padding-bottom: 0.463vw;
+    }
+
+    &__informacao {
+        border-bottom: 0.231vw solid $cor-verde-selecionado;
+        font-family: 'Manrope-Medium';
+        font-size: 0.926vw;
+        padding-bottom: 0.231vw;
+    }
+
+    &__legenda {
+        font-family: 'Manrope-Bold';
+        color: $cor-verde-selecionado;
+        font-size: 0.810vw;
+    }
+
+    &__texto {
+        font-family: 'Manrope-Bold';
+        color: $cor-branco-padrao;
+        font-size: 2.315vw;
+        padding-left: 10vw;
+    }
+
+    &__container {
+        padding: 0 1.389vw 1.389vw 10vw;
+        display: flex;
+    }
+
+    &__card {
+        width: 100%;
+        height: 100%;
+        background-color: $cor-branco-padrao;
+        border: 0.116vw solid $cor-verde-selecionado;
+        border-radius: 1.389vw;
+        min-height: 75vh;
+        max-height: 75vh;
+        box-shadow: 0.405vw 0.405vw 0.694vw 0 rgba(0, 0, 0, 0.25);
+        padding: 1.389vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        &--center {
+            justify-content: center;
+        }
+    }
+
+    &__nome {
+        font-size: 1.852vw;
+        font-family: 'Manrope-Bold';
+    }
+
+    &__informacoes {
+        font-size: 0.926vw;
+        font-family: 'Manrope-Medium';
+        color: $cor-cinza-subtitulo;
+    }
+
+    &__inner-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    &__topo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-bottom: 0.926vw;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+
+    &__seta {
+        width: 1.389vw;
+        height: auto;
+    }
+
+    &__voltar {
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.389vw;
+        font-family: 'Manrope-Bold';
+        font-size: 1.389vw;
+        color: $cor-verde-selecionado;
+
+        &--texto {
+            padding-left: 0.926vw;
+        }
+    }
+
+    &__botao-rodape {
+        margin-top: 1.389vw;
+    }
+
+    &__botao-lista {
+        margin-bottom: 1.389vw;
+    }
+}

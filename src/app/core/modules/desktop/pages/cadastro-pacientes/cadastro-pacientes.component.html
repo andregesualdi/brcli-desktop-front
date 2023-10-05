@@ -1,0 +1,63 @@
+<app-menu-lateral [selecao]="'cadastro'"></app-menu-lateral>
+<div class="cadastro-pacientes__borda-superior">
+    <div class="cadastro-pacientes__texto">
+        {{ 'PACIENTES.TITULO' | translate }}
+    </div>
+</div>
+<div class="cadastro-pacientes__container">
+    <div class="cadastro-pacientes__card" *ngIf="!loading">
+        <button (click)="voltar()" type="button" class="cadastro-pacientes__voltar">
+            <img class="cadastro-pacientes__seta" src="../../../../../../assets/images/Seta_Esquerda.svg" />
+            <div class="cadastro-pacientes__voltar--texto">{{ 'CADASTRO_PACIENTE.BOTAO_VOLTAR' | translate }}</div>
+        </button>
+        <div class="cadastro-pacientes__titulo">{{ 'CADASTRO_PACIENTE.TITULO' | translate }}</div>
+        <div class="cadastro-pacientes__campos">
+            <form [formGroup]="cadastro" (ngSubmit)="cadastrar()">
+                <div class="cadastro-pacientes__input">
+                    <input
+                        class="cadastro-pacientes__espacamento-input"
+                        type="text" 
+                        [placeholder]="'CADASTRO_PACIENTE.NOME' | translate"
+                        formControlName="nome"
+                    >
+                    <input
+                        class="cadastro-pacientes__espacamento-input"
+                        type="tel" 
+                        [placeholder]="'CADASTRO_PACIENTE.TELEFONE' | translate"
+                        formControlName="telefone"
+                    >
+                    <input
+                        class="cadastro-pacientes__espacamento-input"
+                        type="email" 
+                        [placeholder]="'CADASTRO_PACIENTE.EMAIL' | translate"
+                        formControlName="email"
+                    >
+                    <input
+                        class="cadastro-pacientes__espacamento-input"
+                        type="date" 
+                        [placeholder]="'CADASTRO_PACIENTE.DATA_NASC' | translate"
+                        formControlName="dataNasc"
+                    >
+                    <input
+                        class="cadastro-pacientes__espacamento-input"
+                        type="number" 
+                        [placeholder]="'CADASTRO_PACIENTE.ALTURA' | translate"
+                        formControlName="altura"
+                    >
+                    <input
+                        class="cadastro-pacientes__espacamento-input"
+                        type="number" 
+                        [placeholder]="'CADASTRO_PACIENTE.PESO' | translate"
+                        formControlName="peso"
+                    >
+                </div>
+                <div class="cadastro-pacientes__cadastrar">
+                    <app-botao tipo="submit" [desabilitado]="!cadastro.valid" [texto]="'CADASTRO_PACIENTE.BOTAO_CADASTRAR' | translate"></app-botao>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="cadastro-pacientes__card cadastro-pacientes__card--center" *ngIf="loading">
+        <app-loading [fullpage]="false"></app-loading>
+    </div>
+</div>

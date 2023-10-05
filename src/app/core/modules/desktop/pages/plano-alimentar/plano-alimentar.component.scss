@@ -1,0 +1,121 @@
+@import '../../../../../styles/base-import';
+
+.plano-alimentar {
+    aspect-ratio: 16 / 9;
+
+    &__borda-superior {
+        height: 8.25vw;
+        width: 100%;
+        background-color: $cor-verde-selecionado;
+        display: flex;
+        margin-bottom: 1.852vw;
+        align-items: center;
+    }
+
+    &__container {
+        padding: 0 1.389vw 1.389vw 10vw;
+        display: flex;
+    }
+
+    &__card {
+        width: 100%;
+        height: 100%;
+        background-color: $cor-branco-padrao;
+        border: 0.116vw solid $cor-verde-selecionado;
+        border-radius: 1.389vw;
+        min-height: 75vh;
+        max-height: 75vh;
+        box-shadow: 0.405vw 0.405vw 0.694vw 0 rgba(0, 0, 0, 0.25);
+        padding: 1.389vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        &--center {
+            justify-content: center;
+        }
+    }
+
+    &__topo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__cartao-perfil {
+        width: 25%;
+    }
+
+    &__seta {
+        width: 1.389vw;
+        height: auto;
+    }
+
+    &__voltar {
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.389vw;
+        font-family: 'Manrope-Bold';
+        font-size: 1.389vw;
+        color: $cor-verde-selecionado;
+
+        &--texto {
+            padding-left: 0.926vw;
+        }
+    }
+
+    &__texto {
+        font-family: 'Manrope-Bold';
+        color: $cor-branco-padrao;
+        font-size: 2.315vw;
+        padding-left: 10vw;
+    }
+
+    &__titulo {
+        font-family: 'Manrope-Bold';
+        font-size: 1.852vw;
+        margin-bottom: 1.389vw;
+    }
+
+    &__conteudo {
+        width: 100%;
+    }
+
+    &__inner-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        &--1, &--2 {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            padding-bottom: 0.926vw;
+        }
+    }
+
+    &__cartao-refeicao {
+        width: 30%;
+        margin-right: 0.926vw;
+        cursor: pointer;
+    }
+
+    &__botao-salvar {
+        text-align: center;
+        width: 40%;
+        align-self: center;
+    }
+
+    &__texto-salvar {
+        font-family: 'Manrope-SemiBold';
+        font-size: 0.926vw;
+        margin-bottom: 0.926vw;
+    }
+}

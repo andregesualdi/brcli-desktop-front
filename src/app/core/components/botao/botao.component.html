@@ -1,6 +1,8 @@
 <button
+    [type]="tipo"
     [ngClass]="{
         'brcli__botao--primario-desktop': tipoBotao === 'primario-desktop',
+        'brcli__botao--menor-desktop': tipoBotao === 'menor-desktop',
         'brcli__botao--flutuante-desktop': tipoBotao === 'flutuante-desktop'
     }"
     (click)="clique($event)"

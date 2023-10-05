@@ -1,22 +1,22 @@
 export class RefeicaoUtils {
-    public static getChaveRefeicao(tipo: string | undefined): string {
-        switch (tipo) {
-          case 'cafe':
+    public static getChaveRefeicao(tipo: number | undefined): string {
+        switch (Number(tipo)) {
+          case 0:
             return 'PLANO_ALIMENTAR.CAFE';
             break;
-          case 'lanchemanha':
+          case 1:
             return 'PLANO_ALIMENTAR.LANCHEMANHA';
             break;
-          case 'almoco':
+          case 2:
             return 'PLANO_ALIMENTAR.ALMOCO';
             break;
-          case 'lanchetarde':
+          case 3:
             return 'PLANO_ALIMENTAR.LANCHETARDE';
             break;
-          case 'jantar':
+          case 4:
             return 'PLANO_ALIMENTAR.JANTAR';
             break;
-          case 'ceia':
+          case 5:
             return 'PLANO_ALIMENTAR.CEIA';
             break;
           default:

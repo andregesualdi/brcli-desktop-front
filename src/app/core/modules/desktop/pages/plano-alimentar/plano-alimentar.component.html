@@ -1,0 +1,53 @@
+<app-menu-lateral [selecao]="'cadastro'"></app-menu-lateral>
+<div class="plano-alimentar__borda-superior">
+    <div class="plano-alimentar__texto">
+        {{ 'PACIENTES.TITULO' | translate }}
+    </div>
+</div>
+<div class="plano-alimentar__container">
+    <div class="plano-alimentar__card" *ngIf="!loading">
+        <div class="plano-alimentar__topo">
+            <button (click)="voltar()" type="button" class="plano-alimentar__voltar">
+                <img class="plano-alimentar__seta" src="../../../../../../assets/images/Seta_Esquerda.svg" />
+                <div class="plano-alimentar__voltar--texto">{{ 'CADASTRO_PACIENTE.BOTAO_VOLTAR' | translate }}</div>
+            </button>
+            <div class="plano-alimentar__cartao-perfil">
+                <app-card-pessoa (botaoClicado)="voltar()" [mini]="true" [paciente]="paciente"></app-card-pessoa>
+            </div>
+        </div>
+        <div class="plano-alimentar__conteudo">
+            <div class="plano-alimentar__titulo">{{ 'PLANO_ALIMENTAR.TITULO' | translate }}</div>
+            <div class="plano-alimentar__inner-container">
+                <div class="plano-alimentar__inner-container--1">
+                    <div class="plano-alimentar__cartao-refeicao">
+                        <app-card-informacao (cliqueBotao)="redirecionarRefeicao(0)" [refeicaoAlterada]="refeicaoAlterada[0]" [refeicao]="true" [imagem]="'cafe'" [texto]="'PLANO_ALIMENTAR.CAFE' | translate"></app-card-informacao>
+                    </div>
+                    <div class="plano-alimentar__cartao-refeicao">
+                        <app-card-informacao (cliqueBotao)="redirecionarRefeicao(1)" [refeicaoAlterada]="refeicaoAlterada[1]" [refeicao]="true" [imagem]="'lanchemanha'" [texto]="'PLANO_ALIMENTAR.LANCHEMANHA' | translate"></app-card-informacao>
+                    </div>
+                    <div class="plano-alimentar__cartao-refeicao">
+                        <app-card-informacao (cliqueBotao)="redirecionarRefeicao(2)" [refeicaoAlterada]="refeicaoAlterada[2]" [refeicao]="true" [imagem]="'almoco'" [texto]="'PLANO_ALIMENTAR.ALMOCO' | translate"></app-card-informacao>
+                    </div>
+                </div>
+                <div class="plano-alimentar__inner-container--2">
+                    <div class="plano-alimentar__cartao-refeicao">
+                        <app-card-informacao (cliqueBotao)="redirecionarRefeicao(3)" [refeicaoAlterada]="refeicaoAlterada[3]" [refeicao]="true" [imagem]="'lanchetarde'" [texto]="'PLANO_ALIMENTAR.LANCHETARDE' | translate"></app-card-informacao>
+                    </div>
+                    <div class="plano-alimentar__cartao-refeicao">
+                        <app-card-informacao (cliqueBotao)="redirecionarRefeicao(4)" [refeicaoAlterada]="refeicaoAlterada[4]" [refeicao]="true" [imagem]="'jantar'" [texto]="'PLANO_ALIMENTAR.JANTAR' | translate"></app-card-informacao>
+                    </div>
+                    <div class="plano-alimentar__cartao-refeicao">
+                        <app-card-informacao (cliqueBotao)="redirecionarRefeicao(5)" [refeicaoAlterada]="refeicaoAlterada[5]" [refeicao]="true" [imagem]="'ceia'" [texto]="'PLANO_ALIMENTAR.CEIA' | translate"></app-card-informacao>
+                    </div>
+                </div>
+                <div class="plano-alimentar__botao-salvar" *ngIf="planoAlterado()">
+                    <div class="plano-alimentar__texto-salvar">{{ 'PLANO_ALIMENTAR.PLANO_ALTERADO' | translate }}</div>
+                    <app-botao (botaoClicado)="salvarPlano()" [tipoBotao]="'menor-desktop'" [texto]="'PLANO_ALIMENTAR.SALVAR' | translate"></app-botao>
+                </div>
+            </div>                
+        </div>
+    </div>
+    <div class="plano-alimentar__card plano-alimentar__card--center" *ngIf="loading">
+        <app-loading [fullpage]="false"></app-loading>
+    </div>
+</div>

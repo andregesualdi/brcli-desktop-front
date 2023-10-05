@@ -1,0 +1,17 @@
+<div class="menu-lateral">
+    <img class="menu-lateral__logo" src="../../../../../assets/images/logo_broccoli.svg">
+    <button id="botao-plano" class="menu-lateral__botao" [ngClass]="{'menu-lateral__botao--selecionado': agendaSelecionada}" (click)="navegar('agenda')">
+        <img *ngIf="!agendaSelecionada" src="../../../../../assets/images/Agendamentos_NaoSelecionado.svg">
+        <img *ngIf="agendaSelecionada" src="../../../../../assets/images/Agendamentos_Selecionado.svg">
+        {{ 'MENU_LATERAL.AGENDAMENTOS' | translate }}
+    </button>
+    <button id="botao-metas" class="menu-lateral__botao menu-lateral__metas" [ngClass]="{'menu-lateral__botao--selecionado': pacientesSelecionado}" (click)="navegar('pacientes')">
+        <img *ngIf="!pacientesSelecionado" src="../../../../../assets/images/Pacientes_NaoSelecionado.svg">
+        <img *ngIf="pacientesSelecionado" src="../../../../../assets/images/Pacientes_Selecionado.svg">
+        {{ 'MENU_LATERAL.PACIENTES' | translate }}
+    </button>
+    <button id="botao-metas" class="menu-lateral__botao menu-lateral__sair" (click)="sair()">
+        <img src="../../../../../assets/images/Logout.svg">
+        <div>{{ 'MENU_LATERAL.SAIR' | translate }}</div>
+    </button>
+</div>

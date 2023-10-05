@@ -1,45 +1,59 @@
 {
+    "id": 120441,
     "refeicoes": [
       {
         "tipo": "cafe",
         "horario": "8h30",
         "alimentos": [
           {
-            "quantidade": "50g",
+            "quantidade": "50",
+            "medida": "g",
             "descricao": "Ovo"
           },
           {
-            "quantidade": "200ml",
+            "quantidade": "200",
+            "medida": "ml",
             "descricao": "Leite"
           },
           {
-            "quantidade": "20g",
+            "quantidade": "20",
+            "medida": "g",
             "descricao": "Requeijão Light"
           },
           {
-            "quantidade": "50g",
+            "quantidade": "50",
+            "medida": "g",
             "descricao": "Banana Prata"
           }
         ]
+      },
+      {
+        "tipo": "lanchemanha",
+        "horario": "",
+        "alimentos": []
       },
       {
         "tipo": "almoco",
         "horario": "12h",
         "alimentos": [
           {
-            "quantidade": "100g",
+            "quantidade": "100",
+            "medida": "g",
             "descricao": "Arroz"
           },
           {
-            "quantidade": "80g",
+            "quantidade": "80",
+            "medida": "g",
             "descricao": "Feijão"
           },
           {
-            "quantidade": "150g",
+            "quantidade": "150",
+            "medida": "g",
             "descricao": "Filé de Frango"
           },
           {
             "quantidade": "-",
+            "medida": "g",
             "descricao": "Salada à vontade"
           }
         ]
@@ -49,11 +63,13 @@
         "horario": "16h30",
         "alimentos": [
           {
-            "quantidade": "100ml",
+            "quantidade": "100",
+            "medida": "ml",
             "descricao": "Iogurte desnatado"
           },
           {
-            "quantidade": "200g",
+            "quantidade": "200",
+            "medida": "g",
             "descricao": "Morango"
           }
         ]
@@ -63,19 +79,23 @@
         "horario": "20h",
         "alimentos": [
           {
-            "quantidade": "80g",
+            "quantidade": "80",
+            "medida": "g",
             "descricao": "Arroz"
           },
           {
-            "quantidade": "50g",
+            "quantidade": "50",
+            "medida": "g",
             "descricao": "Feijão"
           },
           {
-            "quantidade": "100g",
+            "quantidade": "100",
+            "medida": "g",
             "descricao": "Acém Moído"
           },
           {
-            "quantidade": "100g",
+            "quantidade": "100",
+            "medida": "g",
             "descricao": "Brócolis cozido"
           },
           {
@@ -89,7 +109,8 @@
         "horario": "23h",
         "alimentos": [
           {
-            "quantidade": "100ml",
+            "quantidade": "100",
+            "medida": "ml",
             "descricao": "Chá de Camomila"
           }
         ]

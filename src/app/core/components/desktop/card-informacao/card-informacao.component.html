@@ -1,26 +1,29 @@
-<div class="card-informativo" (click)="navegar($event)">
+<div class="card-informativo"
+    [ngClass]="{
+        'card-informativo__refeicao': refeicao
+    }"
+    (click)="navegar($event)">
     <div class="card-informativo__imagem"
         [ngClass]="{
+            'card-informativo__imagem--agenda': imagem === 'agenda',
+            'card-informativo__imagem--arquivo': imagem === 'arquivo',
             'card-informativo__imagem--cafe': imagem === 'cafe',
-            'card-informativo__imagem--relogio': imagem === 'relogio',
             'card-informativo__imagem--lanchemanha': imagem === 'lanchemanha',
             'card-informativo__imagem--almoco': imagem === 'almoco',
             'card-informativo__imagem--lanchetarde': imagem === 'lanchetarde',
             'card-informativo__imagem--jantar': imagem === 'jantar',
-            'card-informativo__imagem--ceia': imagem === 'ceia'
-        }"></div>
-    <div class="card-informativo__texto">
-        <div *ngIf="direcionador; else informativo">
-            <div class="card-informativo__texto--titulo">
-                {{ getTipoRefeicao | translate }}
-            </div>
-            <div class="card-informativo__texto--descricao">
-                {{ descricao }}
-            </div>
-        </div>
-        <ng-template #informativo>
+            'card-informativo__imagem--ceia': imagem === 'ceia',
+            'card-informativo__imagem-refeicao': refeicao}"></div>
+    <div class="card-informativo__texto"
+            [ngClass]="{
+                'card-informativo__texto-refeicao': refeicao
+            }"
+        >
+        <div class="card-informativo__texto--titulo">
             {{ texto }}
-        </ng-template>
+        </div>
+        <div class="card-informativo__refeicao-alterada" *ngIf="refeicaoAlterada">
+            {{ 'PLANO_ALIMENTAR.ALTERADO' | translate }}
+        </div>
     </div>
-    <div class="card-informativo__seta" *ngIf="direcionador"></div>
 </div>

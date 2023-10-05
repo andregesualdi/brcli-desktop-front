@@ -1,0 +1,63 @@
+<app-menu-lateral [selecao]="'cadastro'"></app-menu-lateral>
+<div class="editar-pacientes__borda-superior">
+    <div class="editar-pacientes__texto">
+        {{ 'PACIENTES.TITULO' | translate }}
+    </div>
+</div>
+<div class="editar-pacientes__container">
+    <div class="editar-pacientes__card" *ngIf="!loading">
+        <button (click)="voltar()" type="button" class="editar-pacientes__voltar">
+            <img class="editar-pacientes__seta" src="../../../../../../assets/images/Seta_Esquerda.svg" />
+            <div class="editar-pacientes__voltar--texto">{{ 'CADASTRO_PACIENTE.BOTAO_VOLTAR' | translate }}</div>
+        </button>
+        <div class="editar-pacientes__titulo">{{ 'EDITAR_PACIENTES.TITULO' | translate }}</div>
+        <div class="editar-pacientes__campos">
+            <form [formGroup]="cadastro" (ngSubmit)="salvarDados()">
+                <div class="editar-pacientes__input">
+                    <input
+                        class="editar-pacientes__espacamento-input"
+                        type="text" 
+                        [placeholder]="'CADASTRO_PACIENTE.NOME' | translate"
+                        formControlName="nome"
+                    >
+                    <input
+                        class="editar-pacientes__espacamento-input"
+                        type="tel" 
+                        [placeholder]="'CADASTRO_PACIENTE.TELEFONE' | translate"
+                        formControlName="telefone"
+                    >
+                    <input
+                        class="editar-pacientes__espacamento-input"
+                        type="email" 
+                        [placeholder]="'CADASTRO_PACIENTE.EMAIL' | translate"
+                        formControlName="email"
+                    >
+                    <input
+                        class="editar-pacientes__espacamento-input"
+                        type="date" 
+                        [placeholder]="'CADASTRO_PACIENTE.DATA_NASC' | translate"
+                        formControlName="dataNasc"
+                    >
+                    <input
+                        class="editar-pacientes__espacamento-input"
+                        type="number" 
+                        [placeholder]="'CADASTRO_PACIENTE.ALTURA' | translate"
+                        formControlName="altura"
+                    >
+                    <input
+                        class="editar-pacientes__espacamento-input"
+                        type="number" 
+                        [placeholder]="'CADASTRO_PACIENTE.PESO' | translate"
+                        formControlName="peso"
+                    >
+                </div>
+                <div class="editar-pacientes__cadastrar">
+                    <app-botao tipo="submit" [desabilitado]="!cadastro.valid" [texto]="'EDITAR_PACIENTES.BOTAO_SALVAR' | translate"></app-botao>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="editar-pacientes__card editar-pacientes__card--center" *ngIf="loading">
+        <app-loading [fullpage]="false"></app-loading>
+    </div>
+</div>

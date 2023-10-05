@@ -1,0 +1,52 @@
+@import '../../../../../styles.scss';
+
+.menu-lateral {
+    height: 100%;
+    width: 6vw;
+    box-shadow: 0vw -1.111vw 7.222vw 0 rgba(0, 0, 0, 0.25);
+    background-color: $cor-branco-padrao;
+    position: fixed;
+    left: 0;
+    padding: 1.852vw 1.389vw 1.852vw;
+    aspect-ratio: 16 / 9;
+
+    &__logo {
+        margin-bottom: 1.389vw;
+        width: 6vw;
+    }
+
+    &__botao {
+        cursor: pointer;
+        width: 6vw;
+        font-family: 'Manrope-Medium';
+        color: $cor-letra-nao-selecionada;
+        font-size: 0.926vw;
+        margin-bottom: 1.389vw;
+        background-color: $cor-branco-padrao;
+        border: 0;
+
+        &--selecionado {
+            font-family: 'Manrope-Bold';
+            color: $cor-verde-selecionado;
+        }
+    }
+
+    &__sair {
+        position: fixed;
+        display: block;
+        bottom: 0;
+        color: $cor-verde-padrao;
+        font-family: 'Manrope-Bold';
+    }
+
+
+    &__botao > img {
+        height: 3vw;
+        width: 3vw;
+    }
+
+    &__logo > img {
+        height: 6vw;
+        width: vw;
+    }
+}

@@ -1,0 +1,90 @@
+@import '../../../../../styles/base-import';
+
+.pacientes {
+    aspect-ratio: 16 / 9;
+
+    &__borda-superior {
+        height: 8.25vw;
+        width: 100%;
+        background-color: $cor-verde-selecionado;
+        display: flex;
+        margin-bottom: 1.852vw;
+        align-items: center;
+    }
+
+    &__texto {
+        font-family: 'Manrope-Bold';
+        color: $cor-branco-padrao;
+        font-size: 2.315vw;
+        padding-left: 10vw;
+    }
+
+    &__container {
+        padding: 0 1.389vw 1.389vw 10vw;
+        display: flex;
+    }
+
+    &__card {
+        width: 100%;
+        height: 100%;
+        background-color: $cor-branco-padrao;
+        border: 0.116vw solid $cor-verde-selecionado;
+        border-radius: 1.389vw;
+        min-height: 75vh;
+        max-height: 75vh;
+        box-shadow: 0.405vw 0.405vw 0.694vw 0 rgba(0, 0, 0, 0.25);
+        padding: 1.389vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        &--erro {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        &--center {
+            justify-content: center;
+        }
+    }
+
+    &__listagem {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow: auto;
+    }
+
+    &__topo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 0.926vw;
+    }
+
+    &__busca {
+        width: 75%;
+        padding-right: 1.389vw;
+    }
+
+    &__novo-cadastro {
+        width: 25%;
+    }
+
+    &__descricao-erro {
+        margin-top: 1.389vw;
+        font-family: 'Manrope-Medium';
+    }
+
+    &__botao {
+        margin-top: 1.389vw;
+        width: 50%;
+    }
+}

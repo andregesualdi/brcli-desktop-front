@@ -54,7 +54,7 @@ export class LoginComponent {
           if (data.userType === "nutricionista") {
             window.sessionStorage.setItem('usuario', this.login); // Melhorar este ponto, acesso perigoso, analisar outras formas
             this.loading = false;
-            this.router.navigate(['plano-alimentar']);
+            this.router.navigate(['meus-agendamentos']);
           } else if (data.userType === "paciente") {
             this.paciente = true;
           } else {

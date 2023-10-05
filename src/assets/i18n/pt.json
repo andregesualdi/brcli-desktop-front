@@ -1,8 +1,77 @@
 {
-    "AVALIACAO_FISICA": {
-        "TITULO": "Minha avaliação física",
-        "DESCRICAO": "Nós do Broccoli estamos trabalhando para trazer a avaliação física detalhada aqui no app para você, Camila. Por enquanto, você pode baixar a versão em PDF disponibilizada pelo seu nutricionista.",
-        "BOTAO_BAIXAR": "Baixar avaliação"
+    "MENU_LATERAL": {
+        "AGENDAMENTOS": "Agenda",
+        "PACIENTES": "Pacientes",
+        "SAIR": "Sair"
+    },
+    "MEUS_AGENDAMENTOS": {
+        "TITULO": "Meus agendamentos",
+        "SEM_AGENDAMENTOS": "Você não possui agendamentos para este dia.",
+        "ERRO": "Erro ao carregar agendamentos. Tente novamente mais tarde."
+    },
+    "PACIENTES": {
+        "TITULO": "Pacientes",
+        "NOME": "Nome",
+        "NOVO_PACIENTE": "Novo paciente",
+        "ERRO": "Erro ao carregar pacientes. Tente novamente mais tarde.",
+        "SEM_PACIENTES": "Você não possui pacientes no momento. Cadastre um paciente para acessar mais detalhes."
+    },
+    "CADASTRO_PACIENTE": {
+        "TITULO": "Cadastro de pacientes",
+        "BOTAO_VOLTAR": "Voltar",
+        "NOME": "Nome do paciente",
+        "TELEFONE": "Telefone do paciente",
+        "EMAIL": "E-mail do paciente",
+        "DATA_NASC": "Data de nascimento",
+        "ALTURA": "Altura",
+        "PESO": "Peso",
+        "BOTAO_CADASTRAR": "Cadastrar"
+    },
+    "EDITAR_PACIENTES": {
+        "TITULO": "Editar informações do paciente",
+        "BOTAO_SALVAR": "Salvar"
+    },
+    "PERFIL_PACIENTE": {
+        "PACIENTE_DESDE": "Paciente desde ",
+        "PROXIMO_AGENDAMENTO": "Próximo agendamento em ",
+        "PESO": "Peso",
+        "ALTURA": "Altura",
+        "IMC": "IMC",
+        "IDADE": "Idade",
+        "EMAIL": "E-mail",
+        "TELEFONE_CELULAR": "Telefone ou celular",
+        "NOME_USUARIO": "Nome de usuário do Broccoli",
+        "CODIGO_ACESSO": "Código de acesso Broccoli",
+        "EDITAR": "Editar informações",
+        "GERAR_CODIGO": "Gerar novo código de acesso",
+        "PLANO": "Plano alimentar",
+        "METAS": "Metas",
+        "AVALIACAO": "Avaliação física",
+        "CONSULTA": "Consulta"
+    },
+    "CONSULTA": {
+        "TITULO": "Consulta",
+        "TEXTO": "Estamos trabalhando para uma melhor experiência na parte de agendamento de consultas. No momento, você pode informar, alterar ou remover a data da próxima consulta do seu paciente.",
+        "DATA": "Data da consulta",
+        "HORA": "Hora da consulta",
+        "BOTAO_AGENDAR": "Agendar",
+        "SEM_AGENDAMENTO": "Este paciente ainda não possui consulta agendada."
+    },
+    "METAS": {
+      "TITULO": "Metas",
+      "DESCRICAO": "Descrição",
+      "ATINGIDA": "Atingida?",
+      "BOTAO_EXCLUIR": "excluir",
+      "BOTAO_ADICIONAR": "+ adicionar meta",
+      "NUMERO_MAXIMO": "Número máximo de metas atingido.",
+      "BOTAO_SALVAR": "Salvar metas"
+    },
+    "AVALIACAO": {
+        "TITULO": "Avaliação física",
+        "TEXTO": "Estamos trabalhando para uma melhor experiência na parte de avaliação física. No momento, você pode enviar em PDF a avaliação física do paciente.",
+        "DESCRICAO": "Este paciente ainda não possui avaliação física.",
+        "ESCOLHER": "Escolher arquivo",
+        "BOTAO_ENVIAR": "Enviar avaliação"
     },
     "ERRO": {
         "TEXTO": "Não é possível exibir essas informações no momento. Por favor, tente mais tarde.",
@@ -10,35 +79,25 @@
         "BOTAO_OK": "Ok"
     },
     "PLANO_ALIMENTAR": {
-        "TITULO": "Meu plano alimentar",
-        "TEXTO_AGENDAMENTO": "Seu próximo agendamento é dia 12 de agosto, às 14h30.",
+        "TITULO": "Plano alimentar",
         "CAFE": "Café da manhã",
         "LANCHEMANHA": "Lanche da manhã",
         "ALMOCO": "Almoço",
         "LANCHETARDE": "Lanche da tarde",
         "JANTAR": "Jantar",
         "CEIA": "Ceia",
-        "HORARIO_PREVISTO": "Horário previsto: ",
-        "BOTAO_BAIXAR": "Baixar plano",
-        "MEU": "Meu",
-        "MINHA": "Minha",
-        "VOLTAR": "Voltar"
+        "ALTERADO": "Alterado",
+        "PLANO_ALTERADO": "O plano foi alterado. Deseja salvar?",
+        "SALVAR": "Salvar"
     },
-    "TABELA_ALIMENTOS": {
-        "QUANTIDADE": "Qtd.",
-        "ALIMENTO": "Alimento"
-    },
-    "METAS": {
-        "TITULO": "Minhas metas mensais",
-        "BOTAO_SALVAR": "Salvar metas",
-        "METAS_SALVAS": "Metas salvas",
-        "ERRO_AO_SALVAR": "Erro ao salvar metas, tente novamente."
-    },
-    "PERFIL": {
-        "TITULO": "Meu perfil",
-        "TITULO_NUTRICIONISTA": "Nutricionista",
-        "BOTAO_SAIR": "Sair do aplicativo",
-        "ALTURA": "Altura: "
+    "REFEICAO": {
+        "QUANTIDADE": "Quantidade",
+        "MEDIDA": "Medida",
+        "DESCRICAO": "Descrição",
+        "QUANTIDADE_QTDE": "Qtde.",
+        "BOTAO_EXCLUIR": "excluir",
+        "ADICIONAR_ALIMENTO": "+ adicionar alimento",
+        "SALVAR_REFEICAO": "Salvar refeição"
     },
     "LOGIN": {
         "LOGIN": "Login",
@@ -47,15 +106,6 @@
         "ACESSAR": "Acessar",
         "PRIMEIRO_ACESSO": "Primeiro acesso",
         "INVALIDO": "Usuário ou senha inválidos"
-    },
-    "PRIMEIRO_ACESSO": {
-        "DESCRICAO": "Informe o código de acesso fornecido pelo seu nutricionista",
-        "CODIGO_ACESSO": "Código de acesso",
-        "VALIDAR": "Validar",
-        "FINALIZE": "Finalize seu cadastro",
-        "NOME_USUARIO": "Nome de usuário",
-        "SENHA": "Senha",
-        "CADASTRAR": "Cadastrar"
     },
     "RECUPERAR_SENHA": {
         "DESCRICAO": "Informe seu usuário",

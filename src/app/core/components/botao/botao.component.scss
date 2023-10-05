@@ -29,4 +29,13 @@ button:disabled {
         border-radius: 1.389vw;
         box-shadow: 0vw 1.111vw 1.111vw 0 rgba(0, 0, 0, 0.25);
     }
+
+    &--menor-desktop {
+        background-color: $cor-verde-padrao;
+        font-family: 'Manrope-SemiBold';
+        font-size: 0.926vw;
+        height: 2.315vw;
+        color: $cor-branco-padrao;
+        border-radius: 0.926vw;
+    }
 }

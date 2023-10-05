@@ -10,16 +10,23 @@
             "status": 200
         },
         "requests": [
+            "mappings/get/agenda.yaml",
+            "mappings/get/pacientes.yaml",
             "mappings/get/plano-alimentar.yaml",
-            "mappings/get/dados-paciente.yaml",
+            "mappings/get/agendamento-paciente.yaml",
+            "mappings/get/perfil-paciente.yaml",
             "mappings/get/metas.yaml",
             "mappings/get/avaliacao-fisica.yaml",
-            "mappings/put/cadastro-paciente.yaml",
+            "mappings/get/gerar-codigo.yaml",
+            "mappings/post/plano-alimentar.yaml",
+            "mappings/post/cadastro-paciente.yaml",
+            "mappings/post/agendar.yaml",
+            "mappings/post/registrar-avaliacao-fisica.yaml",
+            "mappings/post/editar-paciente.yaml",
             "mappings/post/login.yaml",
             "mappings/post/primeiro-acesso.yaml",
             "mappings/post/recuperar-senha.yaml",
-            "mappings/put/alterar-imagem.yaml",
-            "mappings/put/salvar-metas.yaml"
+            "mappings/post/salvar-metas.yaml"
         ]
     },
     "server": {
