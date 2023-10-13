@@ -49,7 +49,7 @@ export class ConsultaComponent implements OnInit {
     };
     this.dados.agendarConsulta('1200A', this.idPaciente, agendamento as unknown as NovoAgendamento).subscribe({
       next: (data) => {
-        if (data.sucesso) {
+        if (data.sucess) {
           alert('Agendamento realizado');
           this.limparAgendamento();
           this.recuperarAgendamento();

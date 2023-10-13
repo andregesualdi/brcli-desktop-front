@@ -1,3 +1,3 @@
 export class ResponseSucesso {
-    public sucesso: boolean | undefined;
+    public sucess: boolean | undefined;
 }

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { DadosService } from '../../../../services/dados.service';
 import { Meta } from '../../../../shared/models/meta.model';
 import { Paciente } from '../../../../shared/models/paciente.model';
+import { PlanoMetas } from '../../../../shared/models/plano-metas.model';
 
 @Component({
   selector: 'app-metas',
@@ -15,6 +16,7 @@ export class MetasComponent implements OnInit {
   public idPaciente: string = '';
   public paciente: Paciente = new Paciente;
   public metas: Array<Meta> = new Array<Meta>;
+  public planoMetas: PlanoMetas = new PlanoMetas;
 
   constructor(
     private router: Router,
@@ -34,7 +36,7 @@ export class MetasComponent implements OnInit {
 
   public adicionarMeta(): void {
     this.metas.push({
-      descricao: '',
+      descricaoMeta: '',
       atingida: false
     });
   }
@@ -52,9 +54,9 @@ export class MetasComponent implements OnInit {
 
   public salvar(): void {
     this.loading = true;
-    this.dados.salvarMetas('1200A', this.idPaciente, this.metas).subscribe({
+    this.dados.salvarMetas('1200A', this.idPaciente, this.planoMetas).subscribe({
       next: (data) => {
-        if (data.sucesso) {
+        if (data.sucess) {
           alert('Metas salvas');
           this.metas = new Array<Meta>;
           this.recuperarMetas();
@@ -73,8 +75,9 @@ export class MetasComponent implements OnInit {
     this.loading = true;
     this.dados.recuperarMetas('1200A', this.idPaciente).subscribe({
       next: (data) => {
-        if (data && data.length > 0) {
-          this.metas = data;
+        if (data) {
+          this.planoMetas = data;
+          this.metas = this.planoMetas.metas!;
         }
         this.loading = false;
       }, error: () => {

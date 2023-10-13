@@ -79,7 +79,7 @@ export class PlanoAlimentarComponent {
     this.loading = true;
     this.dados.salvarPlano('1200A', this.idPaciente, this.planoAlimentar).subscribe({
       next: (data) => {
-        if (data.sucesso) {
+        if (data.sucess) {
           alert('Plano novo salvo com sucesso');
           this.refeicaoAlterada = [false,false,false,false,false,false];
           this.recuperarPlano();

@@ -1,4 +1,4 @@
 export class Meta {
-    public descricao: string | undefined; 
+    public descricaoMeta: string | undefined; 
     public atingida: boolean | undefined;
 }

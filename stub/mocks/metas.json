@@ -1,14 +1,17 @@
-[
-    {
-        "descricao": "Comer frutas duas vezes por dia",
-        "atingida": false
-    },
-    {
-        "descricao": "Ir à academia quatro vezes por semana",
-        "atingida": true
-    },
-    {
-        "descricao": "Beber dois litros de água",
-        "atingida": true
-    }
-]
+{
+    "id": 1234,
+    "metas": [
+        {
+            "descricaoMeta": "Comer frutas duas vezes por dia",
+            "atingida": false
+        },
+        {
+            "descricaoMeta": "Ir à academia quatro vezes por semana",
+            "atingida": true
+        },
+        {
+            "descricaoMeta": "Beber dois litros de água",
+            "atingida": true
+        }
+    ]
+}

@@ -13,8 +13,8 @@ import { CodigoAcessoGerado } from '../shared/models/codigo.model';
 import { NovoAgendamento } from '../shared/models/novo-agendamento.model';
 import { AgendamentoPaciente } from '../shared/models/agendamento-paciente.model';
 import { AvaliacaoFisica } from '../shared/models/avaliacao-fisica.model';
-import { Meta } from '../shared/models/meta.model';
 import { PlanoAlimentar } from '../shared/models/plano-alimentar.model';
+import { PlanoMetas } from '../shared/models/plano-metas.model';
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +29,7 @@ export class DadosService {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     headers.append('data-agenda', data.getTime().toString());
     return this.rest.get(environment.api.endpoints.agenda,
       headers);
@@ -39,7 +39,7 @@ export class DadosService {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     return this.rest.get(environment.api.endpoints.pacientes,
       headers);
   }
@@ -48,7 +48,7 @@ export class DadosService {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     return this.rest.post(environment.api.endpoints.cadastroPaciente, paciente, headers);
   }
 
@@ -56,7 +56,7 @@ export class DadosService {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     return this.rest.post(environment.api.endpoints.editarPaciente, pacienteEditado, headers);
   }
 
@@ -64,7 +64,7 @@ export class DadosService {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.perfilPaciente, headers);
   }
@@ -73,7 +73,7 @@ export class DadosService {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.gerarCodigo, headers);
   }
@@ -82,7 +82,7 @@ export class DadosService {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.post(environment.api.endpoints.agendar, agendamento, headers);
   }
@@ -91,7 +91,7 @@ export class DadosService {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.consulta, headers);
   }
@@ -100,7 +100,7 @@ export class DadosService {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.post(environment.api.endpoints.registrarAvaliacaoFisica, avaliacao, headers);
   }
@@ -109,25 +109,25 @@ export class DadosService {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.avaliacaoFisica, headers);
   }
 
-  public recuperarMetas(usuario: string, codigoPaciente: string): Observable<Meta[]> {
+  public recuperarMetas(usuario: string, codigoPaciente: string): Observable<PlanoMetas> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.metas, headers);
   }
 
-  public salvarMetas(usuario: string, codigoPaciente: string, metas: Meta[]): Observable<ResponseSucesso> {
+  public salvarMetas(usuario: string, codigoPaciente: string, metas: PlanoMetas): Observable<ResponseSucesso> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.post(environment.api.endpoints.salvarMetas, metas, headers);
   }
@@ -136,7 +136,7 @@ export class DadosService {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.planoAlimentar, headers);
   }
@@ -145,7 +145,7 @@ export class DadosService {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('x-usuario', usuario);
+    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.post(environment.api.endpoints.planoAlimentar, planoAlimentar, headers);
   }

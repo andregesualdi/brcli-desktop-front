@@ -37,7 +37,7 @@ export class CadastroPacientesComponent {
     this.loading = true;
     this.dados.cadastrarPaciente('1200A', cadastro as unknown as CadastrarPaciente).subscribe({
       next: (data) => {
-        if (data.sucesso) {
+        if (data.sucess) {
           this.loading = false;
           alert('Cliente cadastrado');
           this.router.navigate(['pacientes']);

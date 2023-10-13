@@ -77,7 +77,7 @@ export class AvaliacaoComponent implements OnInit {
     };
     this.dados.salvarAvaliacao('1200A', avaliacao, this.idPaciente).subscribe({
       next: (data) => {
-        if (data.sucesso) {
+        if (data.sucess) {
           alert('Enviado com sucesso');
           this.resetInput();
           this.recuperarAvaliacao();

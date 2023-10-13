@@ -25,7 +25,7 @@
                     </div>
                     <div class="metas__tabela--corpo" *ngFor="let meta of metas; index as i">
                         <div class="metas__tabela--linha-0">
-                            <input [(ngModel)]="meta.descricao" id="meta-{{i}}" placeholder="{{ 'METAS.DESCRICAO' | translate }}" type="text">
+                            <input [(ngModel)]="meta.descricaoMeta" id="meta-{{i}}" placeholder="{{ 'METAS.DESCRICAO' | translate }}" type="text">
                         </div>
                         <div class="metas__tabela--linha-1">
                             {{ meta.atingida ? 'Sim' : 'Não' }}
