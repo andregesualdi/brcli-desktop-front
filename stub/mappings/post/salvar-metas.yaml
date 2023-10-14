@@ -1,6 +1,6 @@
 - request:
     method: POST
-    url: /brcli-gateway/brcli-bff-desktop/salvar-metas
+    url: /brcli-gateway/api/desktop/metas
   response:
     latency: 2000
     status: 200

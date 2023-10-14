@@ -1,6 +1,6 @@
 - request:
     method: GET
-    url: /brcli-gateway/brcli-bff-desktop/gerar-codigo
+    url: /brcli-gateway/api/desktop/codigo-acesso
   response:
     latency: 3000
     status: 200

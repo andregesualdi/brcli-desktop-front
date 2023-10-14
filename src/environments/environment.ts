@@ -3,25 +3,23 @@ export const environment = {
     verbose: true,
 
     api: {
-        context: '/brcli-gateway/brcli-bff-desktop',
+        context: '/brcli-gateway',
         endpoints: {
-            agenda: '/agenda',
-            agendar: '/agendar',
-            consulta: '/consulta-paciente',
-            avaliacaoFisica: '/avaliacao-fisica',
-            registrarAvaliacaoFisica: '/registrar-avaliacao-fisica',
-            cadastroPaciente: '/cadastro-paciente',
-            editarPaciente: '/editar-paciente',
-            dadosPaciente: '/dados-paciente',
-            perfilPaciente: '/perfil-paciente',
-            gerarCodigo: '/gerar-codigo',
+            agenda: '/api/desktop/agenda',
+            agendar: '/api/desktop/agendamento',
+            consulta: '/api/desktop/agendamento',
+            avaliacaoFisica: '/api/desktop/avaliacao',
+            registrarAvaliacaoFisica: '/api/desktop/avaliacao',
+            cadastroPaciente: '/api/desktop/paciente',
+            editarPaciente: '/api/desktop/paciente',
+            perfilPaciente: '/api/desktop/paciente',
+            gerarCodigo: '/api/desktop/codigo-acesso',
             login: '/login',
-            metas: '/metas',
-            pacientes: '/pacientes',
-            planoAlimentar: '/plano-alimentar',
-            primeiroAcesso: '/primeiro-acesso',
+            metas: '/api/desktop/metas',
+            pacientes: '/api/desktop/pacientes',
+            planoAlimentar: '/api/desktop/plano-alimentar',
             recuperarSenha: '/recuperar-senha',
-            salvarMetas: '/salvar-metas'
+            salvarMetas: '/api/desktop/metas'
         }
     }
 }

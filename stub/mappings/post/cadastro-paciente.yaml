@@ -1,6 +1,6 @@
 - request:
     method: POST
-    url: /brcli-gateway/brcli-bff-desktop/cadastro-paciente
+    url: /brcli-gateway/api/desktop/paciente
   response:
     latency: 2000
     status: 200

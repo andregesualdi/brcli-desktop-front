@@ -1,6 +1,6 @@
 - request:
     method: GET
-    url: /brcli-gateway/brcli-bff-desktop/plano-alimentar
+    url: /brcli-gateway/api/desktop/plano-alimentar
   response:
     latency: 3000,
     status: 200

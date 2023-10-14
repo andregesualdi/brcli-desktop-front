@@ -1,6 +1,6 @@
 - request:
     method: POST
-    url: /brcli-gateway/brcli-bff-desktop/login
+    url: /brcli-gateway/login
   response:
     latency: 2000
     status: 200

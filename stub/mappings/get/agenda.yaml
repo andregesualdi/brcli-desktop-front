@@ -1,6 +1,6 @@
 - request:
     method: GET
-    url: /brcli-gateway/brcli-bff-desktop/agenda
+    url: /brcli-gateway/api/desktop/agenda
   response:
     latency: 1250
     status: 200

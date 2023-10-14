@@ -1,6 +1,6 @@
 - request:
     method: GET
-    url: /brcli-gateway/brcli-bff-desktop/perfil-paciente
+    url: /brcli-gateway/api/desktop/paciente
   response:
     latency: 3000,
     status: 200

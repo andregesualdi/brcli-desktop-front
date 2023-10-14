@@ -1,6 +1,6 @@
 - request:
     method: POST
-    url: /brcli-gateway/brcli-bff-desktop/agendar
+    url: /brcli-gateway/api/desktop/agendamento
   response:
     latency: 2000
     status: 200
