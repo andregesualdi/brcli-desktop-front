@@ -132,6 +132,10 @@
         }
     }
 
+    &__subtopo {
+        display: flex;
+    }
+
     &__salvar-refeicao {
         width: 25%;
         padding: 0 0.926vw 0;
@@ -180,6 +184,7 @@
         font-family: 'Manrope-Bold';
         font-size: 1.852vw;
         margin-bottom: 1.389vw;
+        margin-right: 0.926vw;
     }
 
     &__conteudo {
@@ -192,6 +197,16 @@
         flex-wrap: nowrap;
         justify-content: flex-start;
     }
+}
+
+.horario__input > input {
+    height: 2.315vw;
+    border: 0;
+    border-bottom: 0.231vw solid $cor-letra-nao-selecionada;
+    background: none;
+    font-family: 'Manrope-Regular';
+    font-size: 1.389vw;
+    width: 100%;
 }
 
 .refeicao__input > input {

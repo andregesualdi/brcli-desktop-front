@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Paciente } from 'src/app/core/shared/models/paciente.model';
@@ -19,7 +20,8 @@ export class RefeicaoComponent {
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private datePipe: DatePipe
   ) { }
 
   ngOnInit(): void {

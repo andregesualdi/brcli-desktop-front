@@ -77,7 +77,7 @@ export class AvaliacaoComponent implements OnInit {
     };
     this.dados.salvarAvaliacao(avaliacao, this.idPaciente).subscribe({
       next: (data) => {
-        if (data.sucess) {
+        if (data.success) {
           alert('Enviado com sucesso');
           this.resetInput();
           this.recuperarAvaliacao();
@@ -104,7 +104,7 @@ export class AvaliacaoComponent implements OnInit {
           this.loading = false;
       },
       error: (error) => {
-        if (error.code = "BRCLI404") {
+        if (error.error.code = "BRCLI404") {
           this.semAvaliacao = true;
           this.loading = false;
         } else {

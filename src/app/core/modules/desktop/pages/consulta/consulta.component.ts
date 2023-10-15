@@ -49,7 +49,7 @@ export class ConsultaComponent implements OnInit {
     };
     this.dados.agendarConsulta(this.idPaciente, agendamento as unknown as NovoAgendamento).subscribe({
       next: (data) => {
-        if (data.sucess) {
+        if (data.success) {
           alert('Agendamento realizado');
           this.limparAgendamento();
           this.recuperarAgendamento();
@@ -72,10 +72,11 @@ export class ConsultaComponent implements OnInit {
     this.dados.proximaConsultaPaciente(this.idPaciente).subscribe({
       next: (data) => {
         this.dataAgendamento = data.data!;
+        this.semAgendamento = false;
         this.loading = false;
       },
       error: (error) => {
-        if (error.code === "BRCLI404") {
+        if (error.error.code === "BRCLI404") {
           this.semAgendamento = true;
         } else {
           alert('Erro ao buscar dados de agendamento');

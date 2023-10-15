@@ -33,7 +33,7 @@
     },
     "PERFIL_PACIENTE": {
         "PACIENTE_DESDE": "Paciente desde ",
-        "PROXIMO_AGENDAMENTO": "Próximo agendamento em ",
+        "PROXIMO_AGENDAMENTO": "Agendado para ",
         "PESO": "Peso",
         "ALTURA": "Altura",
         "IMC": "IMC",

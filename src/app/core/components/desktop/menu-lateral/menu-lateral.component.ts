@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AcessoService } from 'src/app/core/services/acesso.service';
 
 @Component({
   selector: 'app-menu-lateral',
@@ -14,7 +15,8 @@ export class MenuLateralComponent implements OnInit {
   public pacientesSelecionado: boolean = false;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private acessoService: AcessoService
   ) { }
 
   ngOnInit(): void {
@@ -41,6 +43,6 @@ export class MenuLateralComponent implements OnInit {
   }
 
   public sair(): void {
-    this.router.navigate(['']);
+    this.acessoService.sair();
   }
 }

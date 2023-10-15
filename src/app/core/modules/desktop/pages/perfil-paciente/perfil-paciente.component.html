@@ -20,7 +20,7 @@
                 <div class="perfil-paciente__dados">
                     <div class="perfil-paciente__nome">{{ perfilPaciente.nome }}</div>
                     <div class="perfil-paciente__informacoes">{{ 'PERFIL_PACIENTE.PACIENTE_DESDE' | translate }}{{ perfilPaciente.dataCadastro }}</div>
-                    <div class="perfil-paciente__informacoes">{{ 'PERFIL_PACIENTE.PROXIMO_AGENDAMENTO' | translate }}{{ perfilPaciente.dataAgendamento }}</div>
+                    <div *ngIf="perfilPaciente.dataAgendamento" class="perfil-paciente__informacoes">{{ 'PERFIL_PACIENTE.PROXIMO_AGENDAMENTO' | translate }}{{ perfilPaciente.dataAgendamento }}</div>
                 </div>
             </div>
             <div class="perfil-paciente__bottom">

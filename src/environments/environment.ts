@@ -1,7 +1,7 @@
 export const environment = {
     production: true,
     verbose: true,
-
+    apiUrl: "https://brcli-gateway-production.up.railway.app",
     api: {
         context: '/brcli-gateway',
         endpoints: {

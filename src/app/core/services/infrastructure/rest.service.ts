@@ -13,19 +13,19 @@ export class RestService {
   ) { }
 
   public get(path: string, headers?: HttpHeaders): Observable<any> {
-    return this.httpClient.get(`${environment.api.context}${path}`, {
+    return this.httpClient.get(`${environment.apiUrl}${environment.api.context}${path}`, {
       headers: headers
     });
   }
 
   public post(path: string, body: any, headers?: HttpHeaders): Observable<any> {
-    return this.httpClient.post(`${environment.api.context}${path}`, body, {
+    return this.httpClient.post(`${environment.apiUrl}${environment.api.context}${path}`, body, {
       headers: headers
     });
   }
 
   public put(path: string, body: any, headers?: HttpHeaders): Observable<any> {
-    return this.httpClient.put(`${environment.api.context}${path}`, body, {
+    return this.httpClient.put(`${environment.apiUrl}${environment.api.context}${path}`, body, {
       headers: headers
     });
   }

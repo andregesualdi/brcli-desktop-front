@@ -1,6 +1,6 @@
 {
     "/brcli-gateway/*": {
-        "target": "http://127.0.0.1:4100/",
+        "target": "http://127.0.0.1:3003/",
         "secure": false,
         "logLevel": "debug"
     }

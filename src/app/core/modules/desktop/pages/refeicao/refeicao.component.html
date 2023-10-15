@@ -16,7 +16,15 @@
             </div>
         </div>
         <div class="refeicao__conteudo">
-            <div class="refeicao__titulo">{{ getTipoRefeicao | translate }}</div>
+            <div class="refeicao__subtopo">
+                <div class="refeicao__titulo">{{ getTipoRefeicao | translate }}</div>
+                <div class="horario__input">
+                    <input
+                        [(ngModel)]="planoAlimentar.refeicoes![idRefeicao].horario"
+                        type="time"
+                    >
+                </div>
+            </div>
             <div class="refeicao__inner-container">
                 <div class="refeicao__container-tabela">
                     <div class="refeicao__tabela">

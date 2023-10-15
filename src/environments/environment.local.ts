@@ -1,7 +1,7 @@
 export const environment = {
     production: false,
     verbose: true,
-
+    apiUrl: "http://localhost:4200",
     api: {
         context: '/brcli-gateway',
         endpoints: {

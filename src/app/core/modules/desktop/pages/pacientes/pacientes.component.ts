@@ -44,7 +44,7 @@ export class PacientesComponent implements OnInit {
         this.loading = false;
       },
       error: (error) => {
-        if (error.code === "BRCLI404") {
+        if (error.error.code === "BRCLI404") {
           this.semPacientes = true;
         } else {
           this.erro = true;

@@ -54,7 +54,7 @@ export class EditarPacienteComponent implements OnInit {
     this.loading = true;
     this.dados.editarPaciente(cadastro as unknown as DadosPaciente).subscribe({
       next: (data: ResponseSucesso) => {
-        if (data.sucess) {
+        if (data.success) {
           alert('Paciente editado com sucesso');
           this.router.navigate(['paciente', this.paciente.codigoPaciente]);
         } else {

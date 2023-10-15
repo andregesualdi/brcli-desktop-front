@@ -43,7 +43,8 @@ export class MeusAgendamentosComponent implements OnInit {
         this.loadingHoje = false;
       },
       error: (error) => {
-        if (error.code === "BRCLI404") {
+        console.log(error);
+        if (error.error.code === "BRCLI404") {
           this.semAgendamentoHoje = true;
         } else {
           this.erroHoje = true;
@@ -58,7 +59,7 @@ export class MeusAgendamentosComponent implements OnInit {
         this.loadingAmanha = false;
       },
       error: (error) => {
-        if (error.code === "BRCLI404") {
+        if (error.error.code === "BRCLI404") {
           this.semAgendamentoAmanha = true;
         } else {
           this.erroAmanha = true;
@@ -73,7 +74,7 @@ export class MeusAgendamentosComponent implements OnInit {
         this.loadingDepoisAmanha = false;
       },
       error: (error) => {
-        if (error.code === "BRCLI404") {
+        if (error.error.code === "BRCLI404") {
           this.semAgendamentoDepoisAmanha = true;
         } else {
           this.erroAposAmanha = true;
