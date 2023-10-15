@@ -78,6 +78,7 @@ export class ConsultaComponent implements OnInit {
       error: (error) => {
         if (error.error.code === "BRCLI404") {
           this.semAgendamento = true;
+          this.loading = false;
         } else {
           alert('Erro ao buscar dados de agendamento');
           this.voltar();

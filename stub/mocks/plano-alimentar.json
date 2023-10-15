@@ -3,7 +3,7 @@
     "refeicoes": [
       {
         "tipo": "cafe",
-        "horario": "8h30",
+        "horario": "08:30",
         "alimentos": [
           {
             "quantidade": "50",
