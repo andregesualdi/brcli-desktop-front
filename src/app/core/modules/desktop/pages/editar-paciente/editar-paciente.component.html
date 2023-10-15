@@ -22,7 +22,8 @@
                     >
                     <input
                         class="editar-pacientes__espacamento-input"
-                        type="tel" 
+                        type="number" 
+                        pattern="^[0-9]*$"
                         [placeholder]="'CADASTRO_PACIENTE.TELEFONE' | translate"
                         formControlName="telefone"
                     >
@@ -48,6 +49,7 @@
                     <input
                         class="editar-pacientes__espacamento-input"
                         type="number" 
+                        pattern="^[0-9]*$"
                         [placeholder]="'CADASTRO_PACIENTE.PESO' | translate"
                         formControlName="peso"
                     >

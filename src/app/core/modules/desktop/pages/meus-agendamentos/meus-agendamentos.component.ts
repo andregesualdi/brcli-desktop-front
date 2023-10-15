@@ -43,7 +43,6 @@ export class MeusAgendamentosComponent implements OnInit {
         this.loadingHoje = false;
       },
       error: (error) => {
-        console.log(error);
         if (error.error.code === "BRCLI404") {
           this.semAgendamentoHoje = true;
         } else {

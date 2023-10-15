@@ -54,7 +54,6 @@ export class MetasComponent implements OnInit {
 
   public salvar(): void {
     this.loading = true;
-    console.log(this.planoMetas);
     this.dados.salvarMetas(this.idPaciente, this.planoMetas).subscribe({
       next: (data) => {
         if (data.success) {
@@ -83,6 +82,11 @@ export class MetasComponent implements OnInit {
         this.loading = false;
       }, error: (error) => {
         if (error.error.code === "BRCLI404") {
+          this.planoMetas = {
+            id: undefined,
+            metas: []
+          };
+          this.metas = this.planoMetas.metas!;
           this.loading = false;
         } else {
           alert('Não foi possível carregar as metas, tente novamente mais tarde.')
