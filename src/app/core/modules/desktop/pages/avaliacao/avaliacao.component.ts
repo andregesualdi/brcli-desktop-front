@@ -75,7 +75,7 @@ export class AvaliacaoComponent implements OnInit {
       arquivo: this.arquivo,
       nomeArquivo: this.nomeArquivo
     };
-    this.dados.salvarAvaliacao('1200A', avaliacao, this.idPaciente).subscribe({
+    this.dados.salvarAvaliacao(avaliacao, this.idPaciente).subscribe({
       next: (data) => {
         if (data.sucess) {
           alert('Enviado com sucesso');
@@ -97,21 +97,21 @@ export class AvaliacaoComponent implements OnInit {
 
   private recuperarAvaliacao(): void {
     this.loading = true;
-    this.dados.recuperarAvaliacao('1200A', this.idPaciente).subscribe({
+    this.dados.recuperarAvaliacao(this.idPaciente).subscribe({
       next: (data) => {
-        if (data.arquivo && data.arquivo !== '') {
           this.avaliacao = data;
           this.semAvaliacao = false;
           this.loading = false;
-        } else {
+      },
+      error: (error) => {
+        if (error.code = "BRCLI404") {
           this.semAvaliacao = true;
           this.loading = false;
+        } else {
+          alert('Erro ao abrir a página, tente novamente mais tarde');
+          this.loading = false;
+          this.voltar();
         }
-      },
-      error: () => {
-        alert('Erro ao abrir a página, tente novamente mais tarde');
-        this.loading = false;
-        this.voltar();
       }
     })
   }

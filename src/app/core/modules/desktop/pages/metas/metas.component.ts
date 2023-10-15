@@ -54,7 +54,7 @@ export class MetasComponent implements OnInit {
 
   public salvar(): void {
     this.loading = true;
-    this.dados.salvarMetas('1200A', this.idPaciente, this.planoMetas).subscribe({
+    this.dados.salvarMetas(this.idPaciente, this.planoMetas).subscribe({
       next: (data) => {
         if (data.sucess) {
           alert('Metas salvas');
@@ -73,17 +73,20 @@ export class MetasComponent implements OnInit {
 
   private recuperarMetas(): void {
     this.loading = true;
-    this.dados.recuperarMetas('1200A', this.idPaciente).subscribe({
+    this.dados.recuperarMetas(this.idPaciente).subscribe({
       next: (data) => {
         if (data) {
           this.planoMetas = data;
           this.metas = this.planoMetas.metas!;
         }
         this.loading = false;
-      }, error: () => {
-        alert('Não foi possível carregar as metas, tente novamente mais tarde.')
-        this.loading = false;
-        this.voltar();
+      }, error: (error) => {
+        if (error.code === "BRCLI404") {
+          this.loading = false;
+        } else {
+          alert('Não foi possível carregar as metas, tente novamente mais tarde.')
+          this.voltar();
+        }
       }
     })
   }

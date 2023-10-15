@@ -46,7 +46,7 @@ export class PerfilPacienteComponent implements OnInit {
 
   public gerarCodigo(): void {
     this.gerandoCodigo = true;
-    this.dados.gerarCodigo('1200A', this.idPaciente).subscribe({
+    this.dados.gerarCodigo(this.idPaciente).subscribe({
       next: (data) => {
         this.perfilPaciente.codigoAcesso = data.codigo;
         this.gerandoCodigo = false;
@@ -76,7 +76,7 @@ export class PerfilPacienteComponent implements OnInit {
 
   private recuperarPerfil(): void {
     this.loading = true;
-    this.dados.recuperarPerfil('1200A', this.idPaciente).subscribe({
+    this.dados.recuperarPerfil(this.idPaciente).subscribe({
       next: (data: PerfilPaciente) => {
         this.perfilPaciente = data;
         this.loading = false;

@@ -46,13 +46,13 @@ export class EditarPacienteComponent implements OnInit {
       nome: this.cadastro.value.nome,
       telefone: this.cadastro.value.telefone as string,
       email: this.cadastro.value.email as string,
-      dataNasc: this.cadastro.value.dataNasc as string,
+      dataNascimento: this.cadastro.value.dataNasc as string,
       altura: this.cadastro.value.altura as number,
       peso: this.cadastro.value.peso as number,
       codigoPaciente: this.paciente.codigoPaciente
     };
     this.loading = true;
-    this.dados.editarPaciente('1200A', cadastro as unknown as DadosPaciente).subscribe({
+    this.dados.editarPaciente(cadastro as unknown as DadosPaciente).subscribe({
       next: (data: ResponseSucesso) => {
         if (data.sucess) {
           alert('Paciente editado com sucesso');

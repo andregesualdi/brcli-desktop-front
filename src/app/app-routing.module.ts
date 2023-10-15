@@ -12,20 +12,21 @@ import { AvaliacaoComponent } from './core/modules/desktop/pages/avaliacao/avali
 import { MetasComponent } from './core/modules/desktop/pages/metas/metas.component';
 import { PlanoAlimentarComponent } from './core/modules/desktop/pages/plano-alimentar/plano-alimentar.component';
 import { RefeicaoComponent } from './core/modules/desktop/pages/refeicao/refeicao.component';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'esqueci-senha', component: EsqueciSenhaComponent },
-  { path: 'meus-agendamentos', component: MeusAgendamentosComponent },
-  { path: 'pacientes', component: PacientesComponent },
-  { path: 'cadastrar-paciente', component: CadastroPacientesComponent },
-  { path: 'paciente/:id', component: PerfilPacienteComponent, data: { public: true } },
-  { path: 'editar-paciente/:id', component: EditarPacienteComponent, data: { public: true } },
-  { path: 'consulta/:id', component: ConsultaComponent, data: { public: true } },
-  { path: 'avaliacao/:id', component: AvaliacaoComponent, data: { public: true } },
-  { path: 'metas/:id', component: MetasComponent, data: { public: true } },
-  { path: 'plano-alimentar/:id', component: PlanoAlimentarComponent, data: { public: true } },
-  { path: 'plano-alimentar/:id/:refeicao', component: RefeicaoComponent, data: { public: true } }
+  { path: 'meus-agendamentos', component: MeusAgendamentosComponent, canActivate: [AuthGuard] },
+  { path: 'pacientes', component: PacientesComponent, canActivate: [AuthGuard] },
+  { path: 'cadastrar-paciente', component: CadastroPacientesComponent, canActivate: [AuthGuard] },
+  { path: 'paciente/:id', component: PerfilPacienteComponent, data: { public: true }, canActivate: [AuthGuard] },
+  { path: 'editar-paciente/:id', component: EditarPacienteComponent, data: { public: true }, canActivate: [AuthGuard] },
+  { path: 'consulta/:id', component: ConsultaComponent, data: { public: true }, canActivate: [AuthGuard] },
+  { path: 'avaliacao/:id', component: AvaliacaoComponent, data: { public: true }, canActivate: [AuthGuard] },
+  { path: 'metas/:id', component: MetasComponent, data: { public: true }, canActivate: [AuthGuard] },
+  { path: 'plano-alimentar/:id', component: PlanoAlimentarComponent, data: { public: true }, canActivate: [AuthGuard] },
+  { path: 'plano-alimentar/:id/:refeicao', component: RefeicaoComponent, data: { public: true }, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

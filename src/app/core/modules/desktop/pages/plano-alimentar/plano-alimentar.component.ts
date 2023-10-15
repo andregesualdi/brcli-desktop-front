@@ -62,7 +62,7 @@ export class PlanoAlimentarComponent {
   }
 
   public recuperarPlano(): void {
-    this.dados.recuperarPlano('1200A', this.idPaciente).subscribe({
+    this.dados.recuperarPlano(this.idPaciente).subscribe({
       next: (data) => {
         this.planoAlimentar = data;
         this.loading = false;
@@ -77,7 +77,7 @@ export class PlanoAlimentarComponent {
 
   public salvarPlano(): void {
     this.loading = true;
-    this.dados.salvarPlano('1200A', this.idPaciente, this.planoAlimentar).subscribe({
+    this.dados.salvarPlano(this.idPaciente, this.planoAlimentar).subscribe({
       next: (data) => {
         if (data.sucess) {
           alert('Plano novo salvo com sucesso');

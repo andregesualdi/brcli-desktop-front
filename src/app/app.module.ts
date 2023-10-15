@@ -2,7 +2,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import ptBr from '@angular/common/locales/pt';
 import { DatePipe, registerLocaleData } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +31,7 @@ import { AvaliacaoComponent } from './core/modules/desktop/pages/avaliacao/avali
 import { MetasComponent } from './core/modules/desktop/pages/metas/metas.component';
 import { PlanoAlimentarComponent } from './core/modules/desktop/pages/plano-alimentar/plano-alimentar.component';
 import { RefeicaoComponent } from './core/modules/desktop/pages/refeicao/refeicao.component';
+import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
 registerLocaleData(ptBr);
 
@@ -76,7 +77,12 @@ registerLocaleData(ptBr);
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
-    DatePipe
+    DatePipe,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

@@ -24,7 +24,6 @@
             "mappings/post/registrar-avaliacao-fisica.yaml",
             "mappings/post/editar-paciente.yaml",
             "mappings/post/login.yaml",
-            "mappings/post/primeiro-acesso.yaml",
             "mappings/post/recuperar-senha.yaml",
             "mappings/post/salvar-metas.yaml"
         ]

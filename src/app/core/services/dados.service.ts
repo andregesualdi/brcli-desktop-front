@@ -25,127 +25,113 @@ export class DadosService {
     private rest: RestService
   ) { }
 
-  public recuperarAgenda(usuario: string, data: Date): Observable<Agenda> {
+  public recuperarAgenda(data: Date): Observable<Agenda> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     headers.append('data-agenda', data.getTime().toString());
     return this.rest.get(environment.api.endpoints.agenda,
       headers);
   }
 
-  public recuperarPacientes(usuario: string): Observable<Paciente[]> {
+  public recuperarPacientes(): Observable<Paciente[]> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     return this.rest.get(environment.api.endpoints.pacientes,
       headers);
   }
 
-  public cadastrarPaciente(usuario: string, paciente: CadastrarPaciente): Observable<ResponseSucesso> {
+  public cadastrarPaciente(paciente: CadastrarPaciente): Observable<ResponseSucesso> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     return this.rest.post(environment.api.endpoints.cadastroPaciente, paciente, headers);
   }
 
-  public editarPaciente(usuario: string, pacienteEditado: DadosPaciente): Observable<ResponseSucesso> {
+  public editarPaciente(pacienteEditado: DadosPaciente): Observable<ResponseSucesso> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     return this.rest.post(environment.api.endpoints.editarPaciente, pacienteEditado, headers);
   }
 
-  public recuperarPerfil(usuario: string, codigoPaciente: string): Observable<PerfilPaciente> {
+  public recuperarPerfil(codigoPaciente: string): Observable<PerfilPaciente> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.perfilPaciente, headers);
   }
 
-  public gerarCodigo(usuario: string, codigoPaciente: string): Observable<CodigoAcessoGerado> {
+  public gerarCodigo(codigoPaciente: string): Observable<CodigoAcessoGerado> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.gerarCodigo, headers);
   }
 
-  public agendarConsulta(usuario: string, codigoPaciente: string, agendamento: NovoAgendamento): Observable<ResponseSucesso> {
+  public agendarConsulta(codigoPaciente: string, agendamento: NovoAgendamento): Observable<ResponseSucesso> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.post(environment.api.endpoints.agendar, agendamento, headers);
   }
 
-  public proximaConsultaPaciente(usuario: string, codigoPaciente: string): Observable<AgendamentoPaciente> {
+  public proximaConsultaPaciente(codigoPaciente: string): Observable<AgendamentoPaciente> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.consulta, headers);
   }
 
-  public salvarAvaliacao(usuario: string, avaliacao: AvaliacaoFisica, codigoPaciente: string): Observable<ResponseSucesso> {
+  public salvarAvaliacao(avaliacao: AvaliacaoFisica, codigoPaciente: string): Observable<ResponseSucesso> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.post(environment.api.endpoints.registrarAvaliacaoFisica, avaliacao, headers);
   }
 
-  public recuperarAvaliacao(usuario: string, codigoPaciente: string): Observable<AvaliacaoFisica> {
+  public recuperarAvaliacao(codigoPaciente: string): Observable<AvaliacaoFisica> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.avaliacaoFisica, headers);
   }
 
-  public recuperarMetas(usuario: string, codigoPaciente: string): Observable<PlanoMetas> {
+  public recuperarMetas(codigoPaciente: string): Observable<PlanoMetas> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.metas, headers);
   }
 
-  public salvarMetas(usuario: string, codigoPaciente: string, metas: PlanoMetas): Observable<ResponseSucesso> {
+  public salvarMetas(codigoPaciente: string, metas: PlanoMetas): Observable<ResponseSucesso> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.post(environment.api.endpoints.salvarMetas, metas, headers);
   }
 
-  public recuperarPlano(usuario: string, codigoPaciente: string): Observable<PlanoAlimentar> {
+  public recuperarPlano(codigoPaciente: string): Observable<PlanoAlimentar> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.get(environment.api.endpoints.planoAlimentar, headers);
   }
 
-  public salvarPlano(usuario: string, codigoPaciente: string, planoAlimentar: PlanoAlimentar): Observable<ResponseSucesso> {
+  public salvarPlano(codigoPaciente: string, planoAlimentar: PlanoAlimentar): Observable<ResponseSucesso> {
     const headers = new HttpHeaders().set(
       'Content-type', 'application/json'
     );
-    headers.append('codigo-usuario', usuario);
     headers.append('codigo-paciente', codigoPaciente);
     return this.rest.post(environment.api.endpoints.planoAlimentar, planoAlimentar, headers);
   }

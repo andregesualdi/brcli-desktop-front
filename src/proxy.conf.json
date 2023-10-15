@@ -1,5 +1,5 @@
 {
-    "/brcli-gateway/brcli-bff-desktop/*": {
+    "/brcli-gateway/*": {
         "target": "http://127.0.0.1:4100/",
         "secure": false,
         "logLevel": "debug"

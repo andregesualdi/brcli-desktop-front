@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Agenda } from '../../../../shared/models/agenda.model';
 import { HoraUtils } from '../../../../shared/utils/hora.utils';
-import { DadosService } from 'src/app/core/services/dados.service';
+import { DadosService } from '../../../../services/dados.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -37,47 +37,47 @@ export class MeusAgendamentosComponent implements OnInit {
   }
 
   public async recuperarAgendas(): Promise<void> {
-    this.dados.recuperarAgenda('1200A', this.horaUtils.gerarDia(0)).subscribe({
+    this.dados.recuperarAgenda(this.horaUtils.gerarDia(0)).subscribe({
       next: (data: Agenda) => {
-        if (data.agendamentos!.length === 0) {
+        this.agendaHoje = data;
+        this.loadingHoje = false;
+      },
+      error: (error) => {
+        if (error.code === "BRCLI404") {
           this.semAgendamentoHoje = true;
         } else {
-          this.agendaHoje = data;
+          this.erroHoje = true;
         }
-        this.loadingHoje = false;
-      },
-      error: () => {
-        this.erroHoje = true;
         this.loadingHoje = false;
       }
     });
 
-    this.dados.recuperarAgenda('1200A', this.horaUtils.gerarDia(24)).subscribe({
+    this.dados.recuperarAgenda(this.horaUtils.gerarDia(24)).subscribe({
       next: (data: Agenda) => {
-        if (data.agendamentos!.length === 0) {
+        this.agendaAmanha = data;
+        this.loadingAmanha = false;
+      },
+      error: (error) => {
+        if (error.code === "BRCLI404") {
           this.semAgendamentoAmanha = true;
         } else {
-          this.agendaAmanha = data;
+          this.erroAmanha = true;
         }
-        this.loadingAmanha = false;
-      },
-      error: () => {
-        this.erroAmanha = true;
         this.loadingAmanha = false;
       }
     });
 
-    this.dados.recuperarAgenda('1200A', this.horaUtils.gerarDia(48)).subscribe({
+    this.dados.recuperarAgenda(this.horaUtils.gerarDia(48)).subscribe({
       next: (data: Agenda) => {
-        if (data.agendamentos!.length === 0) {
-          this.semAgendamentoDepoisAmanha = true;
-        } else {
-          this.agendaDepoisAmanha = data;
-        }
+        this.agendaDepoisAmanha = data;
         this.loadingDepoisAmanha = false;
       },
-      error: () => {
-        this.erroAposAmanha = true;
+      error: (error) => {
+        if (error.code === "BRCLI404") {
+          this.semAgendamentoDepoisAmanha = true;
+        } else {
+          this.erroAposAmanha = true;
+        }
         this.loadingDepoisAmanha = false;
       }
     });

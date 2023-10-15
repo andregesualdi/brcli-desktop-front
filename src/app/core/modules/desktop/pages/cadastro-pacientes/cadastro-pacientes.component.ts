@@ -30,12 +30,12 @@ export class CadastroPacientesComponent {
       nome: this.cadastro.value.nome,
       telefone: this.cadastro.value.telefone as string,
       email: this.cadastro.value.email as string,
-      dataNasc: this.cadastro.value.dataNasc as string,
+      dataNascimento: this.cadastro.value.dataNasc as string,
       altura: this.cadastro.value.altura as number,
       peso: this.cadastro.value.peso as number
     };
     this.loading = true;
-    this.dados.cadastrarPaciente('1200A', cadastro as unknown as CadastrarPaciente).subscribe({
+    this.dados.cadastrarPaciente(cadastro as unknown as CadastrarPaciente).subscribe({
       next: (data) => {
         if (data.sucess) {
           this.loading = false;

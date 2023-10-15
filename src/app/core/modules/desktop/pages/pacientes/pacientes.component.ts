@@ -38,17 +38,17 @@ export class PacientesComponent implements OnInit {
   }
 
   private recuperarPacientes(): void {
-    this.dados.recuperarPacientes('1200A').subscribe({
+    this.dados.recuperarPacientes().subscribe({
       next: (data: Paciente[]) => {
-        if (!data || data.length === 0) {
-          this.semPacientes = true;
-        } else {
-          this.pacientes = data;
-        }
+        this.pacientes = data;
         this.loading = false;
       },
-      error: () => {
-        this.erro = true;
+      error: (error) => {
+        if (error.code === "BRCLI404") {
+          this.semPacientes = true;
+        } else {
+          this.erro = true;
+        }
         this.loading = false;
       }
     });

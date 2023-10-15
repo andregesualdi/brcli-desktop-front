@@ -1,5 +1,4 @@
 export class PerfilPaciente {
-    public codigoPaciente: string | undefined;
     public imagem: string | undefined;
     public nome: string | undefined;
     public dataCadastro: string | undefined;

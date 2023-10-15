@@ -47,7 +47,7 @@ export class ConsultaComponent implements OnInit {
       data: this.agendamento.value.data,
       hora: this.agendamento.value.hora
     };
-    this.dados.agendarConsulta('1200A', this.idPaciente, agendamento as unknown as NovoAgendamento).subscribe({
+    this.dados.agendarConsulta(this.idPaciente, agendamento as unknown as NovoAgendamento).subscribe({
       next: (data) => {
         if (data.sucess) {
           alert('Agendamento realizado');
@@ -69,19 +69,18 @@ export class ConsultaComponent implements OnInit {
 
   private recuperarAgendamento(): void {
     this.loading = true;
-    this.dados.proximaConsultaPaciente('1200A', this.idPaciente).subscribe({
+    this.dados.proximaConsultaPaciente(this.idPaciente).subscribe({
       next: (data) => {
-        if (data.data && data.data !== '') {
-          this.semAgendamento = false;
-          this.dataAgendamento = data.data;
-        } else {
-          this.semAgendamento = true;
-        }
+        this.dataAgendamento = data.data!;
         this.loading = false;
       },
-      error: () => {
-        alert('Erro ao buscar dados de agendamento');
-        this.voltar();
+      error: (error) => {
+        if (error.code === "BRCLI404") {
+          this.semAgendamento = true;
+        } else {
+          alert('Erro ao buscar dados de agendamento');
+          this.voltar();
+        }
       }
     })
   }

@@ -52,7 +52,7 @@ export class LoginComponent {
         next: (data: Login) => {
         if (data.authorized) {
           if (data.userType === "nutricionista") {
-            window.sessionStorage.setItem('usuario', this.login); // Melhorar este ponto, acesso perigoso, analisar outras formas
+            this.acessoService.sessao(data);
             this.loading = false;
             this.router.navigate(['meus-agendamentos']);
           } else if (data.userType === "paciente") {
@@ -68,8 +68,13 @@ export class LoginComponent {
           this.avisoUsuarioInvalido();
         }
         },
-        error: () => {
-          this.erro = true;
+        error: (error) => {
+          if (error.status === 403) {
+            this.usuarioInvalido = true;
+            this.avisoUsuarioInvalido();
+          } else {
+            this.erro = true;
+          }
           this.loading = false;
         }
       }
